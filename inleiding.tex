@@ -5,36 +5,46 @@
 \chapter*{Inleiding}
 \label{ch:inleiding}
 
-De inleiding moet de lezer net genoeg informatie verschaffen om het onderwerp te begrijpen en in te zien waarom de onderzoeksvraag de moeite waard is om te onderzoeken. In de inleiding ga je literatuurverwijzingen beperken, zodat de tekst vlot leesbaar blijft. Je kan de inleiding verder onderverdelen in secties als dit de tekst verduidelijkt. Zaken die aan bod kunnen komen in de inleiding~\autocite{Pollefliet2011}:
+%De inleiding moet de lezer net genoeg informatie verschaffen om het onderwerp te begrijpen en in te zien waarom de onderzoeksvraag de moeite waard is om te onderzoeken. In de inleiding ga je literatuurverwijzingen beperken, zodat de tekst vlot leesbaar blijft. Je kan de inleiding verder onderverdelen in secties als dit de tekst verduidelijkt. Zaken die aan bod kunnen komen in de inleiding~\autocite{Pollefliet2011}:
 
-\begin{itemize}
-  \item context, achtergrond
-  \item afbakenen van het onderwerp
-  \item verantwoording van het onderwerp, methodologie
-  \item probleemstelling
-  \item onderzoeksdoelstelling
-  \item onderzoeksvraag
-  \item \ldots
-\end{itemize}
+
+%\begin{itemize}
+ % \item context, achtergrond
+  %\item afbakenen van het onderwerp
+  %\item verantwoording van het onderwerp, methodologie
+  %\item probleemstelling
+  %\item onderzoeksdoelstelling
+  %\item onderzoeksvraag
+  %\item \ldots
+%\end{itemize}
+
+ De ontwikkeling van mobiele applicaties is een zeer belangrijke niche in de IT. Zo kunnen we drie verschillende besturingssystemen onderscheiden bij mobiele applicaties: Android, iOS en Windows. Die laatste wordt steeds minder en minder gebruikt. Volgens een artikel van \textcite{Statista2018}, een portaal voor statistieken en onderzoek, heeft Android een marktaandeel van 85\%. Dit wil dus zeggen dat 85\% van de mensen die een smartphone heeft, een toestel is met Android. 
+ \newline
+ \newline
+ De mobiele applicaties die draaien op Android werden allemaal geschreven in Java. Maar sinds kort is er een nieuwe mogelijkheid, Kotlin.
+ \newline
+ Kotlin is een programmeertaal die ontworpen is door JetBrains in 2011. Sinds 2017 biedt Google volledige ondersteuning om Android applicaties te programmeren in Kotlin. 
 
 \section{Probleemstelling}
 \label{sec:probleemstelling}
+Vanuit dit onderzoek zal blijken hoe goed Kotlin is als cross-platform ontwikkelingstaal en wat de mogelijkheden zijn van Kotlin om te programmeren voor verschillende platformen. Deze vraag kwam vanuit mijn stagebedrijf (Endare BVBA). Een developer bij Endare is reeds bezig met het aanleren van Kotlin en heeft reeds enkele Android projecten gedaan met Kotlin. Bij Endare wordt er zeer veel aan cross-platform ontwikkeling gedaan. Er worden maar weinig native applicaties gebouwd. Zo gebruiken ze Angular in combinatie met Ionic framework, React Native en heel af en toe eens Xamarin. Daarom is het belangrijk om te kijken of Kotlin een mogelijkheid biedt tot een nieuwe cross-platform programmeertaal.
 
-Uit je probleemstelling moet duidelijk zijn dat je onderzoek een meerwaarde heeft voor een concrete doelgroep. De doelgroep moet goed gedefinieerd en afgelijnd zijn. Doelgroepen als ``bedrijven,'' ``KMO's,'' systeembeheerders, enz.~zijn nog te vaag. Als je een lijstje kan maken van de personen/organisaties die een meerwaarde zullen vinden in deze bachelorproef (dit is eigenlijk je steekproefkader), dan is dat een indicatie dat de doelgroep goed gedefinieerd is. Dit kan een enkel bedrijf zijn of zelfs één persoon (je co-promotor/opdrachtgever).
+%Uit je probleemstelling moet duidelijk zijn dat je onderzoek een meerwaarde heeft voor een concrete doelgroep. De doelgroep moet goed gedefinieerd en afgelijnd zijn. Doelgroepen als ``bedrijven,'' ``KMO's,'' systeembeheerders, enz.~zijn nog te vaag. Als je een lijstje kan maken van de personen/organisaties die een meerwaarde zullen vinden in deze bachelorproef (dit is eigenlijk je steekproefkader), dan is dat een indicatie dat de doelgroep goed gedefinieerd is. Dit kan een enkel bedrijf zijn of zelfs één persoon (je co-promotor/opdrachtgever).
 
 \section{Onderzoeksvraag}
 \label{sec:onderzoeksvraag}
-
-Wees zo concreet mogelijk bij het formuleren van je onderzoeksvraag. Een onderzoeksvraag is trouwens iets waar nog niemand op dit moment een antwoord heeft (voor zover je kan nagaan). Het opzoeken van bestaande informatie (bv. ``welke tools bestaan er voor deze toepassing?'') is dus geen onderzoeksvraag. Je kan de onderzoeksvraag verder specifiëren in deelvragen. Bv.~als je onderzoek gaat over performantiemetingen, dan 
+Mijn onderzoeksvraag is dus: In hoeverre kan Kotlin gebruikt worden voor cross-platform applicatieontwikkeling?
+%Wees zo concreet mogelijk bij het formuleren van je onderzoeksvraag. Een onderzoeksvraag is trouwens iets waar nog niemand op dit moment een antwoord heeft (voor zover je kan nagaan). Het opzoeken van bestaande informatie (bv. ``welke tools bestaan er voor deze toepassing?'') is dus geen onderzoeksvraag. Je kan de onderzoeksvraag verder specifiëren in deelvragen. Bv.~als je onderzoek gaat over performantiemetingen, dan 
 
 \section{Onderzoeksdoelstelling}
 \label{sec:onderzoeksdoelstelling}
+De criteria voor succes van deze bachelorproef zijn enerzijds een overzicht kunnen geven van de belangrijkste criteria van een cross-platform programmeertaal.
 
-Wat is het beoogde resultaat van je bachelorproef? Wat zijn de criteria voor succes? Beschrijf die zo concreet mogelijk.
+Anderzijds een succesvolle proof-of-concept kunnen opstellen waarin de huidige cross-platform mogelijkheden van Kotlin worden verduidelijkt.
+%Wat is het beoogde resultaat van je bachelorproef? Wat zijn de criteria voor succes? Beschrijf die zo concreet mogelijk.
 
 \section{Opzet van deze bachelorproef}
 \label{sec:opzet-bachelorproef}
-
 % Het is gebruikelijk aan het einde van de inleiding een overzicht te
 % geven van de opbouw van de rest van de tekst. Deze sectie bevat al een aanzet
 % die je kan aanvullen/aanpassen in functie van je eigen tekst.
@@ -45,7 +55,11 @@ In Hoofdstuk~\ref{ch:stand-van-zaken} wordt een overzicht gegeven van de stand v
 
 In Hoofdstuk~\ref{ch:methodologie} wordt de methodologie toegelicht en worden de gebruikte onderzoekstechnieken besproken om een antwoord te kunnen formuleren op de onderzoeksvragen.
 
-% TODO: Vul hier aan voor je eigen hoofstukken, één of twee zinnen per hoofdstuk
+REFERENTIES AANPASSEN!
+
+In Hoofdstuk~\ref{ch:stand-van-zaken} zal onderzocht worden, via een literatuurstudie, wat de belangrijkste criteria zijn voor een cross-platform programmeertaal en in hoever Kotlin aan deze criteria voldoet. 
+
+In Hoofdstuk~\ref{ch:methodologie} zal ik een kleine proof-of-concept maken waarmee ik zal kunnen duidelijk maken hoe Kotlin er momenteel voor staat bij cross-platform development.
 
 In Hoofdstuk~\ref{ch:conclusie}, tenslotte, wordt de conclusie gegeven en een antwoord geformuleerd op de onderzoeksvragen. Daarbij wordt ook een aanzet gegeven voor toekomstig onderzoek binnen dit domein.
 

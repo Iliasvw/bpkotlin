@@ -1,0 +1,77 @@
+%---------- Inleiding ---------------------------------------------------------
+
+\section{Introductie} % The \section*{} command stops section numbering
+\label{sec:introductie}
+
+Ontwikkelaars van mobiele applicaties, webapplicaties en desktopapplicaties gebruiken vaak steeds dezelfde programmeertalen waarmee zij vertrouwd zijn. Android, iOS en eventueel Windows voor mobiele applicaties. Java, C\# en Visual Basic voor dekstopapplicaties. Angular, React en Javascript/jQuery voor webontwikkeling. Natuurlijk zijn er nog vele andere programmeertalen. Maar sinds enkele jaren geleden is er een nieuwe programmeertaal bijgekomen in dat lijstje, genaamd Kotlin. 
+\newline
+\newline
+Kotlin is voor vele programmeurs nieuw. Sinds dit jaar biedt Google volledige ondersteuning voor het gebruik van Kotlin bij Android applicatieontwikkeling. Waarom kan deze taal wel of niet gebruikt worden voor cross-platform ontwikkeling? Zo ja, wat zijn dan de eigenschappen van een goede cross-platform programmeertaal en waarom zou het een goede keuze zijn om Kotlin te gebruiken voor cross-platform ontwikkeling? Zou Kotlin Native mogelijk zijn in de toekomst? In dit onderzoek wordt er een antwoord geformuleerd op deze onderzoeksvragen.
+
+%---------- Stand van zaken ---------------------------------------------------
+
+\section{State-of-the-art}
+\label{sec:state-of-the-art}
+Kotlin, de nieuwe programmeertaal. In 2011 voor het eerst aangekondigd door JetBrains. Zes jaar later biedt Google volledige ondersteuning voor Android applicatieontwikkeling. De voorbije jaren was er nog maar weinig bekend rond Kotlin. Er waren zo goed als geen boeken of andere literatuur op de markt. Hier is het laatste jaar verandering in gekomen. Steeds meer en meer boeken worden geplubliceerd. 
+\newline
+\newline
+Op het internet zijn er reeds enkele reviews, onderzoeken en boeken beschikbaar. Hierin wordt er verteld waarom men juist wel of niet voor Kotlin moet kiezen. Zo vindt je her en der ook wel eens een vergelijkende studie tussen Java en Kotlin, maar meestal zijn deze niet zo sterk uitgewerkt.
+\newline
+\newline
+Op het internet is er een studie beschikbaar \autocite{Pros}, die aangeeft waarom programmeurs Kotlin écht moeten gebruiken. Hieruit blijkt dat Kotlin volledig compatibel zou zijn met Java. Bestaande projecten die geschreven zijn in Java, kunnen dus zonder enig probleem verdergezet worden in Kotlin. Bestaande Java frameworks kan men verder gebruiken indien men wenst te programmeren in Kotlin. De taal zou makkelijk te begrijpen zijn voor iedereen die ervaring heeft met OOP (Object-Oriented Programming). Het gebruik van puntkomma's om de regel af te sluiten is optioneel. Een meer technische specificatie, zo zou je bij het vergelijken van objecten, niet meer equals() moeten gebruiken, maar kan je gebruik maken van de == operator. Deze zou vanaf nu controleren op structurele gelijkheid. Dit zijn features die toch allemaal héél positief klinken.
+\newline
+\newline
+Een andere studie \autocite{Cons}, beschrijft dan de nadelen van Kotlin. Kotlin zou geen gebruik maken van namespaces. De static modifier zou verdwenen zijn, maar een alternatieve manier is dan weer mogelijk via @JvmField. Het compileren van projecten in Android Studio zou veel tijd in beslag nemen en het gebruik van annotations zou nog niet volledig geoptimaliseerd zijn. Zo blijkt dat er toch nog wat werk is aan Kotlin.
+\newline
+\newline
+Wat betreft het gebruik van Kotlin als cross-platform programmeertaal \autocite{dzone}, wordt er sterk gewerkt aan Kotlin Native. Momenteel is dit nog niet beschikbaar. Er wordt echter binnenkort een alpha release verwacht. Ook is het nog niet mogelijk om Kotlin te compileren naar iOS. Het zou reeds al mogelijk zijn om Kotlin te gebruiken als programmeertaal voor desktop- en webapplicaties. Er bestaat een library genaamd KotlinFX, dit is een library die dezelfde functionaliteit aanbiedt als JavaFX, enkel geoptimaliseerd voor Kotlin. Voor webapplicaties kan men gebruik maken van het Spring framework, dat gebruik maakt van de taalfeatures van Kotlin.
+\newline
+\newline
+Het grote verschil met al deze onderzoeken is dat er nooit een antwoord wordt geformuleerd of Kotlin een goede cross-platform programmeertaal is. Er wordt enkel en alleen maar onderzoek gedaan op één platform en meestal zijn dit de mobiele apparaten. Op het einde van mijn onderzoek zal ik een volledig antwoord kunnen geven of Kotlin nu wel of niet een goede cross-platform programmeertaal is. 
+
+% Voor literatuurverwijzingen zijn er twee belangrijke commando's:
+% \autocite{KEY} => (Auteur, jaartal) Gebruik dit als de naam van de auteur
+%   geen onderdeel is van de zin.
+% \textcite{KEY} => Auteur (jaartal)  Gebruik dit als de auteursnaam wel een
+%   functie heeft in de zin (bv. ``Uit onderzoek door Doll & Hill (1954) bleek
+%   ...'')
+
+Je mag gerust gebruik maken van subsecties in dit onderdeel.
+
+%---------- Methodologie ------------------------------------------------------
+\section{Methodologie}
+\label{sec:methodologie}
+
+Om een goed antwoord te kunnen formuleren of Kotlin een goede cross-platform ontwikkelingstaal is, moet er natuurlijk onderzocht worden wat de eigenschappen zijn van een goede cross-platform programmeertaal. Aan welke criteria moet een programmeertaal precies voldoen om cross-platform te kunnen zijn? Zijn er bepaalde eisen?
+\newline
+\newline
+Eens we deze onderzoeksvraag hebben kunnen beantwoorden, kunnen we dit gaan aftoetsen op Kotlin zelf. Enerzijds kunnen we dit theoretisch doen, anderzijds kunnen we dit doen via enkele testen. Zo kunnen we zowel voor desktopapplicaties, webapplicaties als mobiele applicaties enkele kleine programma's schrijven waarbij Kotlin vergeleken wordt met een andere vaak gebruikte cross-platform programmeertaal. We kunnen Kotlin vergelijken met Java, gebruikt bij desktop- en mobiele applicaties. Kotlin zou namelijk gebaseerd zijn op Java. Maar we kunnen ook gaan kijken naar specifiek bestaande cross-platform methodes zoals Xamarin, React, Angular, Titanium, ... Ervaren we sterke verschillen tussen deze programmeertalen? Hoe is het hergebruik van code bij Kotlin? Hoe is de toegang tot hardware van de verschillende platformen? Allemaal vragen die we aan de hand van theoretische en praktische testen kunnen beantwoorden.
+
+%---------- Verwachte resultaten ----------------------------------------------
+\section{Verwachte resultaten}
+\label{sec:verwachte_resultaten}
+Enerzijds denk ik uit mijn resultaten te kunnen besluiten wat de eigenschappen zijn van een goede cross-platform programmeertaal. Dit is noodzakelijk om mijn onderzoek goed te kunnen uitvoeren.
+\newline
+\newline
+Anderzijds verwacht ik uit mijn resultaten de conclusie te kunnen trekken dat Kotlin zowel voor mobiele, desktop- en webapplicaties uitermate geschikt zal zijn. Voor het gebruik van Kotlin op Apple toestellen zal het waarschijnlijk nog te vroeg zijn. Kotlin is nog niet compileerbaar naar Swift, tenzij dat Kotlin Native de komende maanden wordt uitgebracht.
+
+%---------- Verwachte conclusies ----------------------------------------------
+\section{Verwachte conclusies}
+\label{sec:verwachte_conclusies}
+Uit dit onderzoek verwacht ik te kunnen concluderen dat Kotlin meer dan geschikt is als cross-platform programmeertaal. Dit aangezien Kotlin volledig ondersteund wordt door Google wat betreft de ontwikkeling van Android applicaties. Er wordt reeds gewerkt aan Kotlin Native. Ook zou het reeds mogelijk zijn om Kotlin te gebruiken om een webapplicatie uit te werken. Maar natuurlijk, Kotlin is een nieuwe taal, waar nog veel aan gesleuteld zal moeten worden. De toekomst ziet er enkel maar veel belovend uit. De kans is groot dat een groot aantal programmeurs zal overschakelen naar deze taal. Kotlin heeft zeker en vast de kracht om programmeurs, die al jaren in dit vak zitten en zich hebben vastgehecht aan een bepaalde programmeertaal, mee te slepen in het Kotlin-avontuur
+
+%------------------------------------------------------------------------------
+% Referentielijst
+%------------------------------------------------------------------------------
+% TODO: de gerefereerde werken moeten in BibTeX-bestand ``biblio.bib''
+% voorkomen. Gebruik JabRef om je bibliografie bij te houden en vergeet niet
+% om compatibiliteit met Biber/BibLaTeX aan te zetten (File > Switch to
+% BibLaTeX mode)
+
+\phantomsection
+\printbibliography[heading=bibintoc]
+\nocite{SSDK}
+\nocite{Kotlin}
+
+
+\end{document}
