@@ -26,7 +26,7 @@
 \newcommand{\instelling}{Endare}
 
 % De titel van het rapport/bachelorproef
-\newcommand{\titel}{Kotlin als cross-platform programmeertaal}
+\newcommand{\titel}{Kotlin Native, het nieuwe cross-platform framework voor de mobiele omgeving}
 
 % Datum van indienen (gebruik telkens de deadline, ook al geef je eerder af)
 \newcommand{\datum}{28 mei 2018}
@@ -91,8 +91,8 @@
 % vormen. De structuur en titels hangen af van je eigen onderzoek. Je kan bv.
 % elke fase in je onderzoek in een apart hoofdstuk bespreken.
 
-%\input{...}
-%\input{...}
+\input{compiler}
+\input{kotlinnative}
 %...
 
 \input{conclusie}
@@ -110,15 +110,16 @@
 Het onderwerp van deze bachelorproef is gebaseerd op een onderzoeksvoorstel dat vooraf werd beoordeeld door de promotor. Dat voorstel is opgenomen in deze bijlage.
 
 % Verwijzing naar het bestand met de inhoud van het onderzoeksvoorstel
-\input{voorstel}
+\input{voorstel/naam_voornaam_voorstel}
 
 %%---------- Andere bijlagen --------------------------------------------------
 % TODO: Voeg hier eventuele andere bijlagen toe
 %\input{...}
 
 %%---------- Referentielijst --------------------------------------------------
-
+\nocite{*}
 \printbibliography[heading=bibintoc]
+
 %\addcontentsline{toc}{chapter}{\textcolor{maincolor}{\IfLanguageName{dutch}{Bibliografie}{Bibliography}}}
 
 \end{document}

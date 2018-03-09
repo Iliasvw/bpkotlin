@@ -21,26 +21,45 @@
  De ontwikkeling van mobiele applicaties is een zeer belangrijke niche in de IT. Zo kunnen we drie verschillende besturingssystemen onderscheiden bij mobiele applicaties: Android, iOS en Windows. Die laatste wordt steeds minder en minder gebruikt. Volgens een artikel van \textcite{Statista2018}, een portaal voor statistieken en onderzoek, heeft Android een marktaandeel van 85\%. Dit wil dus zeggen dat 85\% van de mensen die een smartphone heeft, een toestel is met Android. 
  \newline
  \newline
- De mobiele applicaties die draaien op Android werden allemaal geschreven in Java. Maar sinds kort is er een nieuwe mogelijkheid, Kotlin.
- \newline
- Kotlin is een programmeertaal die ontworpen is door JetBrains in 2011. Sinds 2017 biedt Google volledige ondersteuning om Android applicaties te programmeren in Kotlin. 
+ De mobiele applicaties die draaien op Android werden allemaal geschreven in Java. Maar sinds kort is er een nieuwe mogelijkheid, Kotlin. Kotlin is een programmeertaal die ontworpen is door JetBrains in 2011. Sinds 2017 biedt Google volledige ondersteuning om Android applicaties te programmeren in Kotlin. 
 
 \section{Probleemstelling}
 \label{sec:probleemstelling}
-Vanuit dit onderzoek zal blijken hoe goed Kotlin is als cross-platform ontwikkelingstaal en wat de mogelijkheden zijn van Kotlin om te programmeren voor verschillende platformen. Deze vraag kwam vanuit mijn stagebedrijf (Endare BVBA). Een developer bij Endare is reeds bezig met het aanleren van Kotlin en heeft reeds enkele Android projecten gedaan met Kotlin. Bij Endare wordt er zeer veel aan cross-platform ontwikkeling gedaan. Er worden maar weinig native applicaties gebouwd. Zo gebruiken ze Angular in combinatie met Ionic framework, React Native en heel af en toe eens Xamarin. Daarom is het belangrijk om te kijken of Kotlin een mogelijkheid biedt tot een nieuwe cross-platform programmeertaal.
+Vanuit dit onderzoek zal blijken hoe goed Kotlin is als cross-platform ontwikkelingstaal en wat de mogelijkheden zijn van Kotlin om te programmeren voor verschillende platformen. Deze vraag kwam vanuit mijn stagebedrijf (Endare BVBA). Een developer bij Endare is reeds bezig met het aanleren van Kotlin en heeft reeds enkele Android projecten gedaan met Kotlin. Bij Endare wordt er zeer veel aan cross-platform ontwikkeling gedaan. Zo heeft een mede-stagiair tijdens zijn stage bij Endare gewerkt met React Native. Een framework waarbij je via één codebase native applicaties kan schrijven voor iOS en Android. Tegenwoordig worden worden er nog maar weinig native applicaties gebouwd. Waarom? Voor veel bedrijven zijn native applicaties een zéér hoge kost. Je hebt enerzijds twee keer een kost om de applicaties te bouwen, anderszijds heb je twee keer een kost om de applicaties te onderhouden of eventueel uit te breiden. 
+\newline
+\newline
+Tegenwoordig heb je meer dan genoeg keuze om hybride applicaties te maken. Zo is er:
+\begin{itemize}
+	\item Ionic
+	\item Cordova
+	\item React Native
+	\item Xamarin
+\end{itemize}
+En ga zo maar door... Met Kotlin Native komt er een nieuw framework zich aanbieden. Dit framework is nog zeer jong en er bestaat bijna geen documentatie. Ontwikkelaars die dit framework willen gebruiken moeten momenteel zelf de werking van Kotlin Native proberen achterhalen. Daarom is het belangrijk om te bestuderen of Kotlin een mogelijkheid biedt tot een nieuwe cross-platform programmeertaal, hoe de compiler van Kotlin ervoor kan zorgen dat het op meerdere platformen kan draaien en hoe men nu juist gebruik kan maken van Kotlin Native. 
+\newline
+\newline
+Voor het stagebedrijf, Endare, heeft deze bachelorproef een grote meerwaarde aangezien zij iedere dag met cross-platform frameworks aan de slag moeten.
 
 %Uit je probleemstelling moet duidelijk zijn dat je onderzoek een meerwaarde heeft voor een concrete doelgroep. De doelgroep moet goed gedefinieerd en afgelijnd zijn. Doelgroepen als ``bedrijven,'' ``KMO's,'' systeembeheerders, enz.~zijn nog te vaag. Als je een lijstje kan maken van de personen/organisaties die een meerwaarde zullen vinden in deze bachelorproef (dit is eigenlijk je steekproefkader), dan is dat een indicatie dat de doelgroep goed gedefinieerd is. Dit kan een enkel bedrijf zijn of zelfs één persoon (je co-promotor/opdrachtgever).
 
 \section{Onderzoeksvraag}
 \label{sec:onderzoeksvraag}
-Mijn onderzoeksvraag is dus: In hoeverre kan Kotlin gebruikt worden voor cross-platform applicatieontwikkeling?
+De onderzoeksvragen voor deze bachelorproef zijn: 
+\begin{itemize}
+	\item Hoe zorgt de Kotlin compiler ervoor dat Kotlin op verschillende platformen kan gebruikt worden?
+	\item Wat is de werking van Kotlin Native?
+	\item In hoeverre kan Kotlin gebruikt worden voor cross-platform applicatieontwikkeling?
+\end{itemize}
 %Wees zo concreet mogelijk bij het formuleren van je onderzoeksvraag. Een onderzoeksvraag is trouwens iets waar nog niemand op dit moment een antwoord heeft (voor zover je kan nagaan). Het opzoeken van bestaande informatie (bv. ``welke tools bestaan er voor deze toepassing?'') is dus geen onderzoeksvraag. Je kan de onderzoeksvraag verder specifiëren in deelvragen. Bv.~als je onderzoek gaat over performantiemetingen, dan 
 
 \section{Onderzoeksdoelstelling}
 \label{sec:onderzoeksdoelstelling}
-De criteria voor succes van deze bachelorproef zijn enerzijds een overzicht kunnen geven van de belangrijkste criteria van een cross-platform programmeertaal.
-
-Anderzijds een succesvolle proof-of-concept kunnen opstellen waarin de huidige cross-platform mogelijkheden van Kotlin worden verduidelijkt.
+Voor deze bachelorproef zijn er verschillende criteria van succes:
+\begin{itemize}
+	\item De werking van de Kotlin compiler documenteren
+	\item Goede documentatie opstellen over de werking van Kotlin Native
+	\item Bepalen in hoeverre Kotlin gebruikt kan worden als cross-platform programmeertaal
+\end{itemize}
 %Wat is het beoogde resultaat van je bachelorproef? Wat zijn de criteria voor succes? Beschrijf die zo concreet mogelijk.
 
 \section{Opzet van deze bachelorproef}
@@ -55,11 +74,9 @@ In Hoofdstuk~\ref{ch:stand-van-zaken} wordt een overzicht gegeven van de stand v
 
 In Hoofdstuk~\ref{ch:methodologie} wordt de methodologie toegelicht en worden de gebruikte onderzoekstechnieken besproken om een antwoord te kunnen formuleren op de onderzoeksvragen.
 
-REFERENTIES AANPASSEN!
+In Hoofdstuk~\ref{ch:compiler} zal onderzocht worden, via een literatuurstudie, wat de werking is van de Kotlin compiler. Hoe ervoor kan gezorgd worden dat Kotlin ook op apparaten zonder een JVM kan draaien.
 
-In Hoofdstuk~\ref{ch:stand-van-zaken} zal onderzocht worden, via een literatuurstudie, wat de belangrijkste criteria zijn voor een cross-platform programmeertaal en in hoever Kotlin aan deze criteria voldoet. 
-
-In Hoofdstuk~\ref{ch:methodologie} zal ik een kleine proof-of-concept maken waarmee ik zal kunnen duidelijk maken hoe Kotlin er momenteel voor staat bij cross-platform development.
+In Hoofdstuk~\ref{ch:kotlinnative} zal Kotlin Native bestudeerd worden. Hierin zal de werking van Kotlin Native gedocumenteerd worden.
 
 In Hoofdstuk~\ref{ch:conclusie}, tenslotte, wordt de conclusie gegeven en een antwoord geformuleerd op de onderzoeksvragen. Daarbij wordt ook een aanzet gegeven voor toekomstig onderzoek binnen dit domein.
 

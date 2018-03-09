@@ -1,0 +1,149 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{apa/global/}
+    \entry{Cons}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=f4ecd803e56379b32e0ece8d96811f1f}{%
+           family={AJ},
+           familyi={A\bibinitperiod},
+           given={Alt},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{f4ecd803e56379b32e0ece8d96811f1f}
+      \strng{fullhash}{f4ecd803e56379b32e0ece8d96811f1f}
+      \strng{authornamehash}{f4ecd803e56379b32e0ece8d96811f1f}
+      \strng{authorfullhash}{f4ecd803e56379b32e0ece8d96811f1f}
+      \field{sortinit}{A}
+      \field{sortinithash}{3248043b5fe8d0a34dab5ab6b8d4309b}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://medium.com/keepsafe-engineering/kotlin-the-good-the-bad-and-the-ugly-bf5f09b87e6f}}
+      \field{title}{Why you shouldn't switch to Kotlin}
+      \field{year}{2016}
+    \endentry
+    \entry{dzone}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=215aa7998e5118eec9e29a1d7fe66341}{%
+           family={DZone},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{215aa7998e5118eec9e29a1d7fe66341}
+      \strng{fullhash}{215aa7998e5118eec9e29a1d7fe66341}
+      \strng{authornamehash}{215aa7998e5118eec9e29a1d7fe66341}
+      \strng{authorfullhash}{215aa7998e5118eec9e29a1d7fe66341}
+      \field{sortinit}{D}
+      \field{sortinithash}{d10b5413de1f3d197b20897dd0d565bb}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://dzone.com/articles/kotlin-for-cross-platform-mobile-app-development}}
+      \field{title}{Kotlin and cross-platform}
+      \field{year}{2015}
+    \endentry
+    \entry{SSDK}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=b6a77f3f5bead76a495a90d63703e1f9}{%
+           family={JetBrains},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{fullhash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{authornamehash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{authorfullhash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \field{sortinit}{J}
+      \field{sortinithash}{c86bd6cced82a15683b396c2169909ef}
+      \field{extrayear}{1}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://kotlinlang.org/docs/reference/server-overview.html}}
+      \field{title}{Kotlin for server-side development}
+      \field{year}{2017}
+    \endentry
+    \entry{Kotlin}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=b6a77f3f5bead76a495a90d63703e1f9}{%
+           family={JetBrains},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{fullhash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{authornamehash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{authorfullhash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \field{sortinit}{J}
+      \field{sortinithash}{c86bd6cced82a15683b396c2169909ef}
+      \field{extrayear}{2}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://kotlinlang.org/docs/reference/faq.html}}
+      \field{title}{Kotlin official website FAQ}
+      \field{year}{2017}
+    \endentry
+    \entry{KotlinNative}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=b6a77f3f5bead76a495a90d63703e1f9}{%
+           family={JetBrains},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{fullhash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{authornamehash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{authorfullhash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \field{sortinit}{J}
+      \field{sortinithash}{c86bd6cced82a15683b396c2169909ef}
+      \field{extrayear}{3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://kotlinlang.org/docs/reference/native-overview.html}}
+      \field{title}{Kotlin official website, Kotlin Native}
+      \field{year}{2017}
+    \endentry
+    \entry{Pros}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=2869a2263c40623a83ab552aedb1794f}{%
+           family={Magnus},
+           familyi={M\bibinitperiod},
+           given={Vinther},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{2869a2263c40623a83ab552aedb1794f}
+      \strng{fullhash}{2869a2263c40623a83ab552aedb1794f}
+      \strng{authornamehash}{2869a2263c40623a83ab552aedb1794f}
+      \strng{authorfullhash}{2869a2263c40623a83ab552aedb1794f}
+      \field{sortinit}{M}
+      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://medium.com/@magnus.chatt/why-you-should-totally-switch-to-kotlin-c7bbde9e10d5}}
+      \field{title}{Switch to Kotlin}
+      \field{year}{2017}
+    \endentry
+  \endsortlist
+\endrefsection
+\endinput
+

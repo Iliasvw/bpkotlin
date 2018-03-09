@@ -1,0 +1,87 @@
+	\section{Introductie} % The \section*{} command stops section numbering
+	\label{sec:introductie}
+	%Hier introduceer je werk. Je hoeft hier nog niet te technisch te gaan.
+	%
+	%Je beschrijft zeker:
+	%
+	%\begin{itemize}
+	%	\item de probleemstelling en context
+	%	\item de motivatie en relevantie voor het onderzoek
+	%	\item de doelstelling en onderzoeksvraag/-vragen
+	%\end{itemize}
+	
+	Maar wat betekent nu cross-platform? Met cross-platform bedoelt men een systeem/software dat op verschillende platformen en/of besturingssystemen kan draaien. Er zijn al heel wat cross-platform frameworks op de markt. Denk maar aan Xamarin, React Native, Angular in combinatie met het Ionic framework. Momenteel is JetBrains bezig met het ontwikkelen van Kotlin Native waarmee het zou mogelijk zijn om zowel voor web, dekstop als voor mobile (Android, iOS) te ontwikkelen.
+	\newline
+	\newline
+	Kotlin is voor vele programmeurs nieuw. Sinds dit jaar biedt Google volledige ondersteuning voor het gebruik van Kotlin bij Android applicatieontwikkeling. Maar het gaat nog veel verder. JetBrains, de ontwikkelaars van Kotlin, werkt momenteel aan Kotlin Native, het framework dat moet zorgen voor cross-platform ontwikkeling. Maar Kotlin Native is nog heel jong. De huige versie is 0.6 en er bestaat nog maar weinig documentatie rond Kotlin Native. Het probleem echter bij dit framework is dus momenteel dat er heel weinig documentatie en programmeurs dus zelf moeten ontdekken hoe alles momenteel werkt. Dit kan via conferences, voorbeeldprojecten of youtube (kanaal van JetBrains). Maar wat zijn nu de mogelijkheden van Kotlin Native? Zijn er beperkingen? Hoe wordt de GUI opgebouwd? Hoe werkt LLVM, de compiler die alle code omzet naar machinetaal die op elk platform en/of besturingssysteem kan draaien en dus zonder het gebruik van de Java Virtual Machine?
+	
+	%---------- Stand van zaken ---------------------------------------------------
+	
+	\section{State-of-the-art}
+	\label{sec:state-of-the-art}
+	Kotlin, de nieuwe programmeertaal. In 2011 voor het eerst aangekondigd door JetBrains. Zes jaar later biedt Google volledige ondersteuning voor Android applicatieontwikkeling. De voorbije jaren was er nog maar weinig bekend rond Kotlin. Er waren zo goed als geen boeken of andere literatuur op de markt. Hier is het laatste jaar verandering in gekomen. Er worden steeds meer en meer boeken geplubliceerd. 
+	\newline
+	\newline
+	Op het internet zijn er reeds enkele reviews, onderzoeken en boeken beschikbaar. Hierin wordt er verteld waarom men juist wel of niet voor Kotlin moet kiezen. Zo vindt je her en der ook wel eens een vergelijkende studie tussen Java en Kotlin, maar meestal zijn deze niet zo sterk uitgewerkt.
+	\newline
+	\newline
+	Echter is er op het internet een studie beschikbaar \autocite{Pros}, die aangeeft waarom programmeurs Kotlin écht moeten gebruiken. Hieruit blijkt dat Kotlin volledig compatibel zou zijn met Java. Bestaande projecten die geschreven zijn in Java, kunnen dus zonder enig probleem verdergezet worden in Kotlin, dit noemt men de automigration. Bestaande Java frameworks kan men verder gebruiken indien men wenst te programmeren in Kotlin. De taal zou makkelijk te begrijpen zijn voor iedereen die ervaring heeft met OOP (Object-Oriented Programming). Volgens ontwikkelaars die ervaring hebben met Swift 4 zou Kotlin bijna een kopie zijn van Swift 4. Voorbeelden hiervan zijn: geen puntkomma's om de regels af te sluiten en declaratie van variabelen gebeurd op identieke manier.
+	\begin{lstlisting}
+	var number: Integer = 5
+	var text: String = "text"
+	\end{lstlisting}
+	Bovenstaande code toont beide voorbeelden aan.
+	\newline
+	\newline
+	Een andere studie \autocite{Cons}, beschrijft dan de nadelen van Kotlin. Kotlin zou geen gebruik maken van namespaces. De static modifier zou verdwenen zijn, maar een alternatieve manier is dan weer mogelijk via @JvmField. Het compileren van projecten in Android Studio zou veel tijd in beslag nemen en het gebruik van annotations zou nog niet volledig geoptimaliseerd zijn. Zo blijkt dat er toch nog wat werk is aan Kotlin. We zitten dan ook nog maar aan versie 1.2. 
+	\newline
+	\newline
+	Wat betreft het gebruik van Kotlin als cross-platform programmeertaal \autocite{dzone}, wordt er sterk gewerkt aan Kotlin Native. Momenteel is dit nog in development, JetBrains zelf biedt reeds enkele projecten aan waar ontwikkelaars met de slag kunnen. Zo geven ze de programmeurs de mogelijkheid om reeds kennis te maken met de werking van Kotlin Native ook al is er nog geen documentatie over dit framework. Er is echter ook een kleine tutorial op de website van JetBrains aanwezig om een simpele applicatie te bouwen die 'Hello World' op het scherm print.
+	\newline
+	\newline
+	Op het internet zijn er voldoende bronnen te vinden om applicaties te bouwen met Kotlin voor één platform. Dit kan gaan over een webapplicatie die gebruik maakt van het Spring framework, waarbij Spring gebruik maakt van de taalfeatures van Kotlin. Wat Android betreft kan men gewoon in Android Studio een applicatie geschreven in Android converteren naar Kotlin. Tenslotte is er de mogelijkheid om voor een desktopapplicatie, KotlinFX te gebruiken. KotlinFX is een library die dezelfde functionaliteit biedt als JavaFX, een library om interfaces te bouwen.
+	\newline
+	\newline
+	Zoals te lezen is, is er op het internet voldoende informatie te vinden om applicaties te bouwen voor één platform. Maar is het nu ook mogelijk om via één codebase verschillende platformen aan te spreken? Kan je door het eenmalig schrijven van code, een applicatie ontwikkelen die zowel op Android als op iOS kan draaien? Dit is het grote verschil met mijn onderzoek.
+	
+	% Voor literatuurverwijzingen zijn er twee belangrijke commando's:
+	% \autocite{KEY} => (Auteur, jaartal) Gebruik dit als de naam van de auteur
+	%   geen onderdeel is van de zin.
+	% \textcite{KEY} => Auteur (jaartal)  Gebruik dit als de auteursnaam wel een
+	%   functie heeft in de zin (bv. ``Uit onderzoek door Doll & Hill (1954) bleek
+	%   ...'')
+	
+	%Je mag gerust gebruik maken van subsecties in dit onderdeel.
+	
+	%---------- Methodologie ------------------------------------------------------
+	\section{Methodologie}
+	\label{sec:methodologie}
+	Vooraleer er aan de slag wordt gegaan met het uittesten van Kotlin Native, of het analyseren van voorbeeldprojecten van JetBrains, is het belangrijk om te onderzoeken hoe het nu komt dat Kotlin Native op verschillende platformen kan draaien. Kotlin is oorspronkelijk, net zoals Java, een programmeertaal die gebruik maakt van de Java Virtual Machine. Het zal daarom dus belangrijk zijn om te onderzoeken waarop Kotlin Native draait, wat de taak is van de LLVM compiler. Dit zal gebeuren aan de hand van een literatuurstudie.
+	\newline
+	\newline
+	Daarna worden de voorbeeldprojecten van JetBrains, geschreven in Kotlin Native, geanalyseerd om de werking van Kotlin Native te achterhalen. De bedoeling is om te kijken naar bepaalde aspecten. Hoe wordt de user interface opgebouwd, wordt er per platform een UI opgebouwd of is er slechts één UI? Hoe kunnen specifieke native modules gebruikt worden? 
+	\newline
+	\newline
+	Eenmaal de werking van Kotlin Native duidelijk is en voldoende gedocumenteerd is, is het het doel om zelf aan de slag te gaan met Kotlin Native en een kleine cross-platform applicatie te schrijven.
+	
+	%---------- Verwachte resultaten ----------------------------------------------
+	\section{Verwachte resultaten}
+	\label{sec:verwachte_resultaten}
+	Ten eerste wordt verwacht om uit de literatuurstudie te kunnen besluiten wat de werking is van de LLVM compiler. Hierdoor is het duidelijk hoe Kotlin Native er voor zorgt dat Kotlin voor verschillende platformen kan gebruikt worden.
+	\newline
+	\newline
+	Anderzijds wordt een zeer duidelijke documentatie verwacht over de werking van Kotlin Native zodat mensen die geïnteresseerd zijn om Kotlin Native in de toekomst te gebruiken deze documentatie kunnen gebruiken. 
+	
+	%---------- Verwachte conclusies ----------------------------------------------
+	\section{Verwachte conclusies}
+	\label{sec:verwachte_conclusies}
+	Uit dit onderzoek verwacht ik te kunnen concluderen dat Kotlin meer dan geschikt is als cross-platform programmeertaal. Dit aangezien Kotlin volledig ondersteund wordt door Google wat betreft de ontwikkeling van Android applicaties. Er wordt nog steeds verder gebouwd aan Kotlin Native. Maar natuurlijk, Kotlin is een nieuwe taal, waar nog veel aan gesleuteld zal moeten worden. De toekomst ziet er enkel maar veel belovend uit. De kans is groot dat een groot aantal programmeurs zal overschakelen naar deze taal. Kotlin heeft zeker en vast de kracht om programmeurs, die al jaren in dit vak zitten en zich hebben vastgehecht aan een bepaalde programmeertaal, mee te slepen in het Kotlin-avontuur. Ook voor Swift programmeurs zal de aanpassing naar Kotlin niet groot zijn wegens de grote gelijkenissen tussen de twee programmeertalen.
+	
+	%------------------------------------------------------------------------------
+	% Referentielijst
+	%------------------------------------------------------------------------------
+	% TODO: de gerefereerde werken moeten in BibTeX-bestand ``biblio.bib''
+	% voorkomen. Gebruik JabRef om je bibliografie bij te houden en vergeet niet
+	% om compatibiliteit met Biber/BibLaTeX aan te zetten (File > Switch to
+	% BibLaTeX mode)
+
