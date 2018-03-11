@@ -4,12 +4,37 @@
 
 \chapter{De compilatie van Kotlin Native}
 \label{ch:compiler}
+Kotlin is een programmeertaal die gebruik maakt van de JVM. Sinds de beslissing van JetBrains om zich ook te focussen op cross-platform development, moesten ze met een oplossing komen voor de JVM. De JVM wordt namelijk niet ondersteund op alle besturingssystemen. Zo ondersteunen bijvoorbeeld MacOS en iOS (mobile) geen JVM. JetBrains moest dus op zoek gaan naar een oplossing... de LLVM compiler.
 
-%% TODO: Hoe ben je te werk gegaan? Verdeel je onderzoek in grote fasen, en
-%% licht in elke fase toe welke stappen je gevolgd hebt. Verantwoord waarom je
-%% op deze manier te werk gegaan bent. Je moet kunnen aantonen dat je de best
-%% mogelijke manier toegepast hebt om een antwoord te vinden op de
-%% onderzoeksvraag.
+\section{Wat is LLVM?}
+Het LLVM-project is een verzameling modulaire en herbruikbare compiler- en toolchaintechnologieën. Het project is ontwikkeld door de LLVM developer group, waarvan Vikram Adve en Chris Lattner de originele ontwikkelaars zijn. Ondanks de naam heeft LLVM weinig te maken met traditionele virtuele machines. De naam 'LLVM' zelf is geen acroniem, het is de volledige naam van het project.
 
-\lipsum[21-25]
+Het LLVM-project begon als een onderzoeksproject aan de universiteit van Illinois, met als doel een compilatiestrategie aan te bieden die in staat is om zowel statische als dynamische compilatie van programmeertalen aan te bieden. Een voorbeeld van een statische taal is Java, een voorbeeld van een dynamische taal is Javascript. Zowel beide types van programmeertalen kunnen dus gecompileerd worden door LLVM.
+
+Sinds het ontstaan van LLVM is het project uitgegroeid tot een overkoepelend project dat bestaat uit een aantal deelprojecten. Veel van deze deelprojecten worden momenteel sterk gebruikt bij commerciele en open-source projecten en zelfs in academisch onderzoek.
+
+Het grote voordeel van het gebruik van LLVM is de veelzijdigheid, flexibiliteit en herbruikbaarheid. Dit wil zeggen dat het zo goed als in ieder soort project kan worden geintegreerd. Het wordt daarom tegenwoordig gebruikt voor een groot aantal verschillende taken, dit gaande van het compileren van enkele klein code-projecten tot het compileren van code voor massieve computers.
+
+\subsection{Deelprojecten LLVM}
+Enkele voorbeelden van deelprojecten van de LLVM developers group:
+\begin{itemize}
+	\item \textbf{Clang} is een LLVM native C/C++/Objective-C compiler dat als doel heeft om verbazingwekkend snelle compilaties aan te bieden. Het zorgt overigens voor nuttige fout- en waarschuwingsberichten.
+	\newline
+	\item Het \textbf{LLDB} project bouwt verder op libraries die aangeboden worden door LLVM en Clang om te zorgen voor een native debugger.
+	\newline
+	\item Het \textbf{libc++} en \textbf{libc++ ABI} project voorziet een krachtige implementatie van de standaard C++ bibliotheek, met ondersteuning voor C++11. 
+\end{itemize}
+
+URL: https://llvm.org/
+
+\section{De werking van LLVM}
+URL: http://www.informit.com/articles/article.aspx?p=1215438
+
+http://www.aosabook.org/en/llvm.html
+
+https://www.ibm.com/developerworks/library/os-createcompilerllvm1/
+
+\section{LLVM en Kotlin}
+
+\section{LLVM en Java}
 
