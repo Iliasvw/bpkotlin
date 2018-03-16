@@ -129,31 +129,55 @@
       \verb https://www.avantica.net/blog/what-is-kotlin-and-how-did-we-get-here
       \endverb
     \endentry
-    \entry{Creeger2009}{article}{}
+    \entry{Informit}{misc}{}
       \name{author}{1}{}{%
-        {{uniquename=0,hash=e888aba3556efbb8063540e3e2ae69b4}{%
-           family={Creeger},
+        {{uniquename=0,hash=daed1937c489ce8feb27f6838641fcab}{%
+           family={Chisnall},
            familyi={C\bibinitperiod},
-           given={Mache},
-           giveni={M\bibinitperiod}}}%
+           given={David},
+           giveni={D\bibinitperiod}}}%
       }
-      \strng{namehash}{e888aba3556efbb8063540e3e2ae69b4}
-      \strng{fullhash}{e888aba3556efbb8063540e3e2ae69b4}
-      \strng{authornamehash}{e888aba3556efbb8063540e3e2ae69b4}
-      \strng{authorfullhash}{e888aba3556efbb8063540e3e2ae69b4}
+      \strng{namehash}{daed1937c489ce8feb27f6838641fcab}
+      \strng{fullhash}{daed1937c489ce8feb27f6838641fcab}
+      \strng{authornamehash}{daed1937c489ce8feb27f6838641fcab}
+      \strng{authorfullhash}{daed1937c489ce8feb27f6838641fcab}
       \field{sortinit}{C}
       \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
       \field{labeldatesource}{year}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Communications of the ACM}
-      \field{number}{8}
-      \field{title}{{CTO Roundtable: Cloud Computing}}
-      \field{volume}{52}
-      \field{year}{2009}
-      \field{pages}{50\bibrangedash 56}
-      \range{pages}{7}
+      \field{title}{How the LLVM Compiler Infrastructure Works}
+      \field{year}{2008}
+      \verb{url}
+      \verb http://www.informit.com/articles/article.aspx?p=1215438
+      \endverb
+    \endentry
+    \entry{LLVM}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=125bc0ef9981222e2c15e430e45f26c4}{%
+           family={group},
+           familyi={g\bibinitperiod},
+           given={LLVM},
+           giveni={L\bibinitperiod},
+           prefix={developer},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{125bc0ef9981222e2c15e430e45f26c4}
+      \strng{fullhash}{125bc0ef9981222e2c15e430e45f26c4}
+      \strng{authornamehash}{125bc0ef9981222e2c15e430e45f26c4}
+      \strng{authorfullhash}{125bc0ef9981222e2c15e430e45f26c4}
+      \field{sortinit}{d}
+      \field{sortinithash}{d10b5413de1f3d197b20897dd0d565bb}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{LLVM}
+      \field{year}{2018}
+      \verb{url}
+      \verb https://llvm.org/
+      \endverb
     \endentry
     \entry{JetBrains12}{misc}{}
       \name{author}{1}{}{%
@@ -196,6 +220,18 @@
       \field{howpublished}{\url{https://dzone.com/articles/kotlin-for-cross-platform-mobile-app-development}}
       \field{title}{Kotlin and cross-platform}
       \field{year}{2015}
+    \endentry
+    \entry{Statista2018}{article}{}
+      \field{sortinit}{G}
+      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statista}
+      \field{title}{{Global mobile OS market share in sales to end users from 1st quarter 2009 to 2nd quarter 2017}}
+      \field{year}{2018}
+      \verb{url}
+      \verb https://www.statista.com/statistics/266136/global-market-share-held-by-smartphone-operating-systems/
+      \endverb
     \endentry
     \entry{SSDK}{misc}{}
       \name{author}{1}{}{%
@@ -301,32 +337,28 @@
       \verb https://kotlinlang.org/docs/reference/server-overview.html
       \endverb
     \endentry
-    \entry{Knuth1998}{book}{}
+    \entry{aosa}{misc}{}
       \name{author}{1}{}{%
-        {{uniquename=0,hash=fcbea740aeb72b8e941e0d4aa9f6a9c6}{%
-           family={Knuth},
-           familyi={K\bibinitperiod},
-           given={Donald\bibnamedelima E.},
-           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{uniquename=0,hash=082d304bf1444853e07be11590d172a2}{%
+           family={Lattner},
+           familyi={L\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
       }
-      \list{location}{1}{%
-        {Redwood City, CA, USA}%
-      }
-      \list{publisher}{1}{%
-        {Addison Wesley Longman Publishing Co., Inc.}%
-      }
-      \strng{namehash}{fcbea740aeb72b8e941e0d4aa9f6a9c6}
-      \strng{fullhash}{fcbea740aeb72b8e941e0d4aa9f6a9c6}
-      \strng{authornamehash}{fcbea740aeb72b8e941e0d4aa9f6a9c6}
-      \strng{authorfullhash}{fcbea740aeb72b8e941e0d4aa9f6a9c6}
-      \field{sortinit}{K}
-      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
-      \field{labeldatesource}{year}
+      \strng{namehash}{082d304bf1444853e07be11590d172a2}
+      \strng{fullhash}{082d304bf1444853e07be11590d172a2}
+      \strng{authornamehash}{082d304bf1444853e07be11590d172a2}
+      \strng{authorfullhash}{082d304bf1444853e07be11590d172a2}
+      \field{sortinit}{L}
+      \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
+      \field{labeldatesource}{nodate}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{The art of computer programming, volume 3: (2nd ed.) sorting and searching}
-      \field{year}{1998}
+      \field{title}{The architecture of Open Source Applications}
+      \verb{url}
+      \verb http://www.aosabook.org/en/llvm.html
+      \endverb
     \endentry
     \entry{Pros}{misc}{}
       \name{author}{1}{}{%
@@ -350,41 +382,17 @@
       \field{title}{Switch to Kotlin}
       \field{year}{2017}
     \endentry
-    \entry{Statista2018}{article}{}
-      \field{sortinit}{M}
-      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+    \entry{JetBrainsNeedKotlin}{article}{}
+      \field{sortinit}{W}
+      \field{sortinithash}{6d25b3eefe5aa2147d1f339686808918}
       \field{labeldatesource}{year}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Statista}
-      \field{title}{{Market share worldwide smartphone shipments by operating system from 2014 to 2021}}
-      \field{year}{2018}
-    \endentry
-    \entry{Pollefliet2011}{book}{}
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=7ca343ebcc6de1727ac22a1a847c21e5}{%
-           family={Pollefliet},
-           familyi={P\bibinitperiod},
-           given={Leen},
-           giveni={L\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Gent}%
-      }
-      \list{publisher}{1}{%
-        {Academia Press}%
-      }
-      \strng{namehash}{7ca343ebcc6de1727ac22a1a847c21e5}
-      \strng{fullhash}{7ca343ebcc6de1727ac22a1a847c21e5}
-      \strng{authornamehash}{7ca343ebcc6de1727ac22a1a847c21e5}
-      \strng{authorfullhash}{7ca343ebcc6de1727ac22a1a847c21e5}
-      \field{sortinit}{P}
-      \field{sortinithash}{24100cef455d7974167575052c29146e}
-      \field{labeldatesource}{year}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Schrijven van verslag tot eindwerk: do's en don'ts}
+      \field{journaltitle}{JetBrains}
+      \field{title}{Why JetBrains needs Kotlin}
       \field{year}{2011}
+      \verb{url}
+      \verb https://blog.jetbrains.com/kotlin/2011/08/why-jetbrains-needs-kotlin/
+      \endverb
     \endentry
   \endsortlist
 \endrefsection

@@ -7,7 +7,7 @@
 
 % Pas na deze inleidende paragraaf komt de eerste sectiehoofding.
 
-Dit hoofdstuk is een literatuurstudie over de huidige stand van zaken rond Kotlin. Hierin wordt bekeken wat Kotlin eigenlijk is, waarom Kotlin is uitgevonden. Daarna is Kotlin op verschillende platformen aan de beurt, meer specifieke is dit iOS, Android, web-applicatie en als back-end. Tenslotte het gebruik van Kotlin, hoeveel ontwikkelaars maken er reeds gebruik van Kotlin? Na het lezen van dit hoofdstuk bent u volledig op de hoogte van de laatste updates van Kotlin.
+Dit hoofdstuk is een literatuurstudie over de huidige stand van zaken rond Kotlin. Hierin wordt bekeken wat Kotlin eigenlijk is en waarom Kotlin is uitgevonden. Daarna is Kotlin op verschillende platformen aan de beurt, meer specifieke is dit iOS, Android, web-applicatie en als back-end. Tenslotte het gebruik van Kotlin, hoeveel ontwikkelaars maken er reeds gebruik van Kotlin? Na het lezen van dit hoofdstuk bent u volledig op de hoogte van met de laatste nieuwigheden rond Kotlin.
 
 \section{Wat is Kotlin}
 \label{sec:kotlin}
@@ -15,7 +15,7 @@ Kotlin is een open-source programmeertaal die object-georiënteerde en functione
 Javascript is een dynamically typed programmeertaal, waarbij je aan een variabele verschillende types kan toekennen. Zo kan een variabele bij Javascript in het begin een getal zijn, maar een beetje verder in de code kan dit veranderd worden naar een tekst.
 \newline
 \newline
-Kotlin is ontworpen door JetBrains. JetBrains is een organisatie afkomstig van Sint-Petersburg, Rusland. De naam 'Kotlin' is afkomstig van het Kotlin eiland, 30 km ten westen van Sint-Petersburg. JetBrains is een software ontwikkeling bedrijf dat gesticht is in het jaar 2000. Hun hoofdkantoor is gevestigd in Praag, Tjsechië. Hun core-business is het ontwikkelen van tools die gebruikt kunnen worden door verschillende types van software ontwikkelaars. Zo hebben zij IDE's\footnote{Integrated Development Environment} ontwikkeld voor Java, Ruby, Python, PHP, SQL, Objective-C, C++, C\# en JavaScript.
+Kotlin is ontworpen door JetBrains. JetBrains is een organisatie afkomstig van Sint-Petersburg, Rusland. De naam 'Kotlin' is afkomstig van het Kotlin eiland, 30 km ten westen van Sint-Petersburg. JetBrains is een software ontwikkelingbedrijf dat gesticht is in het jaar 2000. Hun hoofdkantoor is gevestigd in Praag, Tjsechië en hun core-business is het ontwikkelen van tools die gebruikt kunnen worden door verschillende types van software ontwikkelaars. Zo hebben zij IDE's\footnote{Integrated Development Environment} ontwikkeld voor Java, Ruby, Python, PHP, SQL, Objective-C, C++, C\# en JavaScript.
 
 \section{Kotlin en Android}
 \label{sec:kotlinandroid}
@@ -39,13 +39,11 @@ Kotlin-applicaties kunnen worden geïmplementeerd op elke host die Java-webappli
 
 \section{Kotlin Native}
 \label{sec:kotlinnative}
-Waarschijnlijk momenteel één van de meest nieuwe en innovatieve projecten van JetBrains is Kotlin Native. Momenteel is men gekomen aan versie 0.6 en er zijn al verschillende voorbeeldprojecten beschikbaar gesteld door JetBrains. Kotlin Native zou het mogelijk moeten om éénmalige business logica te schrijven in een applicatie en deze te delen over verschillende platformen, bijvoorbeeld Android en iOS. De user interfaces zou men wel per platform moeten opbouwen, waardoor je toch het native applicatie gevoel krijgt. Kotlin Native zou dus moeten instaan voor het cross-platform gebeuren.
-zie sectie \ref{sec:llvm}
-https://kotlinlang.org/docs/reference/native-overview.html
+Waarschijnlijk momenteel één van de meest nieuwe en innovatieve projecten van JetBrains is Kotlin Native. Momenteel is men gekomen aan versie 0.6 en er zijn al verschillende voorbeeldprojecten beschikbaar gesteld door JetBrains. Kotlin Native zou het mogelijk moeten om éénmalige business logica te schrijven in een applicatie en deze te delen over verschillende platformen, bijvoorbeeld Android en iOS. De user interfaces zou men wel per platform moeten opbouwen, waardoor je toch het 'native applicatie'-gevoel krijgt. Kotlin Native zou dus moeten instaan voor het cross-platform gebeuren. Kotlin Native maakt gebruik van een totaal andere compiler dan JVM, zie sectie \ref{sec:llvm} voor meer info.
 
 \section{Compiler}
 \label{sec:llvm}
-Net zoals Java draait Kotlin op de JVM. Dit wil dus zeggen dat alle toestellen die een JVM kunnen draaien, ook Kotlin code ondersteunen. Maar sinds dat JetBrains besloten heeft om zich niet enkel meer te richten op platformen die enkel en alleen de JVM ondersteunen, hebben zij ervoor gezorgd dat ongeacht welk platform of besturingssysteem je gebruikt, de Kotlin code wordt ondersteund. Dit komt door de speciale LLVM compiler die Kotlin Native gebruikt. Deze wordt in hoofdstuk \ref{ch:compiler} verder besproken.
+Net zoals Java draait Kotlin op de JVM. Dit wil dus zeggen dat alle toestellen die een JVM kunnen draaien, ook Kotlin code ondersteunen. Maar sinds de dag dat JetBrains besloten heeft om zich niet enkel meer te richten op platformen die enkel en alleen de JVM ondersteunen, hebben zij ervoor gezorgd dat ongeacht welk platform of besturingssysteem je gebruikt, de Kotlin code wordt ondersteund. Dit komt door de LLVM compiler die Kotlin Native gebruikt. Deze wordt in hoofdstuk \ref{ch:compiler} verder besproken.
 
 \section{Het gebruik van Kotlin}
 \label{sec:kotlingebruik}
@@ -78,6 +76,8 @@ Maar waarom heeft JetBrains nu besloten te beginnen met een nieuwe programmeerta
 Een verklaring die men vaak leest op het internet, is dat JetBrains Kotlin uitvond omdat ze niet tevreden waren met Java en hun eigen productiviteit wilden vergroten. Ze vonden dus Java in sommige aspecten 'slecht'. JetBrains is een ontwikkelaar van IDE's die geschreven worden in Java, en dit is waar het schoentje wringt. Aangezien ze zelf vinden dat Java gebreken heeft, moesten ze met een oplossing komen: Kotlin.
 
 Anderzijds het feit dat ze kiezen voor een taal die draait op de JVM, betekent dus dat men niet alle bestaande libraries willen herschrijven, maar hergebruiken.
+
+Op 2 augustus 2011 heeft JetBrains, in het jaar dat Kotlin bekend werd gemaakt, een artikel geschreven op hun blog \textcite{JetBrainsNeedKotlin} waarin Dmitry Jemerov, Kotlin tools team lead, uitlegt waarom JetBrains Kotlin heeft ontworpen. In die blogpost vindt men volgend zin terug: "We willen productiever worden door over te schakelen op een meer expressieve taal.". Ze geven dus duidelijk aan dat men productiever wil worden, maar wil men hiermee bevestigen dat men Java niet voldoende vindt?
 
 %Dit hoofdstuk bevat je literatuurstudie. De inhoud gaat verder op de inleiding, maar zal het onderwerp van de bachelorproef *diepgaand* uitspitten. De bedoeling is dat de lezer na lezing van dit hoofdstuk helemaal op de hoogte is van de huidige stand van zaken (state-of-the-art) in het onderzoeksdomein. Iemand die niet vertrouwd is met het onderwerp, weet er nu voldoende om de rest van het verhaal te kunnen volgen, zonder dat die er nog andere informatie moet over opzoeken \autocite{Pollefliet2011}.
 

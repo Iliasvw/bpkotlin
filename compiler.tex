@@ -7,13 +7,13 @@
 Kotlin is een programmeertaal die gebruik maakt van de JVM. Sinds de beslissing van JetBrains om zich ook te focussen op cross-platform development, moesten ze met een oplossing komen voor de JVM. De JVM wordt namelijk niet ondersteund op alle besturingssystemen. Zo ondersteunen bijvoorbeeld MacOS en iOS (mobile) geen JVM. JetBrains moest dus op zoek gaan naar een oplossing... de LLVM compiler.
 
 \section{Wat is LLVM?}
-Het LLVM-project is een verzameling modulaire en herbruikbare compiler- en toolchaintechnologieën. Het project is ontwikkeld door de LLVM developer group, waarvan Vikram Adve en Chris Lattner de originele ontwikkelaars zijn. Ondanks de naam heeft LLVM weinig te maken met traditionele virtuele machines. De naam 'LLVM' zelf is geen acroniem, het is de volledige naam van het project.
+Het LLVM-project is een verzameling modulaire en herbruikbare compiler- en toolchaintechnologieën. Het project is ontwikkeld door de LLVM developer group, waarvan Vikram Adve en Chris Lattner de originele ontwikkelaars zijn. De naam 'LLVM' zelf is geen acroniem, het is de volledige naam van het project. Ondanks de naam heeft LLVM weinig te maken met de traditionele virtuele machines.
 
 Het LLVM-project begon als een onderzoeksproject aan de universiteit van Illinois, met als doel een compilatiestrategie aan te bieden die in staat is om zowel statische als dynamische compilatie van programmeertalen aan te bieden. Een voorbeeld van een statische taal is Java, een voorbeeld van een dynamische taal is Javascript. Zowel beide types van programmeertalen kunnen dus gecompileerd worden door LLVM.
 
 Sinds het ontstaan van LLVM is het project uitgegroeid tot een overkoepelend project dat bestaat uit een aantal deelprojecten. Veel van deze deelprojecten worden momenteel sterk gebruikt bij commerciele en open-source projecten en zelfs in academisch onderzoek.
 
-Het grote voordeel van het gebruik van LLVM is de veelzijdigheid, flexibiliteit en herbruikbaarheid. Dit wil zeggen dat het zo goed als in ieder soort project kan worden geintegreerd. Het wordt daarom tegenwoordig gebruikt voor een groot aantal verschillende taken, dit gaande van het compileren van enkele klein code-projecten tot het compileren van code voor massieve computers.
+Het grote voordeel van het gebruik van LLVM is de veelzijdigheid, flexibiliteit en herbruikbaarheid. Dit wil zeggen dat het zo goed als in ieder soort project kan worden geintegreerd. Het wordt daarom tegenwoordig gebruikt voor een groot aantal verschillende taken, dit gaande van het compileren van enkele kleine code-projecten tot het compileren van code voor massieve computers.
 
 \subsection{Deelprojecten LLVM}
 Enkele voorbeelden van deelprojecten van de LLVM developers group:
@@ -25,16 +25,51 @@ Enkele voorbeelden van deelprojecten van de LLVM developers group:
 	\item Het \textbf{libc++} en \textbf{libc++ ABI} project voorziet een krachtige implementatie van de standaard C++ bibliotheek, met ondersteuning voor C++11. 
 \end{itemize}
 
-URL: https://llvm.org/
-
 \section{De werking van LLVM}
-URL: http://www.informit.com/articles/article.aspx?p=1215438
+LLVM is dus een bibliotheek die gebruikt wordt om tussenliggende en/of machine-code te genereren en optimaliseren. Maar wat is nu de exacte werking van deze compiler?
 
-http://www.aosabook.org/en/llvm.html
+\subsection{De werking van een standaard compiler}
+Het meest populaire ontwerp voor een statische compiler, zoals de meeste C-compilers, is het driefasenontwerp waarbij de belangrijkste componenten de \textbf{front-end}, de \textbf{optimizer} en de \textbf{back-end} zijn. 
 
-https://www.ibm.com/developerworks/library/os-createcompilerllvm1/
+\begin{figure} [ht]
+	\centering
+	\includegraphics[width=0.95\textwidth]{img/driefasenmodel}
+	\caption{Driefasenontwerp}
+	\label{fig:driefasenontwerp}
+\end{figure}
+
+\subsubsection{De front-end}
+De front-end zorgt voor de analyse van de broncode. Deze heeft dus als taak om ervoor te zorgen dat geen code gecompileerd kan worden waarbij fouten aanwezig zijn. Dit gebeurt door het opstellen van een taalspecifieke abstracte syntaxboom om de syntaxcode voor te stellen. Deze syntaxboom wordt optioneel geconverteerd naar een nieuwe boom voor optimalisatie en de optimizer en de back-end worden uitgevoerd aan de hand van deze boom. De JVM is ook een implementatie van dit driefasenontwerp. Een voorbeeld van een syntaxboom is te zien in figuur \ref{fig:syntaxtree}.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[width=0.95\textwidth]{img/syntaxtree.png}
+	\caption{Taalspecifieke abstracte syntaxboom}
+	\label{fig:syntaxtree}
+\end{figure}
+
+\subsubsection{De optimizer}
+De optimizer is verantwoordelijk, zoals de naam het zelfs zegt, voor het uitvoeren van een breed gamma van transformaties om de running time van de code te optimaliseren. Dit wordt gedaan door het elimineren van overtollige berekeningen, maar dit meestal afhankelijk van de taal die gebruikt werd en het doelwit van de code.
+
+\subsubsection{De back-end}
+De back-end, ook bekend als de codegenerator, gaat de code gaan mappen naar een instructieset. Naast het maken van deze instructieset is het ook verantwoordelijk om ervoor te zorgen dat deze instructieset gebruik maakt van de ongewone kenmerken van de ondersteunde architectuur. 
+
+\subsection{Verschil met LLVM}
+Maar wat is het verschil tussen een standaard compiler en LLVM? Het grote voordeel van dit driefasenontwerp treedt op wanneer een compiler besluit om meerdere brontalen of architecturen te ondersteunen. Indien de optimizer een gemeenschappelijke code representatie gebruikt, dan kan een front-end geschreven worden voor elke taal die gecompileerd kan worden naar die gemeenschappelijke representatie, en een back-end kan worden geschreven voor elke doelarchitectuur dat daaruit kan compileren. Op figuur \ref{fig:llvmdriefasen} is te zien dat door de common optimizer te gebruiken, er meerdere front-ends kunnen worden geschreven en dus meerdere doelarchitecturen kunnen worden ondersteund.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[width=0.95\textwidth]{img/llvmdriefasen}
+	\caption{Taalspecifieke abstracte syntaxboom}
+	\label{fig:llvmdriefasen}
+\end{figure}
 
 \section{LLVM en Kotlin}
+Kotlin Native is een technologie dat Kotlin direct compileert naar machine code. De Kotlin Native compiler produceert zelfstandige uitvoerbare bestanden die zonder virtuele machine kunnen worden uitgevoerd. Hierdoor is het mogelijk om Kotlin te gebruiken op ieder platform of besturingssysteem.
 
-\section{LLVM en Java}
+\section{LLVM en JVM}
+De LLVM is een low-level register gebasseerde compilatie technologie. Het is ontworpen om onderliggende hardware abstraheren en een lijn te trekken tussen de front-end en de back-end van een compileerprogramma.
+
+De JVM is een high-level stack gebasseerde virtuele machine. De JVM biedt garbage collection aan, heeft kennis van objecten en virtuele methode aanroepen. JVM biedt dus een veel hogere infrastructuur voor taalinteroperabiliteit.
+
 

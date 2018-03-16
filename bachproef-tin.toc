@@ -8,7 +8,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {0.3}Onderzoeksdoelstelling}{16}{section.0.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {0.4}Opzet van deze bachelorproef}{16}{section.0.4}
+\contentsline {section}{\numberline {0.4}Opzet van deze bachelorproef}{17}{section.0.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Stand van zaken}{19}{chapter.1}
 \defcounter {refsection}{0}\relax 
@@ -38,47 +38,57 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.2}De werking van LLVM}{26}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}LLVM en Kotlin}{26}{section.3.3}
+\contentsline {subsection}{\numberline {3.2.1}De werking van een standaard compiler}{26}{subsection.3.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}LLVM en Java}{26}{section.3.4}
+\contentsline {subsubsection}{De front-end}{26}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}De werking van Kotlin Native}{27}{chapter.4}
+\contentsline {subsubsection}{De optimizer}{27}{section*.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Wat is Kotlin Native?}{27}{section.4.1}
+\contentsline {subsubsection}{De back-end}{28}{section*.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Een Kotlin Native project}{27}{section.4.2}
+\contentsline {subsection}{\numberline {3.2.2}Verschil met LLVM}{28}{subsection.3.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}De werking van Kotlin Native}{27}{section.4.3}
+\contentsline {section}{\numberline {3.3}LLVM en Kotlin}{28}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}Graphical user interface}{27}{subsection.4.3.1}
+\contentsline {section}{\numberline {3.4}LLVM en JVM}{28}{section.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.2}Back-end}{27}{subsection.4.3.2}
+\contentsline {chapter}{\numberline {4}De werking van Kotlin Native}{31}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.3}Business logic}{27}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.1}Wat is Kotlin Native?}{31}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Huidige mogelijkheden}{27}{section.4.4}
+\contentsline {section}{\numberline {4.2}Een Kotlin Native project}{31}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Beperkingen}{27}{section.4.5}
+\contentsline {section}{\numberline {4.3}De werking van Kotlin Native}{31}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Toekomst}{27}{section.4.6}
+\contentsline {subsection}{\numberline {4.3.1}Graphical user interface}{31}{subsection.4.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.7}Besluit}{27}{section.4.7}
+\contentsline {subsection}{\numberline {4.3.2}Back-end}{31}{subsection.4.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Praktische uitwerking Kotlin Native}{29}{chapter.5}
+\contentsline {subsection}{\numberline {4.3.3}Business logic}{31}{subsection.4.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusie}{31}{chapter.6}
+\contentsline {section}{\numberline {4.4}Huidige mogelijkheden}{31}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{33}{appendix.A}
+\contentsline {section}{\numberline {4.5}Beperkingen}{31}{section.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Introductie}{33}{section.A.1}
+\contentsline {section}{\numberline {4.6}Toekomst}{31}{section.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}State-of-the-art}{34}{section.A.2}
+\contentsline {section}{\numberline {4.7}Besluit}{31}{section.4.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Methodologie}{35}{section.A.3}
+\contentsline {chapter}{\numberline {5}Praktische uitwerking Kotlin Native}{33}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.4}Verwachte resultaten}{35}{section.A.4}
+\contentsline {chapter}{\numberline {6}Conclusie}{35}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.5}Verwachte conclusies}{36}{section.A.5}
+\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{37}{appendix.A}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{37}{appendix*.7}
+\contentsline {section}{\numberline {A.1}Introductie}{37}{section.A.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}State-of-the-art}{38}{section.A.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}Methodologie}{39}{section.A.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.4}Verwachte resultaten}{39}{section.A.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.5}Verwachte conclusies}{40}{section.A.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografie}{41}{appendix*.10}
 \contentsfinish 
