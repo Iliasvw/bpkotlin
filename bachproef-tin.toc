@@ -46,33 +46,35 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{De back-end}{28}{section*.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.2.2}Verschil met LLVM}{28}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.2}Meerdere front- en backends}{28}{subsection.3.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}LLVM en Kotlin}{28}{section.3.3}
+\contentsline {section}{\numberline {3.3}Verschil met LLVM}{29}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}LLVM en JVM}{28}{section.3.4}
+\contentsline {section}{\numberline {3.4}LLVM en Kotlin}{29}{section.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.5}LLVM en JVM}{29}{section.3.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}De werking van Kotlin Native}{31}{chapter.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Wat is Kotlin Native?}{31}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Een Kotlin Native project}{31}{section.4.2}
+\contentsline {section}{\numberline {4.2}Een Kotlin Native project}{32}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}De werking van Kotlin Native}{31}{section.4.3}
+\contentsline {section}{\numberline {4.3}De werking van Kotlin Native}{32}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}Graphical user interface}{31}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.1}Graphical user interface}{32}{subsection.4.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.2}Back-end}{31}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.2}Back-end}{32}{subsection.4.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.3}Business logic}{31}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.3}Business logic}{32}{subsection.4.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Huidige mogelijkheden}{31}{section.4.4}
+\contentsline {section}{\numberline {4.4}Huidige mogelijkheden}{32}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Beperkingen}{31}{section.4.5}
+\contentsline {section}{\numberline {4.5}Beperkingen}{32}{section.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Toekomst}{31}{section.4.6}
+\contentsline {section}{\numberline {4.6}Toekomst}{32}{section.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.7}Besluit}{31}{section.4.7}
+\contentsline {section}{\numberline {4.7}Besluit}{32}{section.4.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Praktische uitwerking Kotlin Native}{33}{chapter.5}
 \defcounter {refsection}{0}\relax 

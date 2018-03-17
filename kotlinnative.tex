@@ -3,8 +3,16 @@
 %%=============================================================================
 
 \chapter{De werking van Kotlin Native}
+JetBrains heeft met Kotlin Native de interesse van elke cross-platform ontwikkelaar getrokken. Niemand had verwacht dat Kotlin uitgebreid ging worden met een cross-platform framework. Zo zal JetBrains met Kotlin Native een nieuwe markt betreden, het maken van native applicaties via één codebase.
 \label{ch:kotlinnative}
+
 \section{Wat is Kotlin Native?}
+Kotlin Native is een technologie die zorgt voor de compilatie van Kotlin naar native binaire bestanden die zonder VM draaien. Kotlin Native maakt gebruikt van een LLVM gebasseerde backend voor de Kotlin-compiler en een native implementatie van de Kotlin bibliotheek. Origineel werd Kotlin Native uitgevonden om compilatie van Kotlin mogelijk te maken op platformen die geen virtuele machines ondersteunen, zoals bijvoorbeeld de JVM. Een voorbeeld hiervan is iOS dat geen JVM ondersteunt.
+
+Kotlin Native ondersteunt volledig de interoperabiliteit met native code. Wat betreft het gebruik van Kotlin libraries, deze zijn volledig ter beschikking van de ontwikkelaar. Indien een bepaalde bibliotheek niet ondersteunt wordt, bestaat er een tool om een tussenliggende bibliotheek te genereren van een C-header bestand, waardoor deze bibliotheek toch gebruikt kan worden.  Op macOS en iOS wordt samenwerking met Objective/C-code ook ondersteund.
+
+Kotlin Native is momenteel heel jong en zit nog in volledige ontwikkeling. Er zijn echter enkele preview-releases aanwezig om te proberen. De ondersteuning voor de IDE's is beschikbaar als een plugin voor CLion.
+
 \section{Een Kotlin Native project}
 \section{De werking van Kotlin Native}
 \subsection{Graphical user interface}
