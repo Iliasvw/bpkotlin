@@ -179,6 +179,28 @@
       \verb https://llvm.org/
       \endverb
     \endentry
+    \entry{Developine}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=468c46e8f3ea92006bb0d15203fe0c47}{%
+           family={Developine},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{468c46e8f3ea92006bb0d15203fe0c47}
+      \strng{fullhash}{468c46e8f3ea92006bb0d15203fe0c47}
+      \strng{authornamehash}{468c46e8f3ea92006bb0d15203fe0c47}
+      \strng{authorfullhash}{468c46e8f3ea92006bb0d15203fe0c47}
+      \field{sortinit}{D}
+      \field{sortinithash}{d10b5413de1f3d197b20897dd0d565bb}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Kotlin Native iOS Development using Multiplatform Project}
+      \field{year}{2017}
+      \verb{url}
+      \verb http://developine.com/kotlin-native-ios-development-multiplatform-project/
+      \endverb
+    \endentry
     \entry{JetBrains12}{misc}{}
       \name{author}{1}{}{%
         {{uniquename=0,hash=559f18ea9b84c64584cdbf26ce57f205}{%

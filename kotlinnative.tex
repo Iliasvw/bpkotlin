@@ -13,6 +13,129 @@ Kotlin Native ondersteunt volledig de interoperabiliteit met native code. Wat be
 
 Kotlin Native is momenteel heel jong en zit nog in volledige ontwikkeling. Er zijn echter enkele preview-releases aanwezig om te proberen. De ondersteuning voor de IDE's is beschikbaar als een plugin voor CLion.
 
+\section{Het delen van code in Kotlin Native}
+\label{sec:sharingcode}
+Het doel van Kotlin Native is om een framework aan te bieden dat gebruikt kan worden voor cross-platform ontwikkeling. De focus ligt niet op het maken van user interfaces via één codebase, maar wel op het delen van de business logica. JetBrains wil dus via Kotlin Native de mogelijkheid aanreiken om alle business logica in een applicatie te hergebruiken op verschillende platformen en per platform de user interface op te bouwen.
+
+Voordelen:
+\begin{itemize}
+	\item Hergebruik van de business logica
+	\item Mogelijkheid om per platform, zowel in de business logica als in de user interfaces, andere accenten naar voor te brengen
+\end{itemize}
+
+Nadelen:
+\begin{itemize}
+	\item Verplichting om meerdere user interfaces op te bouwen
+	\item Grotere kosten en meer tijd nodig
+	\item Opzet van dit soort projecten is niet gemakkelijk voor de onervaren gebruiker
+\end{itemize}
+
+Figuur \ref{fig:sharingcode} toont hoe Kotlin Native business logica deelt over de verschillende platformen heen. Er wordt gebruik gemaakt van een \textbf{common} module. In deze module bevindt zich de gemeenschappelijke code, die gedeeld met alle platformen. Daarnaast is er per platform dat je wenst te ondersteunen een aparte platformmodule. Deze platformmodules maken gebruik van de common module en men kan er ook platformspecifieke code schrijven. Zie sectie \ref{sec:expectandactual} voor een meer technische uitleg.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[width=0.95\textwidth]{img/sharingcode}
+	\caption{Het delen van code in Kotlin Native (\cite{Developine})}
+	\label{fig:sharingcode}
+\end{figure}
+
+\section{De structuur van een Kotlin Native project}
+Voor te beginnen met het ontwikkelen van een Kotlin Native project is het belangrijk om na te gaan wat de structuur is van een Kotlin Native project. Er is namelijk geen IDE die een volledig Kotlin Native project voor jou genereert, daarom is het dus belangrijk dat je vanaf het begin een goede project structuur hebt. Figuur \ref{fig:knstructuur} toont een goede structuur van een Kotlin Native project.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[width=0.95\textwidth]{img/kn-project-structure}
+	\caption{Kotlin Native structuur}
+	\label{fig:knstructuur}
+\end{figure}
+
+Op deze figuur zijn dus een aantal mappen te vinden:
+\begin{itemize}
+	\item De \textbf{.gradle} map houdt alle instellingen en andere bestanden bij die gebruikt worden door Gradle om het project te bouwen. Dit wordt automatisch gegenereerd wanneer er een Gradle run wordt uitgevoerd.
+	\item Voor dit voorbeeld werd IntelliJ gebruikt als IDE. IntelliJ zal de map, \textbf{.idea}, automatisch genereren om verschillende instellingen van het project bij te houden. Alle project specifieke instellingen zijn aanwezig in deze map.
+	\item \textbf{android} bevat het volledige android project.
+	\item De \textbf{build} map bevat informatie over de laatste uitgevoerd build.
+	\item De \textbf{common} map bevat gemeenschappelijke code dat over de verschillende platformen wordt gedeeld.
+	\item De \textbf{gradle} map bevat een properties bestand. In dit bestand worden enkele belangrijke properties onthouden, dit zoals de locatie van de gradle installatie.
+	\item \textbf{ios} bevat het volledige iOS project.
+	\item De \textbf{platforms} map bevat voor iedere platform dat je wenst te ondersteunen een folder. In dit voorbeeld zijn dit dus twee mappen, iOS en Android. De bedoeling is om hierin specifieke code te schrijven die varieert per platform. Zie sectie \ref{sec:sharingcode} voor meer informatie.
+\end{itemize}
+
+\section {Expect en actual klassen}
+\label{sec:expectandactual}
+Stel dat men wenst om een 'ABCMethods' Kotlin klasse te hebben die de methodes callA(), callB() en callC() heeft, maar waarvan de implementatie verschillend is per platform.
+
+In de common module zal men de 'ABCMethods' klasse maken. Het keyword zegt bijna zelf wat de betekenis ervan is: we 'verwachten' een klasse ABCMethods. Het expect keyword kan ook vergeleken worden met een standaard interface.
+
+\begin{lstlisting}
+expect class ABCMethods() {
+	fun callA():String
+	fun callB():String
+	fun callC():String
+}
+\end{lstlisting}
+
+Met het actual keyword geven we aan dat deze klasse een concrete implementatie is van 'ABCMethods'. De compiler zal in eerste instantie zoeken naar de ABCMethods klasse in de common module. Hij zal daar merken dat ABCMethods een expect klasse is waardoor hij naar de platformspecifieke folder zal gaan en daar de actual klasse van ABCMethods zal gebruiken.
+
+Voor iedere platform wordt dus een concrete implementatie voorzien van de ABCMethods klasse. Dit in de map platforms.
+
+Een mogelijke implementatie voor iOS:
+\begin{lstlisting}
+actual class ABCMethods actual constructor() {
+	actual fun callA():String {
+		return "Calling A from iOS"
+	}
+	
+	actual fun callB():String {
+		return "Calling B from iOS"
+	}
+	
+	actual fun callC():String {
+		return "Calling C from iOS"
+	}
+}
+\end{lstlisting}
+
+Een mogelijke implementatie voor Android:
+\begin{lstlisting}
+actual class ABCMethods actual constructor() {
+	actual fun callA():String {
+		return "Calling A from Android"
+	}
+	
+	actual fun callB():String {
+		return "Calling B from Android"
+	}
+	
+	actual fun callC():String {
+		return "Calling C from Android"
+	}
+}
+\end{lstlisting}
+
+Door gebruik te maken van Kotlin Native is het niet nodig om zelf aan te geven welk bestand de compiler moet gebruiken voor welk platform. De compiler zal detecteren welk platform er gebruikt wordt en het juiste bestand gebruiken.
+
+\section{Gemeenschappelijke klassen}
+Naast de expect en actual klassen, die ervoor zorgen dat we platformspecifieke code kunnen schrijven, kunnen we ook klassen voorzien die voor alle platform hetzelfde zijn. Deze klasse zal dus voor ieder platform hetzelfde zijn.
+
+\begin{lstlisting}
+class Example {
+	private var name: String
+	
+	constructor() {
+		this.name = "Ilias"
+	}
+	
+	fun helloKotlin(): String {
+		return "Hello Kotlin Native, from $name"
+	}
+}
+\end{lstlisting}
+
+\section {Code gebruiken}
+Maar hoe kunnen we nu gebruik maken van de gemeenschappelijke en platformspecifieke code? Simpel. Bij een Android project kunnen we de Kotlin code gebruiken 
+door simpelweg de bibliotheek te importeren. Dit is niks meer dan een import bovenaan in je Android acitivity. iOS gerelateerde code zal gedeeld worden als een iOS framework dat gegenereerd wordt door Kotlin Native. Dit framework zal toegevoegd worden in de build phases van het xcode project.
+
 \section{Een Kotlin Native project}
 \section{De werking van Kotlin Native}
 \subsection{Graphical user interface}
