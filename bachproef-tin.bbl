@@ -373,11 +373,12 @@
       \strng{authorfullhash}{082d304bf1444853e07be11590d172a2}
       \field{sortinit}{L}
       \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
-      \field{labeldatesource}{nodate}
+      \field{labeldatesource}{year}
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{The architecture of Open Source Applications}
+      \field{year}{2018}
       \verb{url}
       \verb http://www.aosabook.org/en/llvm.html
       \endverb

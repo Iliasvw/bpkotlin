@@ -1,23 +1,23 @@
-\chapter{Praktische uitwerking Kotlin Native}
+\chapter{Praktische uitwerking Kotlin/Native}
 \label{ch:praktisch}
-In dit hoofdstuk zal er praktisch een Kotlin Native project worden gebouwd. De bedoeling is om aan de hand van een voorbeeld de volledige werking uit te leggen. In dit voorbeeld zal er een simpele applicatie gebouwd worden waarbij gebruikers een shopping cart kunnen aanmaken, producten kunnen bekijken en toevoegen aan de shopping cart en kunnen afrekenen.
+In dit hoofdstuk zal er praktisch een Kotlin/Native project worden gebouwd. De bedoeling is om aan de hand van een voorbeeld de volledige werking uit te leggen. In dit voorbeeld zal er een simpele applicatie gebouwd worden waarbij gebruikers een shopping cart kunnen aanmaken, producten kunnen bekijken en toevoegen aan de shopping cart en kunnen afrekenen.
 
 \section{Domeinmodel}
-Aangezien het doel van Kotlin Native het delen van business logica is, is het handig om op voorhand na te denken over het domeinmodel. Welke klassen heb ik nodig, welke attributen en methodes moeten deze klassen hebben. Een domeinmodel geeft je ook een duidelijk overzicht over je applicatie.
+Aangezien het doel van Kotlin/Native het delen van business logica is, is het handig om op voorhand na te denken over het domeinmodel. Welke klassen heb ik nodig, welke attributen en methodes moeten deze klassen hebben. Een domeinmodel geeft je ook een duidelijk overzicht over je applicatie.
 
 TOEVOEGEN FOTO
 
 \section{Requirements}
-Om gebruik te kunnen maken van Kotlin Native voor het ontwikkelen van cross-platform applicaties (iOS \& Android), zijn er enkele vereisten:
+Om gebruik te kunnen maken van Kotlin/Native voor het ontwikkelen van cross-platform applicaties (iOS \& Android), zijn er enkele vereisten:
 \begin{itemize}
 	\item \textbf{Android studio} voor het ontwikkelen van de Android applicatie.
 	\item \textbf{Xcode} voor het ontwikkelen van de iOS applicatie (toestel met MacOS is vereist).
 	\item \textbf{IntelliJ IDEA} (optioneel) voor het opzetten van het project. Dit kan eventueel met een andere IDEA die gradle projecten ondersteunt, worden opgezet.
-	\item \textbf{Gradle} om gebruik te kunnen maken van de Kotlin Native compiler en plugin. Deze wordt geïnstalleerd bij het instellen van IntelliJ IDEA of Android Studio.
+	\item \textbf{Gradle} om gebruik te kunnen maken van de Kotlin/Native compiler en plugin. Deze wordt geïnstalleerd bij het instellen van IntelliJ IDEA of Android Studio.
 \end{itemize}
 
 \section{Stap 1: project initiatie}
-De eerste stap in het ontwikkelen van een Kotlin Native project is het maken van een nieuwe map, op een gewenste locatie op de harde schijf van je computer. Hierin zal er een eerste bestand worden aangemaakt: \textbf{build.gradle}.
+De eerste stap in het ontwikkelen van een Kotlin/Native project is het maken van een nieuwe map, op een gewenste locatie op de harde schijf van je computer. Hierin zal er een eerste bestand worden aangemaakt: \textbf{build.gradle}.
 
 \begin{lstlisting}
 subprojects {
@@ -57,22 +57,22 @@ subprojects {
 }
 \end{lstlisting}
 \subsection{Versies}
-Bovenaan geven we aan welke versie van Kotlin en Kotlin Native we willen gebruiken. Dit zijn beide de nieuwste versies. Opgelet, het is niet altijd vanzelfspreken om de laatste versie van Kotlin Native te gebruiken. Er wordt voortdurend gewerkt aan Kotlin Native en nieuwe dingen worden continu gepushed op de Github repository. Het kan al eens gebeuren dat sommige dingen niet altijd even goed werken, waardoor de applicatie soms niet werkt. Bij twijfels, neem een minder recente versie van de Kotlin Native plugin.
+Bovenaan geven we aan welke versie van Kotlin en Kotlin/Native we willen gebruiken. Dit zijn beide de nieuwste versies. Opgelet, het is niet altijd vanzelfsprekend om de laatste versie van Kotlin/Native te gebruiken. Er wordt voortdurend gewerkt aan Kotlin/Native en nieuwe dingen worden continu gepushed op de Github repository. Het kan al eens gebeuren dat sommige features niet altijd even goed werken, waardoor de applicatie soms niet werkt. Bij twijfels, neem een minder recente versie van de Kotlin/Native plugin.
 
 \subsection{Repositories}
 In de repositories tag worden de juiste repositories gelinkt:
 \begin{itemize}
 	\item \textbf{Kotlinx} bevat alle coroutines\footnote{Programmaonderdelen die asynchroon programmeren vergemakkelijken door gecompliceerde logica in bibliotheken te steken} die Kotlin kan gebruiken.
 	\item \textbf{Gradle}
-	\item \textbf{Kotlin-native-dependencies} stelt alle dependencies die Kotlin Native nodig heeft ter beschikking.
+	\item \textbf{Kotlin-native-dependencies} stelt alle dependencies die Kotlin/Native nodig heeft ter beschikking.
 \end{itemize}
 
 \subsection{Dependencies}
 In de dependencies tag worden de juiste dependencies gelinkt:
 \begin{itemize}
-	\item \textbf{Kotlin-gradle} laadt de juiste versie van Kotlin.
+	\item \textbf{Kotlin-gradle} laadt de Kotlin-gradle plugin met de versie van Kotlin dat wordt aangegeven bovenaan het build script.
 	\item \textbf{Android build tools} is nodig voor het bouwen van de Android applicatie.
-	\item \textbf{Kotlin-native-gradle-plugin} is de Kotlin Native plugin die gebruikt zal worden om te zorgen voor een cross-platforme applicatie.
+	\item \textbf{Kotlin-native-gradle-plugin} is de Kotlin/Native plugin die gebruikt zal worden om te zorgen voor een cross-platforme applicatie.
 \end{itemize}
 
 \subsection{Overige informatie}
@@ -93,10 +93,10 @@ Nadat het build.gradle bestand gemaakt is, is het de bedoeling om via IntelliJ I
 	\label{fig:stap2-import}
 \end{figure}
 
-In de huidige versie van Kotlin Native worden de overige folders (nog?) niet automatisch aangemaakt. Alle andere folders, die te zien zijn in figuur \ref{fig:knstructuur} moeten handmatig gemaakt worden.
+In de huidige versie van Kotlin/Native worden de overige mappen nog niet automatisch aangemaakt. Alle andere mappen, die te zien zijn in figuur \ref{fig:knstructuur} moeten handmatig aangemaakt worden. Deze mappenstructuur zal geleidelijkaan opgebouwd worden naargelang de stappen vorderen.
 
-\section{Stap 3: Common folder }
-In de common folder wordt alle gemeenschappelijke code aangemaakt. In deze folder moet er aan een bepaalde structuur worden voldaan, zie figuur \ref{fig:stap3-common}.
+\section{Stap 3: Common map }
+In de common map wordt alle gemeenschappelijke code aangemaakt. In deze map moet er aan een bepaalde structuur worden voldaan, zie figuur \ref{fig:stap3-common}.
 
 \begin{figure} [ht]
 	\centering
@@ -105,18 +105,19 @@ In de common folder wordt alle gemeenschappelijke code aangemaakt. In deze folde
 	\label{fig:stap3-common}
 \end{figure}
 
-\subsection{Build folder}
-De build folder bevat alle gecompileerde bestanden die genereerd worden door Kotlin Native. Deze bestanden worden aangemaakt bij iedere gradle run en/of build.
+\subsection{Build map}
+De build map bevat alle gecompileerde bestanden die genereerd worden door Kotlin/Native. Deze bestanden worden aangemaakt bij iedere gradle run en/of build.
 
-\subsection{Main en test folder}
-Zoals te zien is op figuur \ref{fig:stap3-common} heeft zowel de main als test folder enkele subpackages. Deze beginnen met de groupId die ingesteld is in sectie \ref{sec:overige} met daarin nog eens een 'libs' folder. De naam van deze 'libs' folder is vrij te kiezen.
+\subsection{Main en test map}
+\label{sec:maintestcommon}
+Zoals te zien is op figuur \ref{fig:stap3-common} heeft zowel de main als test map enkele subpackages. Deze beginnen met de groupId die ingesteld is in sectie \ref{sec:overige} met daarin nog eens een 'libs' map. De naam van deze 'libs' map is vrij te kiezen.
 
-De main folder zal alle gemeenschappelijke klassen bevatten (expect en gewone klassen, zie sectie \ref{sec:expectandactual}).
+De main map zal alle gemeenschappelijke klassen bevatten (expect en gewone klassen, zie sectie \ref{sec:expectandactual}).
 
-De test folder zal alle gemeenschappelijke test klassen bevatten, gebruikmakend van de klassen in de main folder.
+De test map zal alle gemeenschappelijke test klassen bevatten, gebruikmakend van de klassen in de main map.
 
 \subsection{Build.gradle}
-Natuurlijk moet de common module ook gecompileerd worden door Kotlin Native. Hiervoor is er een build.gradle nodig.
+Natuurlijk moet de common module ook gecompileerd worden door Kotlin/Native. Hiervoor is er een build.gradle nodig.
 
 \begin{lstlisting}
 apply plugin: 'kotlin-platform-common'
@@ -134,19 +135,178 @@ dependencies {
 \end{lstlisting}
 De bovenste regel in de build.gradle geeft aan dat we gebruik maken van de kotlin-platform-common plugin. Deze zal verantwoordelijk zijn voor het compileren en delen van alle gemeenschappelijke code over de verschillende platformen.
 
-Er worden ook twee sourceSets toegevoegd. SourceSets vertegenwoordigen een logische groep van Java en/of Kotlin bronnen en middelen.
+Er worden ook twee sourceSets toegevoegd. SourceSets vertegenwoordigen een logische groep van Java en/of bronnen en middelen.
 
 Tenslotte worden er drie dependencies toegevoegd. De stdlib is verantwoordelijk voor het aanmaken van de Kotlin Standard Library. Er worden nog twee test dependencies toegevoegd, één verantwoordelijk voor de annotations, de andere voor het opstellen en uitvoeren van de testen (later meer over testen).
 
 CODE TOEVOEGEN!!
 
 \section{Stap 4: platforms folder}
+De platform folder bevat enkele subfolders, één subfolder per platform waarvoor men wenst te ontwikkelen. Bij dit voorbeeld zullen er dus twee subfolders aanwezig zijn, namelijk Android en iOS. Zie figuur \ref{fig:stap4-structuur}.
 
-\section{Stap 5: Android folder}
+\begin{figure} [ht]
+	\centering
+	\includegraphics[width=0.60\textwidth]{img/stap4-structuur.png}
+	\caption{Platforms module structuur}
+	\label{fig:stap4-structuur}
+\end{figure}
 
-\section{Stap 6: iOS folder}
+Per submap, hebben we opnieuw twee submappen, namelijk main en test. Net zoals bij de common map. 
+
+Zowel de main en test bevatten elk nog een map. Bij Android is dit een package die begint met het groupId, zie sectie \ref{sec:overige}, en eindigt met een willekeurige naam. In dit voorbeeld is dit 'libs'. Dit dient identiek te zijn met de naam van de package gekozen in de common map, zie sectie \ref{sec:maintestcommon}. In het geval van iOS zijn dit geen packages maar eerder een mappenstructuur.
+
+\subsection{Android}
+In deze map komt alle Android-specifieke code terecht.
+
+\subsubsection{Build.gradle}
+\begin{lstlisting}
+apply plugin: 'kotlin-platform-jvm'
+
+repositories {
+ jcenter()
+ maven { url "http://kotlin.bintray.com/kotlinx" }
+}
+
+sourceSets {
+ main.kotlin.srcDirs += 'main/'
+ test.kotlin.srcDirs += 'test/'
+}
+
+dependencies {
+ compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+ expectedBy project(":common")
+
+ testCompile "junit:junit:4.12"
+ testCompile "org.jetbrains.kotlin:kotlin-test-junit: $kotlin_version"
+ testCompile "org.jetbrains.kotlin:kotlin-test:$kotlin_version"
+}
+\end{lstlisting}
+
+\subsubsection{Platformspecifieke code}
+Hier komt platformspecifieke Android code.
+
+\subsection{iOS}
+In deze map komt alle iOS-specifieke code terecht.
+\subsubsection{Build.gradle}
+\label{sec:ios-build-gradle}
+\begin{lstlisting}
+apply plugin: 'konan'
+
+konanArtifacts {
+ framework('SharediOS', targets: ['iphone', 'iphone_sim']){
+  enableDebug true
+  enableMultiplatform true
+
+  srcDir 'main'
+ }
+
+ library('test-library') {
+  enableMultiplatform true
+  srcDir 'main'
+ }
+
+ program('shared-ios-test') {
+  srcDir 'test'
+  commonSourceSet 'test'
+  extraOpts '-tr'
+  libraries {
+   artifact 'test-library'
+  }
+ }
+}
+
+dependencies {
+ expectedBy project(':common')
+}
+\end{lstlisting}
+\subsubsection{Platformspecifieke code}
+Hier komt platformspecifieke iOS code.
+
+\section{Stap 5: Android map}
+In de android map is het de bedoeling om via Android Studio een nieuw project te maken. Bij het aanmaken van het project in Android Studio kan je de locatie van het project opgeven. Deze locatie moet zodanig ingesteld zijn dat het Android project een submap is van het Kotlin/Native project en waardoor het geïntegreerd zal worden in het project.
+
+\section{Stap 6: iOS map}
 %Vergeet niet de build phases en scripts%
+Net zoals bij de android map, is het de bedoeling om via Xcode een nieuw Xcode project aan te maken dat ook een submap is van het Kotlin/Native project. Men kan zowel kiezen voor een Objective-C als Swift project aangezien het gecompileerde iOS framework zowel in beide projecten kan gebruikt worden.
 
-\section{Optioneel: testen}
+\subsection{Gebruiken van het SharediOS framework}
+Vooraleer men in Xcode kan gebruik maken van het SharediOS framework, moeten er een aantal dingen aangepast worden in de build phases van het project. Uit figuur \ref{fig:stap6-phases} kan worden afgeleid de build phases zijn aangepast. De build phases die moet worden toegevoegd is: Compile Kotlin Native to iOS framework.
+\begin{figure} [ht]
+	\centering
+	\includegraphics[width=0.75\textwidth]{img/stap6-phases.png}
+	\caption{iOS build phases}
+	\label{fig:stap6-phases}
+\end{figure}
+
+In deze nieuwe build phase moet er een script worden toegevoegd: 
+\begin{lstlisting}
+case "$PLATFORM_NAME" in
+iphoneos)
+NAME=iphone
+;;
+iphonesimulator)
+NAME=iphone_sim
+;;
+*)
+echo "Unknown platform: $PLATFORN_NAME"
+exit 1
+;;
+esac
+
+"$SRCROOT/../gradlew" -p "$SRCROOT/../platforms/ios" "build"
+rm -rf "$SRCROOT/build/"
+mkdir "$SRCROOT/build/"
+cp -a "$SRCROOT/../platforms/ios/build/konan/bin/$NAME/" "$SRCROOT/build/"
+\end{lstlisting}
+
+Bij iedere gradle build van het Kotlin/Native project zal de build.gradle in de platforms/ios map ervoor zorgen dat de Kotlin code omgezet wordt naar een iOS framework. Dit framework vindt men terug in een submap van een build map. Zie figuur \ref{fig:stap6-build}. Er wordt dus zowel voor een echt toestel als voor een simulator een framework gegenereerd. Dit wordt gedaan omdat beiden op verschillende architecturen worden uitgevoerd.
+
+\begin{figure} [ht]
+	\centering
+	\includegraphics[width=0.60\textwidth]{img/stap6-build.png}
+	\caption{iOS build map}
+	\label{fig:stap6-build}
+\end{figure}
+
+In bovenstaand build phase script wordt gekeken welk type toestel er wordt gebruikt, een echte iPhone of een simulator. Daarna zal het juiste framework gekopieerd worden naar de build folder in de iOS map. Waardoor bij iedere build en/of run van het Xcode project het laatst gegenereerde framework zal worden gebruikt en gekopieerd.
+
+Tenslotte zal het framework nog in de build phases 'Link Binary With Libraries' en 'Embed Frameworks' moeten worden toegevoegd. Hierbij wordt er gelinkt naar het gekopieerde framework in de build folder.
+
+\section{Aanspreken van code}
+\subsection{Android}
+Om gebruik te kunnen maken van de Kotlin code in de Android activities 
+
+\subsection{iOS}
+Om gebruik te kunnen maken van het SharediOS framework in de ViewControllers moet het framework worden geimporteerd door bovenaan in de ViewController simpelweg volgende lijn toe te voegen:
+\begin{lstlisting}
+import SharediOS
+\end{lstlisting}
+
+Het aanmaken van een object is nu heel simpel geworden. Zoals te zien is in onderstaande code heeft Kotlin/Native een prefix gegeven aan de klassen. Kotlin/Native zal steeds de hoofdletters uit de naam van het framework filteren, dat gekozen wordt in de build.gradle van de iOS folder, zie sectie \ref{sec:ios-build-gradle}. Stel dat jouw framework KotlinNativeFramework heet, dan zal de prefix KNF zijn en zal de product klasse KNFProduct heten.
+\begin{lstlisting}
+var product: SOSProduct = SOSProduct(name: "Test")
+\end{lstlisting}
 
 \section{User interfaces}
+De user interface moet dus per platform opgebouwd worden. Er is geen manier om één user interface te ontwikkelen voor beide platformen. Dit kan zowel positief als negatief zijn. Het vraagt dubbel zoveel werk maar het geeft wel de mogelijkheid om verschillende accenten te leggen in de user interface.
+
+\section{Optioneel: testen}
+Een essentieel deel van object-oriented programming is het testen van je code. In het Kotlin/Native framework is het mogelijk om je aangemaakte klassen te testen. Zo is er de mogelijkheid om in de common map en per platform een test map toe te voegen. Een voorbeeld van een test in de common/test map:
+
+\begin{lstlisting}
+package ilias.vw.libs
+
+import kotlin.test.*
+
+class TestSampleCommon {
+ @Test
+ fun testCheckChartName() {
+  val sample = Cart("test")
+  val name = sample.name
+  assertEquals(name, "test")
+ }
+}
+
+\end{lstlisting}
+
+Hierbij wordt er een cart aangemaakt met een naam (test). Daarna wordt de naam terug opgevraagd en wordt er gekeken of de naam die we initieel hebben meegegeven effectief gelijk is aan 'test'.

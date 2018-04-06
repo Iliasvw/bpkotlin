@@ -12,13 +12,13 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Driefasenontwerp}}{26}{figure.3.1}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Driefasenontwerp (\cite {aosa})}}{26}{figure.3.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Taalspecifieke abstracte syntaxboom}}{27}{figure.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Meerdere front- en backends}}{28}{figure.3.3}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Meerdere front- en backends (\cite {aosa})}}{28}{figure.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces LLVM implementatie van driefasenontwerp}}{29}{figure.3.4}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces LLVM implementatie van driefasenontwerp (\cite {aosa})}}{29}{figure.3.4}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
@@ -31,6 +31,12 @@
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Importeren van een project}}{40}{figure.5.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {5.2}{\ignorespaces Common module structuur}}{40}{figure.5.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Platforms module structuur}}{42}{figure.5.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.4}{\ignorespaces iOS build phases}}{45}{figure.5.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.5}{\ignorespaces iOS build map}}{46}{figure.5.5}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

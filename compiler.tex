@@ -34,7 +34,7 @@ Het meest populaire ontwerp voor een statische compiler, zoals de meeste C-compi
 \begin{figure} [ht]
 	\centering
 	\includegraphics[width=0.95\textwidth]{img/driefasenmodel}
-	\caption{Driefasenontwerp}
+	\caption{Driefasenontwerp (\cite{aosa})}
 	\label{fig:driefasenontwerp}
 \end{figure}
 
@@ -52,7 +52,7 @@ De front-end zorgt voor de analyse van de broncode. Deze heeft dus als taak om e
 De optimizer is verantwoordelijk, zoals de naam het zelfs zegt, voor het uitvoeren van een breed gamma van transformaties om de running time van de code te optimaliseren. Dit wordt gedaan door het elimineren van overtollige berekeningen, maar dit meestal afhankelijk van de taal die gebruikt werd en de doelarchitectuur.
 
 \subsubsection{De back-end}
-De back-end, ook bekend als de codegenerator, gaat de code gaan mappen naar een instructieset. Naast het maken van deze instructieset is het ook verantwoordelijk om ervoor te zorgen dat deze instructieset gebruik maakt van de ongewone kenmerken van de ondersteunde architectuur. 
+De back-end, ook bekend als de codegenerator, gaat de code gaan mappen naar een instructieset. Naast het maken van deze instructieset is het ook verantwoordelijk om ervoor te zorgen dat deze instructieset gebruik maakt van de ongewone kenmerken van de ondersteunde architectuur. Iedere architectuur is namelijk anders en de instructieset moet dus met iedere architectuur kunnen werken. 
 
 \subsection{Meerdere front- en backends}
 Het grote voordeel van dit driefasenontwerp treedt op wanneer een compiler besluit om meerdere brontalen en architecturen te ondersteunen. Indien de optimizer een gemeenschappelijke code representatie gebruikt, dan kan een front-end geschreven worden voor elke taal die gecompileerd kan worden naar die gemeenschappelijke representatie, en een back-end kan worden geschreven voor elke doelarchitectuur dat daaruit kan compileren. Op figuur \ref{fig:llvmdriefasen} is te zien dat door de common optimizer te gebruiken, er meerdere front-ends kunnen worden geschreven en meerdere doelarchitecturen kunnen worden ondersteund.
@@ -64,7 +64,7 @@ Nog een voordeel van dit ontwerp is dat deze soorten van compilers een veel bred
 \begin{figure} [ht]
 	\centering
 	\includegraphics[width=0.95\textwidth]{img/llvmdriefasen}
-	\caption{Meerdere front- en backends}
+	\caption{Meerdere front- en backends (\cite{aosa})}
 	\label{fig:llvmdriefasen}
 \end{figure}
 
@@ -78,7 +78,7 @@ In een korte notendop: de front-end krijgt een brontaal binnen en gaat deze taal
 \begin{figure} [ht]
 	\centering
 	\includegraphics[width=0.95\textwidth]{img/llvmirdriefasen}
-	\caption{LLVM implementatie van driefasenontwerp}
+	\caption{LLVM implementatie van driefasenontwerp (\cite{aosa})}
 	\label{fig:llvmirdriefasen}
 \end{figure}
 
