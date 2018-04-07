@@ -405,6 +405,40 @@
       \field{title}{Switch to Kotlin}
       \field{year}{2017}
     \endentry
+    \entry{ResearchGate}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=9c71ca0e8ac5da7336ffa149007898f9}{%
+           family={ResearchGate},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{9c71ca0e8ac5da7336ffa149007898f9}
+      \strng{fullhash}{9c71ca0e8ac5da7336ffa149007898f9}
+      \strng{authornamehash}{9c71ca0e8ac5da7336ffa149007898f9}
+      \strng{authorfullhash}{9c71ca0e8ac5da7336ffa149007898f9}
+      \field{sortinit}{R}
+      \field{sortinithash}{c15bc8eb6936bc6b3c8baa9e8575af53}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Syntaxboom}
+      \field{year}{2009}
+      \verb{url}
+      \verb https://www.researchgate.net/figure/Abstract-syntax-tree-of-the-while-loop_fig1_228792639
+      \endverb
+    \endentry
+    \entry{TechYourChance}{article}{}
+      \field{sortinit}{W}
+      \field{sortinithash}{6d25b3eefe5aa2147d1f339686808918}
+      \field{labeldatesource}{year}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{TechYourChance}
+      \field{title}{Why JetBrains Invented and Promotes Kotlin}
+      \field{year}{2017}
+      \verb{url}
+      \verb https://www.techyourchance.com/jetbrains-invented-promotes-kotlin/
+      \endverb
+    \endentry
     \entry{JetBrainsNeedKotlin}{article}{}
       \field{sortinit}{W}
       \field{sortinithash}{6d25b3eefe5aa2147d1f339686808918}

@@ -4,39 +4,39 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Hoeveelheid Kotlin code op GitHub \cite {JetBrains12}}}{21}{figure.1.1}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Hoeveelheid Kotlin code op GitHub (\cite {JetBrains12})}}{21}{figure.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Kotlin user groups in de wereld \cite {JetBrains12}}}{22}{figure.1.2}
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Kotlin user groups in de wereld (\cite {JetBrains12})}}{22}{figure.1.2}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Driefasenontwerp (\cite {aosa})}}{26}{figure.3.1}
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Taalspecifieke abstracte syntaxboom}}{27}{figure.3.2}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Driefasenontwerp (\cite {aosa})}}{28}{figure.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Meerdere front- en backends (\cite {aosa})}}{28}{figure.3.3}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Taalspecifieke abstracte syntaxboom (\cite {ResearchGate})}}{29}{figure.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces LLVM implementatie van driefasenontwerp (\cite {aosa})}}{29}{figure.3.4}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Meerdere front- en backends (\cite {aosa})}}{30}{figure.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces LLVM implementatie van driefasenontwerp (\cite {aosa})}}{31}{figure.3.4}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Het delen van code in Kotlin Native (\cite {Developine})}}{32}{figure.4.1}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Het delen van code in Kotlin Native (\cite {Developine})}}{34}{figure.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Kotlin Native structuur}}{33}{figure.4.2}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Kotlin Native structuur}}{35}{figure.4.2}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Importeren van een project}}{40}{figure.5.1}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Importeren van een project}}{42}{figure.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Common module structuur}}{40}{figure.5.2}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Common module structuur}}{42}{figure.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Platforms module structuur}}{42}{figure.5.3}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Platforms module structuur}}{44}{figure.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.4}{\ignorespaces iOS build phases}}{45}{figure.5.4}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces iOS build phases}}{48}{figure.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.5}{\ignorespaces iOS build map}}{46}{figure.5.5}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces iOS build map}}{49}{figure.5.5}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

@@ -12,20 +12,19 @@ Dit hoofdstuk is een literatuurstudie over de huidige stand van zaken rond Kotli
 \section{Wat is Kotlin}
 \label{sec:kotlin}
 Kotlin is een open-source programmeertaal die object-georiënteerde en functionele programmatie features combineert. Kotlin is ook een statically typed programmeertaal. Dit betekent het type van de variabele is toegekend wanneer de code wordt gecompileerd. 
-Javascript is een dynamically typed programmeertaal, waarbij je aan een variabele verschillende types kan toekennen. Zo kan een variabele bij Javascript in het begin een getal zijn, maar een beetje verder in de code kan dit veranderd worden naar een tekst.
-\newline
-\newline
-Kotlin is ontworpen door JetBrains. JetBrains is een organisatie afkomstig van Sint-Petersburg, Rusland. De naam 'Kotlin' is afkomstig van het Kotlin eiland, 30 km ten westen van Sint-Petersburg. JetBrains is een software ontwikkelingbedrijf dat gesticht is in het jaar 2000. Hun hoofdkantoor is gevestigd in Praag, Tjsechië en hun core-business is het ontwikkelen van tools die gebruikt kunnen worden door verschillende types van software ontwikkelaars. Zo hebben zij IDE's\footnote{Integrated Development Environment} ontwikkeld voor Java, Ruby, Python, PHP, SQL, Objective-C, C++, C\# en JavaScript.
+Javascript is een dynamically typed programmeertaal, waarbij je aan een variabele verschillende types kan toekennen. Zo kan een variabele bij Javascript in het begin een getal zijn, maar wat verder in de code kan dit veranderd worden naar een tekst.
+
+Kotlin is ontworpen door JetBrains. JetBrains is een organisatie afkomstig van Sint-Petersburg, Rusland. De naam 'Kotlin' is afkomstig van het Kotlin eiland, 30 km ten westen van Sint-Petersburg. JetBrains is een software ontwikkelingbedrijf dat gesticht is in het jaar 2000. Hun hoofdkantoor is gevestigd in Praag (Tjsechië) en hun core-business is het ontwikkelen van tools die gebruikt kunnen worden door verschillende types van software ontwikkelaars. Zo hebben zij IDE's\footnote{Integrated Development Environment} ontwikkeld voor Java, Ruby, Python, PHP, SQL, Objective-C, C++, C\# en JavaScript.
 
 \section{Kotlin en Android}
 \label{sec:kotlinandroid}
-In 2017 heeft Google bekend gemaakt dat het Kotlin volledig zou ondersteunen voor Android applicatieontwikkeling. Een Kotlin project maken in Android Studio is dan ook heel gemakkelijk. In Android Studio 3.0 heb je bij het aanmaken van een project de mogelijkheid om direct de ondersteuning voor Kotlin in te schakelen. Hierdoor zal je aangemaakte project onmiddelijk in Kotlin geschreven zijn.
+In 2017 heeft Google bekend gemaakt dat het Kotlin volledig zou ondersteunen voor Android applicatieontwikkeling. Een Kotlin project maken in Android Studio is dan ook heel gemakkelijk. In Android Studio 3.0 heb je bij het aanmaken van een project de mogelijkheid om direct de ondersteuning voor Kotlin in te schakelen. Hierdoor zal het aangemaakte project onmiddelijk in Kotlin geschreven zijn.
 
-Wil je bij een reeds bestaand project gebruik maken van Kotlin, dan zal je voor de klassen die je wenst om te zetten naar Kotlin, de actie 'Convert Java File to Kotlin File' moeten uitvoeren. Hierbij zal Android Studio detecteren dat er gebruik gemaakt wordt van Kotlin, waardoor hij zal vragen om de Kotlin plugin te installeren via Gradle.
+Het is mogelijk om een reeds bestaand Android Java project om te zetten naar Kotlin. Hierbij zal de actie 'Convert Java File to Kotlin File' moeten uitvoerd worden (rechtermuisknop in het Java bestand). Hierdoor zal Android Studio detecteren dat er gebruik gemaakt zal worden van Kotlin, waardoor hij zal vragen om de Kotlin plugin te installeren via Gradle indien deze nog niet is geinstalleerd.
 
 \section{Automigration}
 \label{sec:Automigration}
-Door de intergratie van Kotlin in Android Studio werd er een conversietool ter beschikking gesteld. Met behulp van deze tool kan bestaande Java-code eenvoudig worden omgezet naar Kotlin. Dit zorgt ervoor dat veel tijd kan worden bespaard en het programmeren van dubbele code wordt zo vermeden. Maar deze conversietool bevat wel een klein risico. Het kan wel eens gebeuren dat code soms fout wordt geconverteerd. 
+Door de intergratie van Kotlin in Android Studio werd er een conversietool ter beschikking gesteld. Met behulp van deze tool kan bestaande Java-code eenvoudig worden omgezet naar Kotlin. Dit zorgt ervoor dat veel tijd kan worden bespaard en het programmeren van dubbele code zo wordt vermeden. Maar deze conversietool bevat wel een klein risico. Het kan wel eens gebeuren dat code soms fout wordt geconverteerd. 
 
 Het is ook reeds mogelijk om zowel Java en Kotlin te combineren. Zo kunnen de verschillende object classes in Java worden geschreven en kan je via Kotlin alle objecten aanmaken. Of dit nuttig en best practice is, is te beslissen door de developer.
 
@@ -37,13 +36,13 @@ Wens je echter een full-stack webapplicatie te bouwen, dan heb je de mogelijkhei
 
 Kotlin-applicaties kunnen worden geïmplementeerd op elke host die Java-webapplicaties ondersteunt, inclusief Amazon Web Services, Google Cloud Platform en veel meer.
 
-\section{Kotlin Native}
+\section{Kotlin/Native}
 \label{sec:kotlinnative}
-Waarschijnlijk momenteel één van de meest nieuwe en innovatieve projecten van JetBrains is Kotlin Native. Momenteel is men gekomen aan versie 0.6 en er zijn al verschillende voorbeeldprojecten beschikbaar gesteld door JetBrains. Kotlin Native zou het mogelijk moeten om éénmalige business logica te schrijven in een applicatie en deze te delen over verschillende platformen, bijvoorbeeld Android en iOS. De user interfaces zou men wel per platform moeten opbouwen, waardoor je toch het 'native applicatie'-gevoel krijgt. Kotlin Native zou dus moeten instaan voor het cross-platform gebeuren. Kotlin Native maakt gebruik van een totaal andere compiler dan JVM, zie sectie \ref{sec:llvm} voor meer info.
+Waarschijnlijk momenteel één van de meest nieuwe en innovatieve projecten van JetBrains is Kotlin/Native. Momenteel is men gekomen aan versie 0.6 en er zijn al verschillende voorbeeldprojecten beschikbaar gesteld door JetBrains. Kotlin/Native zou het mogelijk moeten om éénmalige business logica te schrijven in een applicatie en deze te delen over verschillende platformen, bijvoorbeeld Android en iOS. De user interfaces zou men wel nog per platform moeten opbouwen, waardoor je toch het 'native applicatie'-gevoel krijgt. Kotlin Native maakt gebruik van een totaal andere compiler dan JVM, zie sectie \ref{sec:llvm} voor meer info. De bijnaam die gegeven wordt aan Kotlin/Native is \textit{Konan}.
 
 \section{Compiler}
 \label{sec:llvm}
-Net zoals Java draait Kotlin op de JVM. Dit wil dus zeggen dat alle toestellen die een JVM kunnen draaien, ook Kotlin code ondersteunen. Maar sinds de dag dat JetBrains besloten heeft om zich niet enkel meer te richten op platformen die enkel en alleen de JVM ondersteunen, hebben zij ervoor gezorgd dat ongeacht welk platform of besturingssysteem je gebruikt, de Kotlin code wordt ondersteund. Dit komt door de LLVM compiler die Kotlin Native gebruikt. Deze wordt in hoofdstuk \ref{ch:compiler} verder besproken.
+Net zoals Java draait Kotlin op de JVM. Dit wil dus zeggen dat alle toestellen die een JVM kunnen draaien, ook Kotlin code ondersteunen. Maar sinds de dag dat JetBrains besloten heeft om zich niet enkel meer te richten op platformen die enkel en alleen de JVM ondersteunen, hebben zij ervoor gezorgd dat ongeacht welk platform of besturingssysteem er gebruikt wordt, de Kotlin code wordt ondersteund. Dit komt door de LLVM compiler die Kotlin/Native gebruikt. Deze wordt in hoofdstuk \ref{ch:compiler} verder besproken.
 
 \section{Het gebruik van Kotlin}
 \label{sec:kotlingebruik}
@@ -54,14 +53,14 @@ Figuur \ref{fig:kotlingithub} toont het aantal lijnen Kotlin code beschikbaar op
 \begin{figure} [ht]
 	\centering
 	\includegraphics[width=0.95\textwidth]{img/KotlinAdoption.png}
-	\caption{Hoeveelheid Kotlin code op GitHub \cite{JetBrains12}}
+	\caption{Hoeveelheid Kotlin code op GitHub (\cite{JetBrains12})}
 	\label{fig:kotlingithub}
 \end{figure}
 
 \begin{figure} [ht]
 	\centering
 	\includegraphics[width=0.95\textwidth]{img/KUGmap.png}
-	\caption{Kotlin user groups in de wereld \cite{JetBrains12}}
+	\caption{Kotlin user groups in de wereld (\cite{JetBrains12})}
 	\label{fig:usergroups}
 \end{figure}
 
@@ -73,11 +72,11 @@ Figuur \ref{fig:usergroups} toont de verschillende user groups over de volledige
 \label{sec:whykotlin}
 Maar waarom heeft JetBrains nu besloten te beginnen met een nieuwe programmeertaal en deze dan later verder uit te bouwen met een cross-platform framework?
 
-Een verklaring die men vaak leest op het internet, is dat JetBrains Kotlin uitvond omdat ze niet tevreden waren met Java en hun eigen productiviteit wilden vergroten. Ze vonden dus Java in sommige aspecten 'slecht'. JetBrains is een ontwikkelaar van IDE's die geschreven worden in Java, en dit is waar het schoentje wringt. Aangezien ze zelf vinden dat Java gebreken heeft, moesten ze met een oplossing komen: Kotlin.
+Een verklaring die vaak op het internet te lezen is (\cite{TechYourChance}), is dat JetBrains Kotlin heeft uigevonden om hun eigen productiviteit te vergroten. Ze vonden dat Java niet al hun verwachtingen kon inlossen en daarom moest er een nieuwe programmeertaal op de markt komen. Momenteel hebben ze reeds een groot aantal IDE's ontwikkeld die geschreven zijn in Java. Dat is dan ook de reden dat men een programmeertaal ontwikkeld heeft die naar Java compileerbaar is. Een andere reden zou zijn dat men ontwikkelaars zou willen migreren naar een binnenshuis programmeertaal die gemakkelijker te ondersteunen is.
 
 Anderzijds het feit dat ze kiezen voor een taal die draait op de JVM, betekent dus dat men niet alle bestaande libraries willen herschrijven, maar hergebruiken.
 
-Op 2 augustus 2011 heeft JetBrains, in het jaar dat Kotlin bekend werd gemaakt, een artikel geschreven op hun blog \textcite{JetBrainsNeedKotlin} waarin Dmitry Jemerov, Kotlin tools team lead, uitlegt waarom JetBrains Kotlin heeft ontworpen. In die blogpost vindt men volgend zin terug: "We willen productiever worden door over te schakelen op een meer expressieve taal.". Ze geven dus duidelijk aan dat men productiever wil worden, maar wil men hiermee bevestigen dat men Java niet voldoende vindt?
+Op 2 augustus 2011 heeft JetBrains, in het jaar dat Kotlin bekend gemaakt werd, een artikel geschreven op hun blog \textcite{JetBrainsNeedKotlin} waarin Dmitry Jemerov, de Kotlin tools team lead, uitlegt waarom JetBrains Kotlin heeft ontworpen. In die blogpost vindt men volgend zin terug: "We willen productiever worden door over te schakelen op een meer expressieve taal.". Ze geven dus duidelijk aan dat men productiever wil worden, maar wil men hiermee bevestigen dat Java enkele tekortkomingen heeft?
 
 %Dit hoofdstuk bevat je literatuurstudie. De inhoud gaat verder op de inleiding, maar zal het onderwerp van de bachelorproef *diepgaand* uitspitten. De bedoeling is dat de lezer na lezing van dit hoofdstuk helemaal op de hoogte is van de huidige stand van zaken (state-of-the-art) in het onderzoeksdomein. Iemand die niet vertrouwd is met het onderwerp, weet er nu voldoende om de rest van het verhaal te kunnen volgen, zonder dat die er nog andere informatie moet over opzoeken \autocite{Pollefliet2011}.
 

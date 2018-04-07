@@ -44,12 +44,12 @@ De front-end zorgt voor de analyse van de broncode. Deze heeft dus als taak om e
 \begin{figure} [ht]
 	\centering
 	\includegraphics[width=0.95\textwidth]{img/syntaxtree.png}
-	\caption{Taalspecifieke abstracte syntaxboom}
+	\caption{Taalspecifieke abstracte syntaxboom (\cite{ResearchGate})}
 	\label{fig:syntaxtree}
 \end{figure}
 
 \subsubsection{De optimizer}
-De optimizer is verantwoordelijk, zoals de naam het zelfs zegt, voor het uitvoeren van een breed gamma van transformaties om de running time van de code te optimaliseren. Dit wordt gedaan door het elimineren van overtollige berekeningen, maar dit meestal afhankelijk van de taal die gebruikt werd en de doelarchitectuur.
+De optimizer is verantwoordelijk, zoals de naam het zelfs zegt, voor het uitvoeren van een breed gamma van transformaties om de uitvoeringtijd van de code te optimaliseren. Dit wordt gedaan door het elimineren van overtollige berekeningen, maar dit is meestal afhankelijk van de taal die gebruikt werd en de doelarchitectuur.
 
 \subsubsection{De back-end}
 De back-end, ook bekend als de codegenerator, gaat de code gaan mappen naar een instructieset. Naast het maken van deze instructieset is het ook verantwoordelijk om ervoor te zorgen dat deze instructieset gebruik maakt van de ongewone kenmerken van de ondersteunde architectuur. Iedere architectuur is namelijk anders en de instructieset moet dus met iedere architectuur kunnen werken. 
@@ -59,7 +59,7 @@ Het grote voordeel van dit driefasenontwerp treedt op wanneer een compiler beslu
 
 Met dit ontwerp, indien men wenst een nieuwe brontaal te ondersteunen, moet men enkel een nieuwe front-end schrijven maar de bestaande optimizer en back-end kunnen worden hergebruikt. Indien deze delen (front-end, optimizer en back-end) niet waren gescheiden, zou het implementeren van een nieuwe brontaal vereisen om helemaal opnieuw te beginnen, dus een volledig nieuwe compiler te schrijven. Indien men N doelarchitecturen heeft en M brontalen, dan zou men N*M compilers hebben.
 
-Nog een voordeel van dit ontwerp is dat deze soorten van compilers een veel bredere set van programmeurs kan tevreden stellen. Dit is minder het geval indien men slechts één brontaal en doelarchtectuur zou ondersteunen. Voor een open-source project betekent dit dus 
+Nog een voordeel van dit ontwerp is dat deze soorten van compilers een veel bredere set van programmeurs kan tevreden stellen. Dit is minder het geval indien men slechts één brontaal en doelarchtectuur zou ondersteunen. 
 
 \begin{figure} [ht]
 	\centering
@@ -69,8 +69,6 @@ Nog een voordeel van dit ontwerp is dat deze soorten van compilers een veel bred
 \end{figure}
 
 \section{Verschil met LLVM}
-Maar wat is het verschil tussen een standaard compiler en LLVM? 
-\newline
 In een LLVM-gebaseerde compiler heeft de front-end dezelfde taak als de front-end in een normale compiler. De code wordt daarna door de front-end vertaald naar LLVM IR\footnote{Intermediate Representation}, dit meestal door het opbouwen van een syntaxboom en deze later te converteren naar IR. De IR is eigenlijk het hart van de LLVM. Het is een low-level programmeertaal die zeer dicht aansluit bij assembly code. Deze IR heeft als taak om de code te verbeteren, waarna deze code in een soort van codegenerator wordt gestoken waarbij deze wordt omgezet naar native machinecode. 
 
 In een korte notendop: de front-end krijgt een brontaal binnen en gaat deze taal parsen, valideren en analyseren. Hij stelt de syntaxboom op en zet deze om naar LLVM IR. De optimizer gaat de code optimalizeren en stuurt de IR code naar de back-end die dient als codegenerator met als resultaat machinecode.
@@ -83,7 +81,7 @@ In een korte notendop: de front-end krijgt een brontaal binnen en gaat deze taal
 \end{figure}
 
 \section{LLVM en Kotlin}
-Kotlin Native is een technologie dat Kotlin via LLVM direct compileert naar machine code. De Kotlin Native compiler produceert zelfstandige uitvoerbare bestanden die zonder virtuele machine kunnen worden uitgevoerd. Hierdoor is het mogelijk om Kotlin te gebruiken op ieder platform of besturingssysteem.
+Kotlin/Native is een technologie dat Kotlin via LLVM direct compileert naar machine code. De Kotlin/Native compiler produceert zelfstandige uitvoerbare bestanden die zonder virtuele machine kunnen worden uitgevoerd. Hierdoor is het mogelijk om Kotlin te gebruiken op ieder platform of besturingssysteem.
 
 \section{LLVM en JVM}
 De LLVM is een low-level register gebaseerde compilatie technologie. Het is ontworpen om onderliggende hardware abstraheren en een lijn te trekken tussen de front-end en de back-end van een compileerprogramma.
