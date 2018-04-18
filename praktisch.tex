@@ -1,12 +1,17 @@
 \chapter{Praktische uitwerking Kotlin/Native}
 \label{ch:praktisch}
 In dit hoofdstuk zal er praktisch een Kotlin/Native project worden gebouwd. De bedoeling is om aan de hand van een voorbeeld de volledige werking uit te leggen. In dit voorbeeld zal er een simpele applicatie gebouwd worden waarbij gebruikers een shopping cart kunnen aanmaken, producten kunnen bekijken en toevoegen aan de shopping cart en kunnen afrekenen. Het volledige project is te vinden op 
-%TODO: link toevoegen naar github%
+https://github.com/Iliasvw/kotlin-native-example.
 
 \section{Domeinmodel}
-Aangezien het doel van Kotlin/Native het delen van business logica is, is het handig om op voorhand na te denken over het domeinmodel. Welke klassen heb ik nodig, welke attributen en methodes moeten deze klassen hebben. Een domeinmodel geeft je ook een duidelijk overzicht over je applicatie.
+Aangezien het doel van Kotlin/Native het delen van business logica is, is het handig om op voorhand na te denken over het domeinmodel. Welke klassen heb ik nodig, welke attributen en methodes moeten deze klassen hebben. Een domeinmodel geeft je ook een duidelijk overzicht over je applicatie. Zie figuur \ref{fig:domeinmodel-kn} om het domeinmodel te zien van deze voorbeeldapplicatie.
 
-TOEVOEGEN FOTO
+\begin{figure} [ht]
+	\centering
+	\includegraphics[width=0.95\textwidth]{img/domeinmodel.png}
+	\caption{Klassendiagram domeinlogica}
+	\label{fig:domeinmodel-kn}
+\end{figure}
 
 \section{Requirements}
 Om gebruik te kunnen maken van Kotlin/Native voor het ontwikkelen van cross-platform applicaties (iOS \& Android), zijn er enkele vereisten:
@@ -140,7 +145,84 @@ Er worden ook twee sourceSets toegevoegd. SourceSets vertegenwoordigen een logis
 
 Tenslotte worden er drie dependencies toegevoegd. De stdlib is verantwoordelijk voor het aanmaken van de Kotlin Standard Library. Er worden nog twee test dependencies toegevoegd, één verantwoordelijk voor de annotations, de andere voor het opstellen en uitvoeren van de testen (later meer over testen).
 
-%TODO: Code toevoegen%
+\section{Common code}
+\subsection{Cart}
+\begin{lstlisting}
+package ilias.vw.libs
+	
+class Cart constructor(name: String) {
+ var name: String = name
+ private var cartLines: List<CartLine> = mutableListOf()
+	
+ fun getCartLines(): List<CartLine> {
+  return this.cartLines
+ }
+	
+ fun addCartLine(cartLine: CartLine) {
+  for (item in cartLines) {
+   if (item.getProduct().getName() == cartLine.getProduct().getName()) {
+    item.add(cartLine.getQuantity())
+    return
+   }
+  }
+  this.cartLines += cartLine
+ }
+	
+ fun getTotalPrice(): Double {
+  var totalPrice = 0.0
+	
+  for (line in cartLines) {
+   totalPrice += line.getTotalPrice()
+  }
+	
+  return totalPrice
+ }
+	
+ fun removeCartLine(cartLine: CartLine) {
+  this.cartLines -= cartLine
+ }
+}
+\end{lstlisting}
+
+\subsection{CartLine}
+\begin{lstlisting}
+package ilias.vw.libs
+
+class CartLine {
+ private val product: Product
+ private val quantity: Int
+
+ constructor(product: Product, quantity: Int) {
+  this.product = product
+  this.quantity = quantity
+ }
+
+ fun getProduct(): Product {
+  return this.product
+ }
+
+ fun getQuantity(): Int {
+  return this.quantity
+ }
+
+ fun getTotalPrice(): Double {
+  return product.getPrice() * quantity
+ }
+}
+\end{lstlisting}
+
+\subsection{Product}
+\begin{lstlisting}
+package ilias.vw.libs
+
+expect class Product(name: String, price: Double, 
+	description: String, productImage: Int) {
+ fun getName(): String
+ fun getPrice(): Double
+ fun getDescription(): String
+ fun getProductImage(): Int
+}
+\end{lstlisting}
 
 \section{Stap 4: platforms folder}
 De platform folder bevat enkele subfolders, één subfolder per platform waarvoor men wenst te ontwikkelen. Bij dit voorbeeld zullen er dus twee subfolders aanwezig zijn, namelijk Android en iOS. Zie figuur \ref{fig:stap4-structuur}.
@@ -157,7 +239,43 @@ Per submap, hebben we opnieuw twee submappen, namelijk main en test. Net zoals b
 Zowel de main en test bevatten elk nog een map. Bij Android is dit een package die begint met het groupId, zie sectie \ref{sec:overige}, en eindigt met een willekeurige naam. In dit voorbeeld is dit 'libs'. Dit dient identiek te zijn met de naam van de package gekozen in de common map, zie sectie \ref{sec:maintestcommon}. In het geval van iOS zijn dit geen packages maar eerder een mappenstructuur.
 
 \subsection{android map}
-In deze map komt alle Android-specifieke code terecht.
+Platformspecifieke code voor Android.
+\begin{lstlisting}
+package ilias.vw.libs
+
+import java.io.Serializable
+
+actual class Product: Serializable {
+ private val name: String
+ private val price: Double
+ private val description: String
+ private val productImage: Int
+
+ actual constructor(name: String, price: Double, 
+ 	description: String, productImage: Int) {
+  this.name = name;
+  this.price = price
+  this.description = description
+  this.productImage = productImage
+}
+
+ actual fun getName(): String {
+  return "Android: " + this.name
+ }
+
+ actual fun getPrice(): Double {
+  return this.price
+ }
+
+ actual fun getDescription(): String {
+  return this.description
+ }
+
+ actual fun getProductImage(): Int {
+  return this.productImage
+ }
+}
+\end{lstlisting}
 
 \subsubsection{Build.gradle}
 \begin{lstlisting}
@@ -190,7 +308,35 @@ De sourceSets worden ingesteld. Kotlin/Native zal steeds zoeken naar code in de 
 Tenslotte worden alle dependecies geladen en wordt er aangegeven dat we een common module verwachten die code bevat.
 
 \subsubsection{Platformspecifieke code}
-%TODO: code toevoegen%
+Platformspecifieke code voor iOS.
+\begin{lstlisting}
+package ilias.vw.libs
+
+actual class Product {
+ private val name: String
+ private val price: Double
+ private val description: String
+
+ actual constructor(name: String, price: Double, 
+ 	description: String) {
+  this.name = name;
+  this.price = price
+  this.description = description
+ }
+
+ actual fun getName(): String {
+  return "iOS: " + this.name
+ }
+
+ actual fun getPrice(): Double {
+  return this.price
+ }
+
+ actual fun getDescription(): String {
+  return this.description
+ }
+}
+\end{lstlisting}
 
 \subsection{ios map}
 In deze map komt alle iOS-specifieke code terecht.
@@ -265,11 +411,10 @@ implementation project(':platforms-android')
 Hiermee wordt er aangegeven dat de android-specifieke implementatie te vinden is in platforms-android, waarvan de locatie is opgegeven in de settings.gradle. 
 
 \section{Stap 6: iOS map}
-%Vergeet niet de build phases en scripts%
 Net zoals bij de android map, is het de bedoeling om via Xcode een nieuw Xcode project aan te maken dat ook een submap is van het Kotlin/Native project. Men kan zowel kiezen voor een Objective-C als Swift project aangezien het gecompileerde iOS framework zowel in beide projecten kan gebruikt worden.
 
 \subsection{Gebruiken van het SharediOS framework}
-Vooraleer men in Xcode kan gebruik maken van het SharediOS framework, moeten er een aantal dingen aangepast worden in de build phases van het project. Uit figuur \ref{fig:stap6-phases} kan worden afgeleid dat de build phases zijn aangepast. De build phase die moet worden toegevoegd is: Compile Kotlin Native to iOS framework.
+Vooraleer men in Xcode kan gebruik maken van het SharediOS framework, moeten er een aantal dingen aangepast worden in de build phases van het project. Uit figuur \ref{fig:stap6-phases} kan worden afgeleid dat de build phases zijn aangepast. Volgende build phase moet worden toegevoegd: Compile Kotlin Native to iOS framework.
 \begin{figure} [ht]
 	\centering
 	\includegraphics[width=0.75\textwidth]{img/stap6-phases.png}
@@ -277,7 +422,7 @@ Vooraleer men in Xcode kan gebruik maken van het SharediOS framework, moeten er 
 	\label{fig:stap6-phases}
 \end{figure}
 
-In deze nieuwe build phase moet er een script worden toegevoegd: 
+In deze nieuwe build phase moet er een script, afkomstig van \textcite{AlbertGao}, worden toegevoegd: 
 \begin{lstlisting}
 case "$PLATFORM_NAME" in
 iphoneos)
