@@ -86,13 +86,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.4}Stap 2: project structuur}{42}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}Stap 3: Common map }{43}{section.5.5}
+\contentsline {section}{\numberline {5.5}Stap 3: Common map }{42}{section.5.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.5.1}Build map}{43}{subsection.5.5.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.5.2}Main en test map}{43}{subsection.5.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.5.3}Build.gradle}{43}{subsection.5.5.3}
+\contentsline {subsection}{\numberline {5.5.3}Build.gradle}{44}{subsection.5.5.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.6}Common code}{44}{section.5.6}
 \defcounter {refsection}{0}\relax 
@@ -106,7 +106,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.7.1}android map}{47}{subsection.5.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Build.gradle}{47}{section*.10}
+\contentsline {subsubsection}{Build.gradle}{48}{section*.10}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Platformspecifieke code}{48}{section*.11}
 \defcounter {refsection}{0}\relax 
@@ -120,7 +120,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.8.1}settings.gradle}{50}{subsection.5.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.8.2}build.gradle}{50}{subsection.5.8.2}
+\contentsline {subsection}{\numberline {5.8.2}build.gradle}{51}{subsection.5.8.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.9}Stap 6: iOS map}{51}{section.5.9}
 \defcounter {refsection}{0}\relax 
