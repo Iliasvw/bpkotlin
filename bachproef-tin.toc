@@ -56,13 +56,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}De werking van Kotlin/Native}{33}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Wat is Kotlin Native?}{33}{section.4.1}
+\contentsline {section}{\numberline {4.1}Wat is Kotlin/Native?}{33}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Het delen van code in Kotlin Native}{34}{section.4.2}
+\contentsline {section}{\numberline {4.2}Het delen van code in Kotlin/Native}{34}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}De structuur van een Kotlin Native project}{35}{section.4.3}
+\contentsline {section}{\numberline {4.3}De structuur van een Kotlin Native project}{34}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Expect en actual klassen}{36}{section.4.4}
+\contentsline {section}{\numberline {4.4}Expect en actual klassen}{35}{section.4.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.5}Gemeenschappelijke klassen}{37}{section.4.5}
 \defcounter {refsection}{0}\relax 
@@ -104,9 +104,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.7}Stap 4: platforms folder}{46}{section.5.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.7.1}android map}{47}{subsection.5.7.1}
+\contentsline {subsection}{\numberline {5.7.1}android map}{46}{subsection.5.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Build.gradle}{48}{section*.10}
+\contentsline {subsubsection}{Build.gradle}{46}{section*.10}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Platformspecifieke code}{48}{section*.11}
 \defcounter {refsection}{0}\relax 
@@ -114,11 +114,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Build.gradle}{49}{section*.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Platformspecifieke code}{50}{section*.13}
+\contentsline {subsubsection}{Platformspecifieke code}{49}{section*.13}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.8}Stap 5: Android map}{50}{section.5.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.8.1}settings.gradle}{50}{subsection.5.8.1}
+\contentsline {subsection}{\numberline {5.8.1}settings.gradle}{51}{subsection.5.8.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.8.2}build.gradle}{51}{subsection.5.8.2}
 \defcounter {refsection}{0}\relax 
@@ -132,9 +132,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.10.2}iOS}{53}{subsection.5.10.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.11}User interfaces}{53}{section.5.11}
+\contentsline {section}{\numberline {5.11}User interfaces}{54}{section.5.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.12}Optioneel: testen}{53}{section.5.12}
+\contentsline {section}{\numberline {5.12}Optioneel: testen}{54}{section.5.12}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Conclusie}{55}{chapter.6}
 \defcounter {refsection}{0}\relax 

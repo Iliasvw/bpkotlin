@@ -243,6 +243,30 @@
       \field{title}{Kotlin and cross-platform}
       \field{year}{2015}
     \endentry
+    \entry{AlbertGao}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=a617239b92d12085c4b45c4ce6d7d84c}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Albert},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a617239b92d12085c4b45c4ce6d7d84c}
+      \strng{fullhash}{a617239b92d12085c4b45c4ce6d7d84c}
+      \strng{authornamehash}{a617239b92d12085c4b45c4ce6d7d84c}
+      \strng{authorfullhash}{a617239b92d12085c4b45c4ce6d7d84c}
+      \field{sortinit}{G}
+      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Use Kotlin to share native code among iOS, Android}
+      \field{year}{2018}
+      \verb{url}
+      \verb https://github.com/Albert-Gao/kotlin-multuplatform-including-mobile
+      \endverb
+    \endentry
     \entry{Statista2018}{article}{}
       \field{sortinit}{G}
       \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
@@ -359,7 +383,7 @@
       \verb https://kotlinlang.org/docs/reference/server-overview.html
       \endverb
     \endentry
-    \entry{aosa}{misc}{}
+    \entry{aosa}{article}{}
       \name{author}{1}{}{%
         {{uniquename=0,hash=082d304bf1444853e07be11590d172a2}{%
            family={Lattner},
@@ -377,6 +401,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{journaltitle}{Aosabook}
       \field{title}{The architecture of Open Source Applications}
       \field{year}{2018}
       \verb{url}
