@@ -69,15 +69,15 @@ In de repositories tag worden de juiste repositories gelinkt:
 \begin{itemize}
 	\item \textbf{Kotlinx} bevat alle coroutines\footnote{Programmaonderdelen die asynchroon programmeren vergemakkelijken door gecompliceerde logica in bibliotheken te steken} die Kotlin kan gebruiken.
 	\item \textbf{Gradle}
-	\item \textbf{Kotlin-native-dependencies} stelt alle dependencies, die Kotlin nodig heeft, ter beschikking.
+	\item \textbf{Kotlin-native-dependencies} stelt alle dependencies, die Kotlin/Native nodig heeft, ter beschikking.
 \end{itemize}
 
 \subsection{Dependencies}
 In de dependencies tag worden de juiste dependencies gelinkt:
 \begin{itemize}
-	\item \textbf{Kotlin-gradle} laadt de Kotlin-gradle plugin met de versie van Kotlin die wordt aangegeven bovenaan het build script.
+	\item \textbf{Kotlin-gradle} laadt de Kotlin-gradle plugin met de versie van Kotlin die wordt aangegeven bovenaan het build script. Deze plugin zorgt voor het compileren van Kotlin bronnen en modules.
 	\item \textbf{Android build tools} is nodig voor het bouwen van de Android applicatie.
-	\item \textbf{Kotlin-native-gradle-plugin} is de Kotlin/Native plugin die gebruikt zal worden om te zorgen voor een cross-platforme applicatie.
+	\item \textbf{Kotlin-native-gradle-plugin} is de Kotlin/Native plugin die gebruikt zal worden om te zorgen voor een cross-platform applicatie.
 \end{itemize}
 
 \subsection{Overige informatie}
@@ -263,9 +263,9 @@ dependencies {
 
 In deze build.gradle wordt er gebruik gemaakt van de kotlin-platform-jvm plugin. Android applicaties maken nog steeds gebruik van de JVM en dus ook deze android applicatie. 
 
-De sourceSets worden ingesteld. Kotlin/Native zal steeds zoeken naar code in de map src/kotlin/main of src/kotlin/test, maar hier geven we aan dat code te vinden is in de main en test map en dus niet onder een src/kotlin map.
+De sourceSets worden ingesteld. Kotlin/Native zal steeds zoeken naar code in de map src/kotlin/main of src/kotlin/test, maar hier geven we aan dat code te vinden is in de main en test map en dus niet onder een src/kotlin/ map.
 
-Tenslotte worden alle dependecies geladen en wordt er aangegeven dat we een common module verwachten die code bevat.
+Tenslotte worden alle dependecies geladen en wordt er aangegeven dat de common module verwacht wordt die code bevat.
 
 \subsubsection{Platformspecifieke code}
 De platformspecifieke code voor Android. Graag willen we het product ook van een afbeelding voorzien en aangezien drawables in Android gemapt worden naar een Integerwaarde, wordt er een getal ingevuld in de constructor. De naam van het product wordt teruggeven met prefix 'Android'.
