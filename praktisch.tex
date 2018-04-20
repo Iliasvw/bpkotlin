@@ -275,18 +275,18 @@ package ilias.vw.libs
 import java.io.Serializable
 
 actual class Product: Serializable {
-private val name: String
-private val price: Double
-private val description: String
-private val productImage: Int
+ private val name: String
+ private val price: Double
+ private val description: String
+ private val productImage: Int
 
-actual constructor(name: String, price: Double, 
+ actual constructor(name: String, price: Double, 
 		description: String, productImage: Int) {
- this.name = name;
- this.price = price
- this.description = description
- this.productImage = productImage
-}
+  this.name = name;
+  this.price = price
+  this.description = description
+  this.productImage = productImage
+ }
 
  actual fun getName(): String {
   return "Android: $name"
@@ -352,18 +352,18 @@ De platformspecifieke code voor iOS. In iOS heb je de mogelijkheid om afbeelding
 package ilias.vw.libs
 
 actual class Product {
-private val name: String
-private val price: Double
-private val description: String
-private val productImage: String
+ private val name: String
+ private val price: Double
+ private val description: String
+ private val productImage: String
 
-actual constructor(name: String, price: Double, 
+ actual constructor(name: String, price: Double, 
 		description: String, productImage: String) {
- this.name = name;
- this.price = price
- this.description = description
- this.productImage = productImage
-}
+  this.name = name;
+  this.price = price
+  this.description = description
+  this.productImage = productImage
+ }
 
  actual fun getName(): String {
   return "iOS: $name"
