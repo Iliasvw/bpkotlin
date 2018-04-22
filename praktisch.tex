@@ -425,17 +425,11 @@ Vooraleer men in Xcode kan gebruik maken van het SharediOS framework, moeten er 
 
 In deze nieuwe build phase moet er een script, afkomstig van \textcite{AlbertGao}, worden toegevoegd: 
 \begin{lstlisting}
-case "$PLATFORM_NAME" in
-iphoneos)
-NAME=iphone
-;;
-iphonesimulator)
-NAME=iphone_sim
-;;
-*)
+case "$PLATFORM_NAME" in iphoneos)
+NAME=iphone;; iphonesimulator)
+NAME=iphone_sim;; *)
 echo "Unknown platform: $PLATFORN_NAME"
-exit 1
-;;
+exit 1;;
 esac
 
 "$SRCROOT/../gradlew" -p "$SRCROOT/../platforms/ios" "build"
@@ -459,7 +453,7 @@ Tenslotte zal het framework nog in de build phases 'Link Binary With Libraries' 
 
 \section{Aanspreken van code}
 \subsection{Android}
-Om gebruik te kunnen maken van de Kotlin code in de Android activities moet men simpelweg volgende import toevoegen om alle klassen te kunnen gebruiken: 
+Om gebruik te kunnen maken van de Kotlin code in het Android project moet men simpelweg volgende import toevoegen om alle klassen te kunnen gebruiken: 
 
 \begin{lstlisting}
 import ilias.vw.libs.*
@@ -504,5 +498,63 @@ class TestSampleCommon {
 Hierbij wordt er een cart aangemaakt met een naam 'test'. Daarna wordt de naam terug opgevraagd en wordt er gekeken of de naam die we initieel hebben meegegeven effectief gelijk is aan 'test'.
 
 \section{Proof-of-concept}
+Screenshots van de schermen van de proof-of-concept.
 \subsection{Android}
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.65\linewidth]{img/poc/android/1.png}
+		\caption{Aanmaken van een shopping cart}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.65\linewidth]{img/poc/android/2.png}
+		\caption{Overzicht van producten}
+		\label{fig:sub2}
+	\end{subfigure}
+\begin{subfigure}{.5\textwidth}
+	\centering
+	\includegraphics[width=0.65\linewidth]{img/poc/android/3.png}
+	\caption{Details van een product}
+	\label{fig:sub1}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+	\centering
+	\includegraphics[width=0.65\linewidth]{img/poc/android/4.png}
+	\caption{Overzicht winkelmand}
+	\label{fig:sub2}
+\end{subfigure}
+	\caption{Screenshots Android}
+	\label{fig:test}
+\end{figure}
+
 \subsection{iOS}
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.65\linewidth]{img/poc/ios/1.png}
+		\caption{Aanmaken van een shopping cart}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.65\linewidth]{img/poc/ios/2.png}
+		\caption{Overzicht van producten}
+		\label{fig:sub2}
+	\end{subfigure}
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.65\linewidth]{img/poc/ios/3.png}
+		\caption{Details van een product}
+		\label{fig:sub1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.65\linewidth]{img/poc/ios/4.png}
+		\caption{Overzicht winkelmand}
+		\label{fig:sub2}
+	\end{subfigure}
+	\caption{Screenshots iOS}
+	\label{fig:test}
+\end{figure}

@@ -117,7 +117,7 @@ actual class ABCMethods actual constructor() {
 Door gebruik te maken van Kotlin/Native is het niet nodig om zelf aan te geven welk bestand de compiler moet gebruiken voor welk platform. De compiler zal detecteren welk platform er gebruikt wordt en het juiste bestand gebruiken.
 
 \section{Gemeenschappelijke klassen}
-Naast de expect en actual klassen, die ervoor zorgen dat we platformspecifieke code kunnen schrijven, kunnen we ook klassen voorzien die voor alle platformen hetzelfde zijn. Deze klassen zijn dus voor ieder platform hetzelfde.
+Naast de expect en actual klassen, die ervoor zorgen dat we platformspecifieke code kunnen schrijven en dus een onderscheid kunnen maken tussen de verschillende ondersteunde platformen, kunnen we ook klassen voorzien die voor alle platformen hetzelfde zijn. De implementatie van deze klasse is voor ieder platform hetzelfde.
 
 \begin{lstlisting}
 class Example {
@@ -133,6 +133,6 @@ class Example {
 }
 \end{lstlisting}
 
-\section {Code gebruiken}
+\section {Het gebruik van Kotlin code}
 \label{sec:use-ios-code}
 Maar hoe kunnen we nu gebruik maken van de gemeenschappelijke en platformspecifieke code? Simpel. Bij een Android project kunnen we de Kotlin code gebruiken door simpelweg de bibliotheek te importeren. Dit is niks meer dan een import bovenaan in je Android acitivity. iOS gerelateerde code zal gedeeld worden via een iOS framework dat gegenereerd wordt door Kotlin/Native. Dit framework zal toegevoegd worden in de build phases van het xcode project. Zie sectie \ref{sec:ios-stap6} voor meer informatie.
