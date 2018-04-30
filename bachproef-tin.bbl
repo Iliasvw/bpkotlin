@@ -383,6 +383,30 @@
       \verb https://kotlinlang.org/docs/reference/server-overview.html
       \endverb
     \endentry
+    \entry{NativeVsCross}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=e12bcfd40680513dc0accca1555fbdf5}{%
+           family={Klubnikin},
+           familyi={K\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{e12bcfd40680513dc0accca1555fbdf5}
+      \strng{fullhash}{e12bcfd40680513dc0accca1555fbdf5}
+      \strng{authornamehash}{e12bcfd40680513dc0accca1555fbdf5}
+      \strng{authorfullhash}{e12bcfd40680513dc0accca1555fbdf5}
+      \field{sortinit}{K}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Cross-platform vs. Native Mobile App Development: Choosing the Right Dev Tools for Your App Project}
+      \field{year}{2017}
+      \verb{url}
+      \verb https://medium.com/all-technology-feeds/cross-platform-vs-native-mobile-app-development-choosing-the-right-dev-tools-for-your-app-project-47d0abafee81
+      \endverb
+    \endentry
     \entry{aosa}{article}{}
       \name{author}{1}{}{%
         {{uniquename=0,hash=082d304bf1444853e07be11590d172a2}{%
