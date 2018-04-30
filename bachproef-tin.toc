@@ -66,6 +66,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.5}Gemeenschappelijke klassen}{37}{section.4.5}
 \defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.6}Het gebruik van Kotlin code}{37}{section.4.6}
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Praktische uitwerking Kotlin/Native}{39}{chapter.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.1}Domeinmodel}{39}{section.5.1}
