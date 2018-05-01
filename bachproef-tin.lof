@@ -6,45 +6,45 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Hoeveelheid Kotlin code op GitHub (\cite {JetBrains12})\relax }}{22}{figure.caption.6}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Hoeveelheid Kotlin code op GitHub (\cite {JetBrains12})\relax }}{24}{figure.caption.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Kotlin user groups in de wereld (\cite {JetBrains12})\relax }}{23}{figure.caption.7}
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Kotlin user groups in de wereld (\cite {JetBrains12})\relax }}{25}{figure.caption.7}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Driefasenontwerp (\cite {aosa})\relax }}{28}{figure.caption.8}
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Taalspecifieke abstracte syntaxboom (\cite {ResearchGate})\relax }}{29}{figure.caption.10}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Driefasenontwerp (\cite {aosa})\relax }}{30}{figure.caption.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Meerdere front- en backends (\cite {aosa})\relax }}{30}{figure.caption.13}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Taalspecifieke abstracte syntaxboom (\cite {ResearchGate})\relax }}{31}{figure.caption.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces LLVM implementatie van driefasenontwerp (\cite {aosa})\relax }}{31}{figure.caption.14}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Meerdere front- en backends (\cite {aosa})\relax }}{32}{figure.caption.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces LLVM implementatie van driefasenontwerp (\cite {aosa})\relax }}{33}{figure.caption.14}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Het delen van code in Kotlin Native (\cite {Developine})\relax }}{34}{figure.caption.15}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Het delen van code in Kotlin Native (\cite {Developine})\relax }}{36}{figure.caption.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Kotlin/Native structuur\relax }}{35}{figure.caption.16}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Kotlin/Native structuur\relax }}{37}{figure.caption.16}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Klassendiagram domeinlogica\relax }}{40}{figure.caption.17}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Klassendiagram domeinlogica\relax }}{42}{figure.caption.17}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Importeren van een project\relax }}{43}{figure.caption.18}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Importeren van een project\relax }}{45}{figure.caption.18}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Common module structuur\relax }}{44}{figure.caption.19}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Common module structuur\relax }}{46}{figure.caption.19}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Platforms module structuur\relax }}{47}{figure.caption.20}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Platforms module structuur\relax }}{49}{figure.caption.20}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.5}{\ignorespaces iOS build phases\relax }}{52}{figure.caption.25}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces iOS build phases\relax }}{54}{figure.caption.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.6}{\ignorespaces iOS build map\relax }}{53}{figure.caption.26}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces iOS build map\relax }}{55}{figure.caption.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Screenshots Android\relax }}{57}{figure.caption.27}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Screenshots Android\relax }}{59}{figure.caption.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Screenshots iOS\relax }}{58}{figure.caption.28}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Screenshots iOS\relax }}{60}{figure.caption.28}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
