@@ -243,6 +243,30 @@
       \field{title}{Kotlin and cross-platform}
       \field{year}{2015}
     \endentry
+    \entry{GaoIOS}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=a617239b92d12085c4b45c4ce6d7d84c}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Albert},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a617239b92d12085c4b45c4ce6d7d84c}
+      \strng{fullhash}{a617239b92d12085c4b45c4ce6d7d84c}
+      \strng{authornamehash}{a617239b92d12085c4b45c4ce6d7d84c}
+      \strng{authorfullhash}{a617239b92d12085c4b45c4ce6d7d84c}
+      \field{sortinit}{G}
+      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{extrayear}{1}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{How to create Kotlin Native iOS project}
+      \field{year}{2018}
+      \verb{url}
+      \verb https://www.infoworld.com/article/2614665/development-tools/google-positions-gradle-as-the-build-system-of-choice-for-android.html
+      \endverb
+    \endentry
     \entry{AlbertGao}{misc}{}
       \name{author}{1}{}{%
         {{uniquename=0,hash=a617239b92d12085c4b45c4ce6d7d84c}{%
@@ -257,8 +281,8 @@
       \strng{authorfullhash}{a617239b92d12085c4b45c4ce6d7d84c}
       \field{sortinit}{G}
       \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{extrayear}{2}
       \field{labeldatesource}{year}
-      \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Use Kotlin to share native code among iOS, Android}
@@ -471,6 +495,30 @@
       \field{year}{2017}
       \verb{url}
       \verb https://medium.com/all-technology-feeds/cross-platform-vs-native-mobile-app-development-choosing-the-right-dev-tools-for-your-app-project-47d0abafee81
+      \endverb
+    \endentry
+    \entry{GoogleGradle}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=e7ba8198f55630c8227e324242752461}{%
+           family={Krill},
+           familyi={K\bibinitperiod},
+           given={Paul},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{e7ba8198f55630c8227e324242752461}
+      \strng{fullhash}{e7ba8198f55630c8227e324242752461}
+      \strng{authornamehash}{e7ba8198f55630c8227e324242752461}
+      \strng{authorfullhash}{e7ba8198f55630c8227e324242752461}
+      \field{sortinit}{K}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Google positions Gradle as the build system of choice for Android}
+      \field{year}{2013}
+      \verb{url}
+      \verb https://www.infoworld.com/article/2614665/development-tools/google-positions-gradle-as-the-build-system-of-choice-for-android.html
       \endverb
     \endentry
     \entry{aosa}{article}{}

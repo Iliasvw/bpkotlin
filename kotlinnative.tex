@@ -22,15 +22,15 @@ Het doel van Kotlin Native is om een framework aan te bieden dat gebruikt kan wo
 
 Voordelen:
 \begin{itemize}
-	\item Hergebruik van de domeinlogica
-	\item Mogelijkheid om per platform, in de user interfaces, andere accenten naar voor te brengen
+	\item Hergebruik van de domeinlogica.
+	\item Mogelijkheid om per platform, in de user interfaces, andere accenten naar voor te brengen.
 \end{itemize}
 
 Nadelen:
 \begin{itemize}
-	\item Verplichting om meerdere user interfaces op te bouwen (indien men meerdere platformen wil ondersteunen)
-	\item Grotere kosten en meer tijd nodig
-	\item Opzet van dit soort projecten is (momenteel) niet gemakkelijk voor de onervaren gebruiker
+	\item Verplichting om meerdere user interfaces op te bouwen (indien men meerdere platformen wil ondersteunen).
+	\item Grotere kosten en meer tijd nodig.
+	\item Opzet van dit soort projecten is (momenteel) niet gemakkelijk voor de onervaren gebruiker.
 \end{itemize}
 
 Figuur \ref{fig:sharingcode} toont hoe Kotlin/Native domeinlogica deelt over de verschillende platformen heen. Er wordt gebruik gemaakt van een \textbf{common} module. In deze module bevindt zich de gemeenschappelijke code, die gedeeld wordt met alle platformen. Daarnaast is er per platform dat je wenst te ondersteunen een aparte platformmodule. Deze platformmodules maken gebruik van de common module en men kan in deze platformmodules platformspecifieke code schrijven. Zie sectie \ref{sec:expectandactual} voor een meer technische uitleg.
@@ -42,7 +42,7 @@ Figuur \ref{fig:sharingcode} toont hoe Kotlin/Native domeinlogica deelt over de 
 	\label{fig:sharingcode}
 \end{figure}
 
-\section{De structuur van een Kotlin Native project}
+\section{De structuur van een Kotlin/Native project}
 \label{sec:knstructure}
 Alvorens te beginnen met het ontwikkelen van een Kotlin Native project is het belangrijk om na te gaan wat de structuur is van een Kotlin Native project. Er is namelijk geen IDE die een volledig Kotlin Native project voor genereert, daarom is het essentieel dat er vanaf het begin een goede mappenstructuur wordt gebouwd. Figuur \ref{fig:knstructuur} toont een goede structuur van een Kotlin/Native project.
 

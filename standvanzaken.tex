@@ -9,10 +9,10 @@
 
 Dit hoofdstuk is een literatuurstudie over de huidige stand van zaken rond Kotlin. Hierin wordt bekeken wat Kotlin eigenlijk is en waarom Kotlin is uitgevonden. Daarna is Kotlin op verschillende platformen aan de beurt, meer specifieke is dit iOS, Android, web-applicatie en als back-end. Tenslotte het gebruik van Kotlin, hoeveel ontwikkelaars maken er reeds gebruik van Kotlin? Na het lezen van dit hoofdstuk bent u volledig op de hoogte van de laatste nieuwigheden rond Kotlin.
 
-\section{Wat is cross-platform}
+\section{Wat is cross-platform?}
 Wat is de betekenis van cross-platform? Gaat dit over het delen van user interfaces, het delen van domeinlogica, of gaat dit over beiden? \textcite{CrossExplain}, een website voor IT professionals en geeks, heeft op hun website een verklaring voor een cross-platform product. Zij verklaren dat een cross-platform product een platformonafhankelijk computerproduct of systeem is dat op meerdere platformen of besturingssystemen kan werken. Zij geven echter ook aan dat wanneer bepaalde zaak van de applicatie hergebruikt worden per platform, er gedaan wordt aan cross-platform development. Zowel het delen van domeinlogica, het delen van interfaces of beiden is cross-platform ontwikkeling. Cross-platform is echter ook bekend als multiplatform of platformonafhankelijk.
 
-\section{Wat is Kotlin}
+\section{Wat is Kotlin?}
 \label{sec:kotlin}
 Volgens de FAQ van Kotlin \autocite{JetBrainsFAQ} is Kotlin een open-source programmeertaal die object-georiënteerde en functionele programmatie features combineert. Kotlin is ook een statically typed programmeertaal. Dit betekent dat het type van de variabele is toegekend wanneer de code wordt gecompileerd. Javascript is een dynamically typed programmeertaal, waarbij aan een variabele verschillende types kan worden toegekend. Zo kan een variabele bij Javascript in het begin een getal zijn, maar wat verder in de code kan dit veranderd worden naar een tekst.
 
@@ -24,6 +24,7 @@ Volgens het artikel van \textcite{GoogleSupportKotlin} heeft Google in 2017 beke
 
 Het is mogelijk in Android Studio om een reeds bestaand Android Java project om te zetten naar Kotlin. Hierbij zal de actie 'Convert Java File to Kotlin File' moeten uitvoerd worden (rechtermuisknop in het Java bestand). Hierdoor zal Android Studio detecteren dat er gebruik gemaakt zal worden van Kotlin, waardoor hij zal vragen om de Kotlin plugin te installeren via Gradle indien deze nog niet is geïnstalleerd.
 
+
 \section{Automigration}
 \label{sec:Automigration}
 Door de intergratie van Kotlin in Android Studio werd er een conversietool ter beschikking gesteld. Met behulp van deze tool kan bestaande Java-code eenvoudig worden omgezet naar Kotlin. Dit zorgt ervoor dat veel tijd kan worden bespaard en het programmeren van dubbele code zo wordt vermeden. Maar deze conversietool bevat wel een klein risico. Het kan wel eens gebeuren dat code soms fout wordt geconverteerd. 
@@ -31,6 +32,9 @@ Door de intergratie van Kotlin in Android Studio werd er een conversietool ter b
 Het is ook reeds mogelijk om zowel Java en Kotlin te combineren. Zo kunnen de verschillende object classes in Java worden geschreven en kan je via Kotlin alle objecten aanmaken. Of dit nuttig en best practice is, is te beslissen door de developer.
 
 Indien bestaande Java code online of van een vorige project gekopieerd en geplakt wordt naar een bestaand Android Studio project, dan zal Android Studio zelf detecteren dat er Java code gebruikt zal worden in een Kotlin project. Hij zal dan zelf ook de suggestie doen om de Java code om te zetten naar Kotlin code \autocite{Avantica2017}.
+
+\section{Kotlin en iOS development}
+Verschillende ontwikkelaars, zoals \textcite{GaoIOS}, zijn reeds aan de slag gegaan met de Kotlin/Native plugin. Op zijn website is te zien hoe het mogelijk is om aan de hand van deze plugin Kotlin te gebruiken voor iOS development. Er zijn twee mogelijkheden. Enerzijds heb je de mogelijkheid om het project in Objective-C aan te maken en de rest van het project in Kotlin te programmeren. Anderzijds kan het project in Swift aangemaakt worden en de Kotlin code wordt gecompileerd naar een iOS framework en toegevoegd aan het project.
 
 \section{Kotlin web en back-end}
 \label{sec:kotlincrossplatform}
@@ -74,7 +78,7 @@ Figuur \ref{fig:usergroups} toont de verschillende user groups over de volledige
 
 \section{Waarom Kotlin?}
 \label{sec:whykotlin}
-Maar waarom heeft JetBrains nu besloten te beginnen met een nieuwe programmeertaal en deze dan later verder uit te bouwen met een cross-platform framework?
+Maar waarom heeft JetBrains besloten om te beginnen met een nieuwe programmeertaal en deze dan later verder uit te bouwen met een cross-platform framework?
 
 Een verklaring die op het internet te lezen is (\cite{TechYourChance}), is dat JetBrains Kotlin heeft uigevonden om hun eigen productiviteit te vergroten. Ze vonden dat Java niet al hun verwachtingen kon inlossen en daarom moest er een nieuwe programmeertaal op de markt komen. Momenteel hebben ze reeds een groot aantal IDE's ontwikkeld die geschreven zijn in Java. Dat is dan ook de reden dat men een programmeertaal ontwikkeld heeft die naar Java compileerbaar is. Een andere reden zou zijn dat men ontwikkelaars zou willen migreren naar een binnenshuis programmeertaal die gemakkelijker te ondersteunen is.
 

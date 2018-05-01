@@ -1,9 +1,19 @@
-\chapter{Praktische uitwerking Kotlin/Native}
+\chapter{Kotlin/Native in de praktijk}
 \label{ch:praktisch}
 In dit hoofdstuk zal er praktisch een Kotlin/Native project worden opgebouwd. De bedoeling is om aan de hand van een voorbeeld de volledige werking uit te leggen. In dit voorbeeld zal er een simpele applicatie gebouwd worden, gericht op Android en iOS, waarbij gebruikers een shopping cart kunnen aanmaken, producten kunnen bekijken en toevoegen aan de shopping cart en kunnen bekijken welke producten reeds in hun winkelmandje aanwezig zijn. Het volledige project is te vinden op https://github.com/Iliasvw/kotlin-native-example.
 
 \section{Domeinmodel}
-Aangezien het doel van Kotlin/Native het delen van business logica is, is het handig om op voorhand na te denken over het domeinmodel. Welke klassen heb ik nodig, welke attributen en methodes moeten deze klassen hebben, is er eventueel een verschil in klassen tussen Android en iOS? Een domeinmodel geeft je ook een duidelijk overzicht over je applicatie. Zie figuur \ref{fig:domeinmodel-kn} om het domeinmodel te zien van deze voorbeeldapplicatie.
+\label{sec:domeinmodel}
+Aangezien het doel van Kotlin/Native het delen van business logica is, is het handig om op voorhand na te denken over het domeinmodel. Welke klassen heb ik nodig, welke attributen en methodes moeten deze klassen hebben, is er eventueel een verschil in klassen tussen Android en iOS? Een domeinmodel geeft je ook een duidelijk overzicht over je applicatie. Zie figuur \ref{fig:domeinmodel-kn} om het domeinmodel te zien van deze voorbeeldapplicatie. 
+
+Het domeinmodel beschikt over drie klassen: 
+\begin{itemize}
+	\item De klasse Cart stelt het winkelmandje voor. Deze beschikt over een naam en kan nul, één of meerdere CartLines bevatten. De klasse heeft een constructor die een naam verwacht en methodes om een CartLine toe te voegen, alle CartLines op te vragen, de totale prijs van het winkelmandje te berekenen en een CartLine te verwijderen van het winkelmandje.
+	
+	\item Een CartLine object heeft een product en quantity (hoeveelheid) attribuut. Deze klasse beschikt over een constructor die twee parameters verwacht, die tevens onze attributen zijn. Deze is ook voorzien van twee getters, om de attributen op te vragen (aangezien deze private zijn) en een methode om de kostprijs van deze CartLine te berekenen.
+	
+	\item De product klasse is de klasse die per platform wordt geimplementeerd. Deze klasse wordt dus als expect gedeclareerd en beschikt over drie expect methodes om de attributen van de klasse op te vragen. Per platform, in dit voorbeeld zal dit Android en iOS zijn, wordt er een implementatie voorzien van deze klasse. Deze actual klassen hebben elk een name, price, description en productImage en een implementatie van de methodes van de expect Product klasse. Het type van de productImage verschilt per platform.
+\end{itemize}
 
 \begin{figure} [ht]
 	\centering
@@ -21,8 +31,13 @@ Om gebruik te kunnen maken van Kotlin/Native voor het ontwikkelen van cross-plat
 	\item \textbf{Gradle} om gebruik te kunnen maken van de Kotlin/Native compiler en plugin. Deze wordt automatisch geïnstalleerd bij het instellen van IntelliJ IDEA of Android Studio.
 \end{itemize}
 
+\section{Wat is gradle?}
+Gradle is een build systeem. Het combineert de beste features van vele andere build systemen en combineert deze tot één systeem. Het is een op JVM gebaseerd build systeem wat betekent dat er eigen geschreven Java scripts kunnen worden gebruikt. 
+
+Android Studio maakt gebruikt van Gradle. Waarom maakt Google gebruikt van Gradle? Google zag Gradle als een zeer geavanceerd build systeem en realiseerde dat er eigen geschreven build scripts gebruikt kunnen worden met zo goed als geen leercurve. Het was ook niet nodig om een andere programmeertaal te leren aangezien er scripts kunnen worden geschreven in Java. Hierdoor is de Gradle plugin toegevoegd aan Android Studio \autocite{GoogleGradle}.
+
 \section{Stap 1: project initiatie}
-De eerste stap in het ontwikkelen van een Kotlin/Native project is het maken van een nieuwe map op een gewenste locatie op de harde schijf van je computer. Hierin zal er een eerste bestand worden aangemaakt: \textbf{build.gradle}.
+De eerste stap in het ontwikkelen van een Kotlin/Native project is het maken van een nieuwe map op een gewenste locatie op de harde schijf van de computer. Hierin zal er een eerste bestand worden aangemaakt: \textbf{build.gradle}.
 
 \begin{lstlisting}
 subprojects {
@@ -147,6 +162,7 @@ Tenslotte worden er drie dependencies toegevoegd. De stdlib is verantwoordelijk 
 \section{Common code}
 Uitwerking van de common code van de voorbeeldapplicatie.
 \subsection{Cart}
+Implementatie van de Cart klasse in de common module.
 \begin{lstlisting}
 package ilias.vw.libs
 	
@@ -185,6 +201,7 @@ class Cart constructor(name: String) {
 \end{lstlisting}
 
 \subsection{CartLine}
+Implementatie van de CartLine klasse in de common module.
 \begin{lstlisting}
 package ilias.vw.libs
 
@@ -212,7 +229,7 @@ class CartLine {
 \end{lstlisting}
 
 \subsection{Product}
-De product klasse is een expect klasse. Dit wil zeggen dat we voor iedere platform een andere implementatie hebben van deze klasse. Maar voor iedere platform verwachten we wel dat deze de getName, getPrice en getDescription methodes heeft.
+De product klasse is een expect klasse. Dit wil zeggen dat we voor iedere platform een andere implementatie hebben voor deze klasse. Maar voor iedere platform verwachten we wel dat deze de getName, getPrice en getDescription methodes heeft.
 
 \begin{lstlisting}
 package ilias.vw.libs
@@ -236,7 +253,7 @@ De platform folder bevat enkele subfolders, één subfolder per platform waarvoo
 
 Zowel de main en test bevatten elk nog een map. Bij Android is dit een package die begint met het groupId, zie sectie \ref{sec:overige}, en eindigt met een willekeurige naam. In dit voorbeeld is dit opnieuw 'libs'. Dit dient identiek te zijn met de naam van de package gekozen in de common map, zie sectie \ref{sec:maintestcommon}. In het geval van iOS zijn dit geen packages maar eerder een mappenstructuur.
 
-\subsection{android map}
+\subsection{Platforms android map}
 \subsubsection{Build.gradle}
 \begin{lstlisting}
 apply plugin: 'kotlin-platform-jvm'
@@ -306,7 +323,7 @@ actual class Product: Serializable {
 }
 \end{lstlisting}
 
-\subsection{ios map}
+\subsection{Platforms ios map}
 \subsubsection{Build.gradle}
 \label{sec:ios-build-gradle}
 \begin{lstlisting}
@@ -347,7 +364,7 @@ De main map wordt als source directory ingesteld. Om ervoor te zorgen dat op iOS
 Tenslotte wordt er opnieuw aangegeven dat we een common module verwachten die code bevat.
 
 \subsubsection{Platformspecifieke code}
-De platformspecifieke code voor iOS. In iOS heb je de mogelijkheid om afbeeldingen in te laten aan de hand van de naam van de imageset. Daardoor heeft de constructor een productImage die van het type String is. De naam van het product wordt teruggegeven met prefix 'iOS'.
+De platformspecifieke code voor iOS. In iOS is er de mogelijkheid om afbeeldingen in te laden aan de hand van de naam van de imageset. Daardoor heeft de constructor een productImage die van het type String is. De naam van het product wordt teruggegeven met prefix 'iOS'.
 \begin{lstlisting}
 package ilias.vw.libs
 
@@ -426,8 +443,10 @@ Vooraleer men in Xcode kan gebruik maken van het SharediOS framework, moeten er 
 In deze nieuwe build phase moet er een script, afkomstig van \textcite{AlbertGao}, worden toegevoegd: 
 \begin{lstlisting}
 case "$PLATFORM_NAME" in iphoneos)
-NAME=iphone;; iphonesimulator)
-NAME=iphone_sim;; *)
+NAME=iphone;;
+iphonesimulator)
+NAME=iphone_sim;;
+*)
 echo "Unknown platform: $PLATFORN_NAME"
 exit 1;;
 esac
@@ -449,7 +468,7 @@ Bij iedere gradle build van het Kotlin/Native project zal de build.gradle in de 
 
 In bovenstaand build phase script wordt gekeken welk type toestel er wordt gebruikt, een echte iPhone of een simulator. Daarna zal het juiste framework gekopieerd worden naar de build folder in de map van je Xcode project. Bij iedere build en/of run van het Xcode project zal bovenstaand script worden uitgevoerd. Dit zal er voor zorgen dat steeds het laatst gegenereerde framework gebruikt zal worden door je Xcode project.
 
-Tenslotte zal het framework nog in de build phases 'Link Binary With Libraries' en 'Embed Frameworks' moeten worden toegevoegd. Hierbij wordt er gelinkt naar het gekopieerde framework in de build folder van je Xcode project.
+Tenslotte zal het framework nog in de build phases 'Link Binary With Libraries' en 'Embed Frameworks' moeten worden toegevoegd. Hierbij wordt er gelinkt naar het gekopieerde framework in de build folder van het Xcode project.
 
 \section{Aanspreken van code}
 \subsection{Android}
@@ -475,9 +494,9 @@ var product: SOSProduct = SOSProduct(name: "Playstation 4", price: 399.95, descr
 \section{User interfaces}
 De user interface moet dus per platform opgebouwd worden. Er is geen manier om één user interface te ontwikkelen voor beide platformen zoals bijvoorbeeld bij React/Native of Ionic. Dit kan zowel positief als negatief zijn. Het vraagt dubbel zoveel werk maar het geeft wel de mogelijkheid om verschillende accenten te leggen in de user interface per platform.
 
-\section{Optioneel: testen}
+\section{Testen}
 \label{sec:testing}
-Een essentieel deel van object-oriented programming is het testen van je code. In het Kotlin/Native framework is het mogelijk om je aangemaakte klassen te testen. Zo is er de mogelijkheid om in de common map en per platform een test map toe te voegen. Een voorbeeld van een testklasse:
+Een essentieel deel van object-oriented programming is het testen van de code. In het Kotlin/Native framework is het mogelijk om de aangemaakte klassen te testen. Zo is er de mogelijkheid om in de common map en per platform een test map toe te voegen. Een voorbeeld van een testklasse:
 
 \begin{lstlisting}
 package ilias.vw.libs
@@ -497,9 +516,28 @@ class TestSampleCommon {
 
 Hierbij wordt er een cart aangemaakt met een naam 'test'. Daarna wordt de naam terug opgevraagd en wordt er gekeken of de naam die we initieel hebben meegegeven effectief gelijk is aan 'test'.
 
+Aangezien er per platform, platformspecifieke code geschreven kan worden is het belangrijk om deze code ook te kunnen testen. Er kan naargelang dat de code per platform verschilt, verschillende testcode geschreven worden in de test map van het platform. Dit zorgt ervoor dat er geen ongeteste code in het project geraakt wat eventueel bugs kan bevatten. 
+
+Een voorbeeld voor deze proof-of-concept: er kan voor de ios test gecheckt worden of de naam van het product begint met de prefix 'iOS' en voor Android kan er gecheckt worden of deze naam start met prefix 'Android'.
+
+\section{Huidige mogelijkheden}
+Zoals uit de proof-of-concept af te leiden is, is het reeds mogelijk om Kotlin/Native te gebruiken voor cross-platform applicatie ontwikkeling. Aan de hand van de Kotlin/Native Gradle plugin is het mogelijk om niet alleen voor Android te ontwikkelen maar ook voor iOS. Cross-platform heeft bij Kotlin/Native niet dezelfde betekenis als bij een framework zoals React/Native. Het doel van Kotlin/Native is dus het delen van domeinlogica en deze hergebruiken over de verschillende te ondersteunen platformen. In deze vroege versie (0.6) van Kotlin/Native is het reeds mogelijk om dit te doen, maar de mogelijkheden blijven beperkt. Indien je applicatie geen speciale iOS bibliotheken nodig heeft, is er geen probleem.
+
+Een ander belangrijk luik dat Kotlin/Native reeds ondersteunt is het aanmaken van testen voor de geschreven domeinlogica. Testen zijn en blijven een belangrijke onderdeel van object-oriented programming.
+
+\section{Beperkingen}
+Aangezien er nog geen officiële versie van Kotlin/Native is vrijgegeven is het logisch dat de mogelijkheden nog zeer beperkt zijn. 
+
+Er kan voor de platformspecifieke iOS code geen iOS specifieke bibliotheken gebruikt worden. In deze proof-of-concept was het de bedoeling om de shopping cart in zowel Android als iOS te cachen. In iOS moet het object dat gecached moet worden voldoen aan een bepaalde protocol, namelijk Codable. Kotlin/Native heeft geen kennis van deze protocollen waardoor het dus niet mogelijk is om het object te cachen in iOS. Voor Android kon dit wel, indien je een bepaald object wil cachen volstaat het om deze klasse de interface Serializable te laten implementeren. Dit is niet mogelijk in de common module, aangezien iOS het protocol Serializable niet kent. Dit is wel mogelijk in de platformspecifieke code van Android. Voor Android kan je dus wel interfaces implementeren maar dan moet de klasse in de common module expect worden gedeclareerd en moet de actual klasse van Android deze interface implementeren. Dit is het geval bij het domeinmodel van deze proof-of-concept, zie figuur \ref{fig:domeinmodel-kn}.
+
+Het aanspreken van hardware, zoals de Camera, via Kotlin/Native is (nog) niet mogelijk. Momenteel moet het openen van bijvoorbeeld de camera geprogrammeerd worden in het Android en Xcode project, er is (nog) geen manier om dit te doen in bijvoorbeeld de common module.
+
+Het gebruik van expect en actual klassen is momenteel ook nog zeer beperkt. Indien er een bepaalde klasse expect wordt gedeclareerd is het verder niet mogelijk om methodes of attributen toe te voegen aan deze klasse die niet expect zijn. Momenteel kan dus een expect klasse enkel en alleen expect methodes bevatten.
+
 \section{Proof-of-concept}
 \label{sec:poc}
-Screenshots van de schermen van de proof-of-concept.
+Hieronder zijn de screenshots van de schermen van de proof-of-concept te vinden, opgesplitst per platform (Android en iOS).
+\newpage
 \subsection{Android}
 \begin{figure}[H]
 	\centering
