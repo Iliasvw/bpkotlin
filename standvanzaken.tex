@@ -7,20 +7,22 @@
 
 % Pas na deze inleidende paragraaf komt de eerste sectiehoofding.
 
-Dit hoofdstuk is een literatuurstudie over de huidige stand van zaken rond Kotlin. Hierin wordt bekeken wat Kotlin eigenlijk is en waarom Kotlin is uitgevonden. Daarna is Kotlin op verschillende platformen aan de beurt, meer specifieke is dit iOS, Android, web-applicatie en als back-end. Tenslotte het gebruik van Kotlin, hoeveel ontwikkelaars maken er reeds gebruik van Kotlin? Na het lezen van dit hoofdstuk bent u volledig op de hoogte van met de laatste nieuwigheden rond Kotlin.
+Dit hoofdstuk is een literatuurstudie over de huidige stand van zaken rond Kotlin. Hierin wordt bekeken wat Kotlin eigenlijk is en waarom Kotlin is uitgevonden. Daarna is Kotlin op verschillende platformen aan de beurt, meer specifieke is dit iOS, Android, web-applicatie en als back-end. Tenslotte het gebruik van Kotlin, hoeveel ontwikkelaars maken er reeds gebruik van Kotlin? Na het lezen van dit hoofdstuk bent u volledig op de hoogte van de laatste nieuwigheden rond Kotlin.
+
+\section{Wat is cross-platform}
+Wat is de betekenis van cross-platform? Gaat dit over het delen van user interfaces, het delen van domeinlogica, of gaat dit over beiden? \textcite{CrossExplain}, een website voor IT professionals en geeks, heeft op hun website een verklaring voor een cross-platform product. Zij verklaren dat een cross-platform product een platformonafhankelijk computerproduct of systeem is dat op meerdere platformen of besturingssystemen kan werken. Zij geven echter ook aan dat wanneer bepaalde zaak van de applicatie hergebruikt worden per platform, er gedaan wordt aan cross-platform development. Zowel het delen van domeinlogica, het delen van interfaces of beiden is cross-platform ontwikkeling. Cross-platform is echter ook bekend als multiplatform of platformonafhankelijk.
 
 \section{Wat is Kotlin}
 \label{sec:kotlin}
-Kotlin is een open-source programmeertaal die object-georiënteerde en functionele programmatie features combineert. Kotlin is ook een statically typed programmeertaal. Dit betekent het type van de variabele is toegekend wanneer de code wordt gecompileerd. 
-Javascript is een dynamically typed programmeertaal, waarbij je aan een variabele verschillende types kan toekennen. Zo kan een variabele bij Javascript in het begin een getal zijn, maar wat verder in de code kan dit veranderd worden naar een tekst.
+Volgens de FAQ van Kotlin \autocite{JetBrainsFAQ} is Kotlin een open-source programmeertaal die object-georiënteerde en functionele programmatie features combineert. Kotlin is ook een statically typed programmeertaal. Dit betekent dat het type van de variabele is toegekend wanneer de code wordt gecompileerd. Javascript is een dynamically typed programmeertaal, waarbij aan een variabele verschillende types kan worden toegekend. Zo kan een variabele bij Javascript in het begin een getal zijn, maar wat verder in de code kan dit veranderd worden naar een tekst.
 
-Kotlin is ontworpen door JetBrains. JetBrains is een organisatie afkomstig van Sint-Petersburg, Rusland. De naam 'Kotlin' is afkomstig van het Kotlin eiland, 30 km ten westen van Sint-Petersburg. JetBrains is een software ontwikkelingbedrijf dat gesticht is in het jaar 2000. Hun hoofdkantoor is gevestigd in Praag (Tjsechië) en hun core-business is het ontwikkelen van tools die gebruikt kunnen worden door verschillende types van software ontwikkelaars. Zo hebben zij IDE's\footnote{Integrated Development Environment} ontwikkeld voor Java, Ruby, Python, PHP, SQL, Objective-C, C++, C\# en JavaScript.
+Kotlin is ontworpen door JetBrains. JetBrains is een organisatie afkomstig van Sint-Petersburg, Rusland. De naam Kotlin is afkomstig van het Kotlin eiland, 30 km ten westen van Sint-Petersburg. JetBrains is een software ontwikkelingbedrijf dat gesticht is in het jaar 2000. Hun hoofdkantoor is gevestigd in Praag (Tjsechië) en hun core-business is het ontwikkelen van tools die gebruikt kunnen worden door verschillende types van software ontwikkelaars. Zo hebben zij IDE's\footnote{Integrated Development Environment} ontwikkeld voor Java, Ruby, Python, PHP, SQL, Objective-C, C++, C\# en JavaScript \autocite{JetBrainsOverView}.
 
 \section{Kotlin en Android}
 \label{sec:kotlinandroid}
-In 2017 heeft Google bekend gemaakt dat het Kotlin volledig zou ondersteunen voor Android applicatieontwikkeling. Een Kotlin project maken in Android Studio is dan ook heel gemakkelijk. In Android Studio 3.0 heb je bij het aanmaken van een project de mogelijkheid om direct de ondersteuning voor Kotlin in te schakelen. Hierdoor zal het aangemaakte project onmiddelijk in Kotlin geschreven zijn.
+Volgens het artikel van \textcite{GoogleSupportKotlin} heeft Google in 2017 bekend gemaakt dat het Kotlin volledig zou ondersteunen voor Android applicatieontwikkeling. In Android Studio zal vanaf versie 3.0 Kotlin ondersteunt worden voor Android development. Een Kotlin project maken in Android Studio is dan ook heel gemakkelijk. In Android Studio is er bij het aanmaken van een project de mogelijkheid om direct de ondersteuning voor Kotlin in te schakelen. Hierdoor zal het aangemaakte project onmiddelijk in Kotlin geschreven zijn.
 
-Het is mogelijk om een reeds bestaand Android Java project om te zetten naar Kotlin. Hierbij zal de actie 'Convert Java File to Kotlin File' moeten uitvoerd worden (rechtermuisknop in het Java bestand). Hierdoor zal Android Studio detecteren dat er gebruik gemaakt zal worden van Kotlin, waardoor hij zal vragen om de Kotlin plugin te installeren via Gradle indien deze nog niet is geïnstalleerd.
+Het is mogelijk in Android Studio om een reeds bestaand Android Java project om te zetten naar Kotlin. Hierbij zal de actie 'Convert Java File to Kotlin File' moeten uitvoerd worden (rechtermuisknop in het Java bestand). Hierdoor zal Android Studio detecteren dat er gebruik gemaakt zal worden van Kotlin, waardoor hij zal vragen om de Kotlin plugin te installeren via Gradle indien deze nog niet is geïnstalleerd.
 
 \section{Automigration}
 \label{sec:Automigration}
@@ -28,27 +30,29 @@ Door de intergratie van Kotlin in Android Studio werd er een conversietool ter b
 
 Het is ook reeds mogelijk om zowel Java en Kotlin te combineren. Zo kunnen de verschillende object classes in Java worden geschreven en kan je via Kotlin alle objecten aanmaken. Of dit nuttig en best practice is, is te beslissen door de developer.
 
+Indien bestaande Java code online of van een vorige project gekopieerd en geplakt wordt naar een bestaand Android Studio project, dan zal Android Studio zelf detecteren dat er Java code gebruikt zal worden in een Kotlin project. Hij zal dan zelf ook de suggestie doen om de Java code om te zetten naar Kotlin code \autocite{Avantica2017}.
+
 \section{Kotlin web en back-end}
 \label{sec:kotlincrossplatform}
-Kotlin kan net zoals Java gebruikt worden om webapplicaties te bouwen. Dit in combinatie met bijvoorbeeld het Spring Framework, waarbij HttpServlets gebruikt worden om de webpagina's te tonen.
+Kotlin kan net zoals Java gebruikt worden om webapplicaties te bouwen. Dit in combinatie met bijvoorbeeld het Spring Framework, waarbij HttpServlets gebruikt worden om de webpagina's te tonen \autocite{JetBrainsWeb}.
 
-Wens je echter een full-stack webapplicatie te bouwen, dan heb je de mogelijkheid om ook een Kotlin server op te zetten. Zo kan je bijvoorbeeld aan de webapplicatie een RESTfull server hangen om verschillende API calls te doen.
+Wens je echter een full-stack webapplicatie te bouwen, dan heb je de mogelijkheid om ook een Kotlin server op te zetten. Zo kan je bijvoorbeeld aan de webapplicatie een RESTfull server hangen om verschillende API calls te doen  \autocite{JetBrainsServer}.
 
 Kotlin-applicaties kunnen worden geïmplementeerd op elke host die Java-webapplicaties ondersteunt, inclusief Amazon Web Services, Google Cloud Platform en veel meer.
 
 \section{Kotlin/Native}
 \label{sec:kotlinnative}
-Waarschijnlijk momenteel één van de meest nieuwe en innovatieve projecten van JetBrains is Kotlin/Native. Momenteel is men gekomen aan versie 0.6 en er zijn al verschillende voorbeeldprojecten beschikbaar gesteld door JetBrains. Kotlin/Native zou het mogelijk moeten om éénmalige business logica te schrijven in een applicatie en deze te delen over verschillende platformen, bijvoorbeeld Android en iOS. De user interfaces zou men wel nog per platform moeten opbouwen, waardoor je toch het 'native applicatie'-gevoel krijgt. Kotlin/Native maakt gebruik van een totaal andere compiler dan JVM, zie sectie \ref{sec:llvm} voor meer info. De bijnaam die gegeven wordt aan Kotlin/Native is \textit{Konan}.
+Waarschijnlijk momenteel één van de meest nieuwe en innovatieve projecten van JetBrains is Kotlin/Native. Momenteel is men gekomen aan versie 0.6 en er zijn al verschillende voorbeeldprojecten beschikbaar gesteld door JetBrains. Kotlin/Native zou het mogelijk maken om éénmalig domeinlogica te schrijven in een applicatie en deze te delen over verschillende platformen, bijvoorbeeld Android en iOS. De user interfaces zou men wel nog per platform moeten opbouwen, waardoor je toch het 'native applicatie'-gevoel krijgt. Kotlin/Native maakt gebruik van een totaal andere compiler dan JVM, zie sectie \ref{sec:llvm} voor meer info. De bijnaam die gegeven wordt aan Kotlin/Native is \textit{Konan}. Binnen dit onderzoek zal Kotlin/Native nauw onderzocht worden \autocite{AlbertGao}.
 
 \section{Compiler}
 \label{sec:llvm}
-Net zoals Java draait Kotlin op de JVM. Dit wil dus zeggen dat alle toestellen die een JVM kunnen draaien, ook Kotlin code ondersteunen. Maar sinds de dag dat JetBrains besloten heeft om zich niet enkel meer te richten op platformen die enkel en alleen de JVM ondersteunen, hebben zij ervoor gezorgd dat ongeacht welk platform of besturingssysteem er gebruikt wordt, de Kotlin code wordt ondersteund. Dit komt door de LLVM compiler die Kotlin/Native gebruikt. Deze wordt in hoofdstuk \ref{ch:compiler} verder besproken.
+Net zoals Java draait Kotlin op de JVM. Dit wil dus zeggen dat alle toestellen die een JVM kunnen draaien, ook Kotlin code ondersteunen. Maar sinds de dag dat JetBrains besloten heeft om zich niet enkel meer te richten op platformen die enkel en alleen de JVM ondersteunen \autocite{JetBrainsVM}, hebben zij ervoor gezorgd dat ongeacht welk platform of besturingssysteem er gebruikt wordt, de Kotlin code wordt ondersteund. Dit komt door de LLVM compiler die Kotlin/Native gebruikt. Deze wordt in hoofdstuk \ref{ch:compiler} verder besproken.
 
 \section{Het gebruik van Kotlin}
 \label{sec:kotlingebruik}
-Het gebruik van Kotlin is gedurende de jaren zeer sterk gestegen. Op de blog van JetBrains zijn grafieken te vinden waarmee men aantoont dat de populariteit van Kotlin enkel maar stijgt.
+Het gebruik van Kotlin is gedurende de jaren zeer sterk gestegen. Op de blog van JetBrains \autocite{JetBrains12} zijn grafieken te vinden waarmee wordt aangetoond dat de populariteit van Kotlin enkel maar stijgt.
 
-Figuur \ref{fig:kotlingithub} toont het aantal lijnen Kotlin code beschikbaar op GitHub, het aantal vragen gesteld op stackoverflow over Kotlin en het aantal keer dat de Kotlin plugin werd gebruikt. We kunnen hieruit besluiten dat het gebruik van Kotlin sterk stijgt de laatste drie jaren.
+Figuur \ref{fig:kotlingithub} toont het aantal lijnen Kotlin code beschikbaar op GitHub, het aantal vragen gesteld op stackoverflow over Kotlin en het aantal keer dat de Kotlin plugin werd gebruikt. Hieruit kan besloten worden dat het gebruik van Kotlin sterk stijgt de laatste drie jaren.
 
 \begin{figure} [ht]
 	\centering
@@ -64,7 +68,7 @@ Figuur \ref{fig:kotlingithub} toont het aantal lijnen Kotlin code beschikbaar op
 	\label{fig:usergroups}
 \end{figure}
 
-Volgens statistieken van een Android software ontwikkelingsbedrijf genaamd \textcite{AppBrain}, is Kotlin het beste framework voor Android applicaties te ontwikkelen. Verschillende belangrijke en veel gebruikte applicaties zoals Netflix, Twitter, Candy Crash bevatten grote delen Kotlin code.
+Volgens statistieken van een Android software ontwikkelingsbedrijf genaamd AppBrain \autocite{AppBrain}, is Kotlin het beste framework voor Android applicaties te ontwikkelen. Verschillende veel gebruikte applicaties zoals Netflix, Twitter en Candy Crash bevatten grote delen Kotlin code.
 
 Figuur \ref{fig:usergroups} toont de verschillende user groups over de volledige wereld. Het toont de sterke opkomst van Kotlin over de wereld, met een sterke concentratie in Europa.
 

@@ -12,21 +12,23 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Stand van zaken}{19}{chapter.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}Wat is Kotlin}{19}{section.1.1}
+\contentsline {section}{\numberline {1.1}Wat is cross-platform}{19}{section.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}Kotlin en Android}{20}{section.1.2}
+\contentsline {section}{\numberline {1.2}Wat is Kotlin}{19}{section.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Automigration}{20}{section.1.3}
+\contentsline {section}{\numberline {1.3}Kotlin en Android}{20}{section.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.4}Kotlin web en back-end}{20}{section.1.4}
+\contentsline {section}{\numberline {1.4}Automigration}{20}{section.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.5}Kotlin/Native}{21}{section.1.5}
+\contentsline {section}{\numberline {1.5}Kotlin web en back-end}{21}{section.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.6}Compiler}{21}{section.1.6}
+\contentsline {section}{\numberline {1.6}Kotlin/Native}{21}{section.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.7}Het gebruik van Kotlin}{21}{section.1.7}
+\contentsline {section}{\numberline {1.7}Compiler}{21}{section.1.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.8}Waarom Kotlin?}{22}{section.1.8}
+\contentsline {section}{\numberline {1.8}Het gebruik van Kotlin}{22}{section.1.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.9}Waarom Kotlin?}{23}{section.1.9}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Methodologie}{25}{chapter.2}
 \defcounter {refsection}{0}\relax 
