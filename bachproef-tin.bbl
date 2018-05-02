@@ -603,13 +603,56 @@
       \field{sortinit}{T}
       \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
       \field{labeldatesource}{year}
-      \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{What does Cross Platform mean}
       \field{year}{2017}
       \verb{url}
       \verb https://www.techopedia.com/definition/17056/cross-platform
+      \endverb
+    \endentry
+    \entry{TechopediaBytecode}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=2d0ed76dc2bb8ec0ba5cf4473f5c4c74}{%
+           family={Techopedia},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
+      \strng{fullhash}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
+      \strng{authornamehash}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
+      \strng{authorfullhash}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
+      \field{sortinit}{T}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extrayear}{1}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What does Bytecode mean?}
+      \field{year}{2018}
+      \verb{url}
+      \verb https://www.techopedia.com/definition/3760/bytecode
+      \endverb
+    \endentry
+    \entry{TechopediaJVM}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=2d0ed76dc2bb8ec0ba5cf4473f5c4c74}{%
+           family={Techopedia},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
+      \strng{fullhash}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
+      \strng{authornamehash}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
+      \strng{authorfullhash}{2d0ed76dc2bb8ec0ba5cf4473f5c4c74}
+      \field{sortinit}{T}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{extrayear}{2}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What does Java Virtual Machine (JVM) mean?}
+      \field{year}{2018}
+      \verb{url}
+      \verb https://www.techopedia.com/definition/3376/java-virtual-machine-jvm
       \endverb
     \endentry
     \entry{TechYourChance}{article}{}

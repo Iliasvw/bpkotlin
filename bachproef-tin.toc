@@ -22,11 +22,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.4}Automigration}{22}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Kotlin en iOS development}{23}{section.2.5}
+\contentsline {section}{\numberline {2.5}Kotlin web en back-end}{23}{section.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.6}Kotlin web en back-end}{23}{section.2.6}
+\contentsline {section}{\numberline {2.6}Kotlin/Native}{23}{section.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.7}Kotlin/Native}{23}{section.2.7}
+\contentsline {section}{\numberline {2.7}Kotlin en iOS}{23}{section.2.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.8}Compiler}{24}{section.2.8}
 \defcounter {refsection}{0}\relax 
@@ -68,7 +68,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.4}LLVM en Kotlin}{33}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}LLVM en JVM}{33}{section.4.5}
+\contentsline {section}{\numberline {4.5}Java Virtual Machine (JVM)}{33}{section.4.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.6}LLVM en JVM}{34}{section.4.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}De werking van Kotlin/Native}{35}{chapter.5}
 \defcounter {refsection}{0}\relax 

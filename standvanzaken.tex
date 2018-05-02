@@ -20,7 +20,7 @@ Kotlin is ontworpen door JetBrains. JetBrains is een organisatie afkomstig van S
 
 \section{Kotlin en Android}
 \label{sec:kotlinandroid}
-Volgens het artikel van \textcite{GoogleSupportKotlin} heeft Google in 2017 bekend gemaakt dat het Kotlin volledig zou ondersteunen voor Android applicatieontwikkeling. In Android Studio zal vanaf versie 3.0 Kotlin ondersteunt worden voor Android development. Een Kotlin project maken in Android Studio is dan ook heel gemakkelijk. In Android Studio is er bij het aanmaken van een project de mogelijkheid om direct de ondersteuning voor Kotlin in te schakelen. Hierdoor zal het aangemaakte project onmiddelijk in Kotlin geschreven zijn.
+Volgens het artikel van \textcite{GoogleSupportKotlin} heeft Google in 2017 bekend gemaakt dat het Kotlin volledig zou ondersteunen voor Android applicatieontwikkeling. In Android Studio zal vanaf versie 3.0 Kotlin ondersteund worden voor Android development. Een Kotlin project maken in Android Studio is dan ook heel gemakkelijk. In Android Studio is er bij het aanmaken van een project de mogelijkheid om direct de ondersteuning voor Kotlin in te schakelen. Hierdoor zal het aangemaakte project onmiddelijk in Kotlin geschreven zijn.
 
 Het is mogelijk in Android Studio om een reeds bestaand Android Java project om te zetten naar Kotlin. Hierbij zal de actie 'Convert Java File to Kotlin File' moeten uitvoerd worden (rechtermuisknop in het Java bestand). Hierdoor zal Android Studio detecteren dat er gebruik gemaakt zal worden van Kotlin, waardoor hij zal vragen om de Kotlin plugin te installeren via Gradle indien deze nog niet is geïnstalleerd.
 
@@ -33,8 +33,6 @@ Het is ook reeds mogelijk om zowel Java en Kotlin te combineren. Zo kunnen de ve
 
 Indien bestaande Java code online of van een vorige project gekopieerd en geplakt wordt naar een bestaand Android Studio project, dan zal Android Studio zelf detecteren dat er Java code gebruikt zal worden in een Kotlin project. Hij zal dan zelf ook de suggestie doen om de Java code om te zetten naar Kotlin code \autocite{Avantica2017}.
 
-\section{Kotlin en iOS development}
-Verschillende ontwikkelaars, zoals \textcite{GaoIOS}, zijn reeds aan de slag gegaan met de Kotlin/Native plugin. Op zijn website is te zien hoe het mogelijk is om aan de hand van deze plugin Kotlin te gebruiken voor iOS development. Er zijn twee mogelijkheden. Enerzijds heb je de mogelijkheid om het project in Objective-C aan te maken en de rest van het project in Kotlin te programmeren. Anderzijds kan het project in Swift aangemaakt worden en de Kotlin code wordt gecompileerd naar een iOS framework en toegevoegd aan het project.
 
 \section{Kotlin web en back-end}
 \label{sec:kotlincrossplatform}
@@ -47,6 +45,11 @@ Kotlin-applicaties kunnen worden geïmplementeerd op elke host die Java-webappli
 \section{Kotlin/Native}
 \label{sec:kotlinnative}
 Waarschijnlijk momenteel één van de meest nieuwe en innovatieve projecten van JetBrains is Kotlin/Native. Momenteel is men gekomen aan versie 0.6 en er zijn al verschillende voorbeeldprojecten beschikbaar gesteld door JetBrains. Kotlin/Native zou het mogelijk maken om éénmalig domeinlogica te schrijven in een applicatie en deze te delen over verschillende platformen, bijvoorbeeld Android en iOS. De user interfaces zou men wel nog per platform moeten opbouwen, waardoor je toch het 'native applicatie'-gevoel krijgt. Kotlin/Native maakt gebruik van een totaal andere compiler dan JVM, zie sectie \ref{sec:llvm} voor meer info. De bijnaam die gegeven wordt aan Kotlin/Native is \textit{Konan}. Binnen dit onderzoek zal Kotlin/Native nauw onderzocht worden \autocite{AlbertGao}.
+
+\section{Kotlin en iOS}
+Verschillende ontwikkelaars, zoals \textcite{GaoIOS}, zijn reeds aan de slag gegaan met deze Kotlin/Native plugin. Op zijn website is te zien hoe het mogelijk is om aan de hand van deze plugin Kotlin te gebruiken voor iOS development. Er zijn twee mogelijkheden. Enerzijds heb je de mogelijkheid om het project in Objective-C aan te maken en de rest van het project in Kotlin te programmeren. Anderzijds kan het project in Swift aangemaakt worden en de Kotlin code wordt gecompileerd naar een iOS framework en toegevoegd aan het project.
+
+Alhoewel het niet echt optimaal is om Kotlin direct te programmeren in Xcode, aangezien Xcode een Kotlin bestand niet zal herkennen, is het dus mogelijk. Indien de applicatie enkel en alleen ontwikkeld moet worden voor het iOS platform, dan is en blijft Swift of Objective-C de beste manier om een iOS applicatie te bouwen.
 
 \section{Compiler}
 \label{sec:llvm}
@@ -82,7 +85,7 @@ Maar waarom heeft JetBrains besloten om te beginnen met een nieuwe programmeerta
 
 Een verklaring die op het internet te lezen is (\cite{TechYourChance}), is dat JetBrains Kotlin heeft uigevonden om hun eigen productiviteit te vergroten. Ze vonden dat Java niet al hun verwachtingen kon inlossen en daarom moest er een nieuwe programmeertaal op de markt komen. Momenteel hebben ze reeds een groot aantal IDE's ontwikkeld die geschreven zijn in Java. Dat is dan ook de reden dat men een programmeertaal ontwikkeld heeft die naar Java compileerbaar is. Een andere reden zou zijn dat men ontwikkelaars zou willen migreren naar een binnenshuis programmeertaal die gemakkelijker te ondersteunen is.
 
-Anderzijds het feit dat ze kiezen voor een taal die draait op de JVM, betekent dus dat JetBrains niet alle bestaande libraries wil herschrijven, maar hergebruiken.
+Anderzijds het feit dat ze kiezen voor een taal die draait op de JVM, betekent dus dat JetBrains niet alle bestaande libraries wil herschrijven, maar hergebruiken. Dit is ook te zien aan de compatibiliteit van beide programmeertalen. Beiden talen zijn volledig compatibel met elkaar. Sectie \ref{sec:Automigration} is hiervan een mooi voorbeeld.
 
 Op 2 augustus 2011 heeft JetBrains, in het jaar dat Kotlin bekend gemaakt werd, een artikel geschreven op hun blog \textcite{JetBrainsNeedKotlin} waarin Dmitry Jemerov, de Kotlin tools team lead, verklaart waarom JetBrains Kotlin heeft ontworpen. In deze blogpost vindt men volgend zin terug: "We willen productiever worden door over te schakelen op een meer expressieve taal.". Ze geven dus duidelijk aan dat men productiever wil worden, maar wil men hiermee bevestigen dat Java enkele tekortkomingen heeft?
 

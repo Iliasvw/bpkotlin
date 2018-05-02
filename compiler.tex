@@ -69,7 +69,8 @@ Nog een voordeel van dit ontwerp is dat deze soorten van compilers een veel bred
 \end{figure}
 
 \section{Verschil met LLVM}
-In een LLVM-gebaseerde compiler heeft de front-end dezelfde taak als de front-end in een normale compiler. De code wordt daarna door de front-end vertaald naar LLVM IR\footnote{Intermediate Representation}, dit meestal door het opbouwen van een syntaxboom en deze later te converteren naar IR. De IR is eigenlijk het hart van de LLVM. Het is een low-level programmeertaal die zeer dicht aansluit bij assembly code. Deze IR heeft als taak om de code te verbeteren, waarna deze code in een soort van codegenerator wordt gestoken waarbij deze wordt omgezet naar native machinecode. 
+\label{sec:difference-llvm}
+In een LLVM-gebaseerde compiler heeft de front-end dezelfde taak als de front-end in een normale compiler. De code wordt daarna door de front-end vertaald naar LLVM intermediate representation (IR), dit meestal door het opbouwen van een syntaxboom en deze later te converteren naar IR. De IR is eigenlijk het hart van de LLVM. Het is een low-level programmeertaal die zeer dicht aansluit bij assembly code. Deze IR heeft als taak om de code te verbeteren, waarna deze code in een soort van codegenerator wordt gestoken waarbij deze wordt omgezet naar native machinecode. 
 
 In een korte notendop: de front-end krijgt een brontaal binnen en gaat deze taal parsen, valideren en analyseren. Hij stelt de syntaxboom op en zet deze om naar LLVM IR. De optimizer gaat de code optimalizeren en stuurt de IR code naar de back-end die dient als codegenerator met als resultaat machinecode.
 
@@ -83,9 +84,17 @@ In een korte notendop: de front-end krijgt een brontaal binnen en gaat deze taal
 \section{LLVM en Kotlin}
 Kotlin/Native is een technologie dat Kotlin via LLVM direct compileert naar machine code. De Kotlin/Native compiler produceert zelfstandige uitvoerbare bestanden die zonder virtuele machine kunnen worden uitgevoerd. Hierdoor is het mogelijk om Kotlin te gebruiken op ieder platform of besturingssysteem.
 
+\section{Java Virtual Machine (JVM)}
+\label{sec:jvm}
+De Java Virtual Machine, ook wel JVM genoemd, is een virtuele machine voor het uitvoeren van Java bytecode \autocite{TechopediaBytecode}. Deze bytecode is een object-geörienteerde code die gecompileerd is om op een virtuele machine te worden uitgevoerd. De code kan op elk besturingssysteem of platform, waarvoor er een JVM beschikbaar is, worden gebruikt. De virtuele machine transformeert de code, geschreven in een bepaalde programmeertaal, in machinetaal die door de CPU\footnote{Central Processing Unit} van een systeem kan worden uitgevoerd, aangezien platformen andere interpretatietechnieken kunnen gebruiken. Bij de JVM zal de bytecode meestal het resultaat zijn van de compilatie van Java-code. Echter kunnen talen zoals Scala, Clojure en Groovy ook uitgevoerd worden op deze virtuele machine. De JVM heeft kennis van geheugenbeheer, optimalisatie van de uitvoering van de applicatie en garbage collection. Daarnaast begrijpt de JVM het concept van objecten en virtuele methode aanroepen. De gebruiker hoeft hierdoor geen rekening te houden met deze drie zaken \autocite{TechopediaJVM}. 
+
 \section{LLVM en JVM}
-De LLVM is een low-level register gebaseerde compilatie technologie. Het is ontworpen om onderliggende hardware abstraheren en een lijn te trekken tussen de front-end en de back-end van een compileerprogramma.
+LLVM en JVM zijn twee aparte dingen. De JVM is, zoals te lezen in sectie \ref{sec:jvm}, een vertaler die broncode omzet naar machinetaal die door de processor van een computer onmiddelijk kan worden uitgevoerd. Het is een high-level virtuele machine aangezien deze kennis heeft van zaken zoals de garbage collection, geheugenbeheer en objecten.
 
-De JVM is een high-level stack gebaseerde virtuele machine. De JVM biedt garbage collection aan, heeft kennis van objecten en virtuele methode aanroepen. JVM biedt dus een veel hogere infrastructuur voor taalinteroperabiliteit.
+De LLVM is een low-level register gebaseerde compilatie technologie. Het neemt de LLVM IR, zie sectie \ref{sec:difference-llvm}, en gaat deze overbrengen naar native uitvoerbare bestanden voor een specifiek platform. LLVM kan tijdens het vertaalproces naar IR veel optimalisaties uitvoeren.
 
-Het grote verschil tussen LLVM en JVM is dus het niveau waarop beide werken.
+%De LLVM is een low-level register gebaseerde compilatie technologie. Het is ontworpen om onderliggende hardware te abstraheren en een lijn te trekken tussen de front-end en de back-end van een compileerprogramma.
+
+%De JVM is een high-level stack gebaseerde virtuele machine. De JVM biedt garbage collection aan, heeft kennis van objecten en virtuele methode aanroepen. JVM biedt dus een veel hogere infrastructuur voor taalinteroperabiliteit.
+
+%Het grote verschil tussen LLVM en JVM is dus het niveau waarop beide werken.
