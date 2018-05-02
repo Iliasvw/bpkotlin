@@ -4,7 +4,7 @@ In dit hoofdstuk zal er praktisch een Kotlin/Native project worden opgebouwd. De
 
 \section{Domeinmodel}
 \label{sec:domeinmodel}
-Aangezien het doel van Kotlin/Native het delen van business logica is, is het handig om op voorhand na te denken over het domeinmodel. Welke klassen heb ik nodig, welke attributen en methodes moeten deze klassen hebben, is er eventueel een verschil in klassen tussen Android en iOS? Een domeinmodel geeft je ook een duidelijk overzicht over je applicatie. Zie figuur \ref{fig:domeinmodel-kn} om het domeinmodel te zien van deze voorbeeldapplicatie. 
+Aangezien het doel van Kotlin/Native het delen van business logica is, is het handig om op voorhand na te denken over het domeinmodel. Welke klassen heb ik nodig, welke attributen en methodes moeten deze klassen hebben, is er eventueel een verschil in klassen tussen Android en iOS? Een domeinmodel geeft ook een duidelijk overzicht over de logica van de applicatie. Zie figuur \ref{fig:domeinmodel-kn} om het domeinmodel te zien van deze voorbeeldapplicatie. 
 
 Het domeinmodel beschikt over drie klassen: 
 \begin{itemize}
@@ -401,7 +401,7 @@ actual class Product {
 \end{lstlisting}
 
 \section{Stap 5: Android map}
-In de android map is het de bedoeling om via Android Studio een nieuw project aan te maken. Bij het aanmaken van het project in Android Studio kan je de locatie van het project opgeven. Deze locatie moet zodanig ingesteld zijn dat het Android project een submap is van het Kotlin/Native project en waardoor het geïntegreerd zal worden in dit project.
+In de android map is het de bedoeling om via Android Studio een nieuw project aan te maken. Bij het aanmaken van het project in Android Studio kan de locatie van het project worden opgeven. Deze locatie moet zodanig ingesteld zijn dat het Android project een submap is van het Kotlin/Native project en waardoor het geïntegreerd zal worden in dit project.
 
 \subsection{settings.gradle}
 Voor we gebruik kunnen maken van de Kotlin klassen, moeten er eerst nog enkele wijzigingen gebeuren in de settings.gradle. De settings.gradle wordt vervangen door onderstaande code:
@@ -466,7 +466,7 @@ Bij iedere gradle build van het Kotlin/Native project zal de build.gradle in de 
 	\label{fig:stap6-build}
 \end{figure}
 
-In bovenstaand build phase script wordt gekeken welk type toestel er wordt gebruikt, een echte iPhone of een simulator. Daarna zal het juiste framework gekopieerd worden naar de build folder in de map van je Xcode project. Bij iedere build en/of run van het Xcode project zal bovenstaand script worden uitgevoerd. Dit zal er voor zorgen dat steeds het laatst gegenereerde framework gebruikt zal worden door je Xcode project.
+In bovenstaand build phase script wordt gekeken welk type toestel er wordt gebruikt, een echte iPhone of een simulator. Daarna zal het juiste framework gekopieerd worden naar de build folder in de map van het Xcode project. Bij iedere build en/of run van het Xcode project zal bovenstaand script worden uitgevoerd. Dit zal ervoor zorgen dat steeds het laatst gegenereerde framework gebruikt zal worden door het Xcode project.
 
 Tenslotte zal het framework nog in de build phases 'Link Binary With Libraries' en 'Embed Frameworks' moeten worden toegevoegd. Hierbij wordt er gelinkt naar het gekopieerde framework in de build folder van het Xcode project.
 
@@ -521,14 +521,14 @@ Aangezien er per platform, platformspecifieke code geschreven kan worden is het 
 Een voorbeeld voor deze proof-of-concept: er kan voor de ios test gecheckt worden of de naam van het product begint met de prefix 'iOS' en voor Android kan er gecheckt worden of deze naam start met prefix 'Android'.
 
 \section{Huidige mogelijkheden}
-Zoals uit de proof-of-concept af te leiden is, is het reeds mogelijk om Kotlin/Native te gebruiken voor cross-platform applicatie ontwikkeling. Aan de hand van de Kotlin/Native Gradle plugin is het mogelijk om niet alleen voor Android te ontwikkelen maar ook voor iOS. Cross-platform heeft bij Kotlin/Native niet dezelfde betekenis als bij een framework zoals React/Native. Het doel van Kotlin/Native is dus het delen van domeinlogica en deze hergebruiken over de verschillende te ondersteunen platformen. In deze vroege versie (0.6) van Kotlin/Native is het reeds mogelijk om dit te doen, maar de mogelijkheden blijven beperkt. Indien je applicatie geen speciale iOS bibliotheken nodig heeft, is er geen probleem.
+Zoals uit de proof-of-concept af te leiden is, is het reeds mogelijk om Kotlin/Native te gebruiken voor cross-platform applicatie ontwikkeling. Aan de hand van de Kotlin/Native Gradle plugin is het mogelijk om niet alleen voor Android te ontwikkelen maar ook voor iOS. Cross-platform heeft bij Kotlin/Native niet dezelfde betekenis als bij een framework zoals React/Native. Het doel van Kotlin/Native is dus het delen van domeinlogica en deze hergebruiken over de verschillende te ondersteunen platformen. In deze vroege versie (0.6) van Kotlin/Native is het reeds mogelijk om dit te doen, maar de mogelijkheden blijven beperkt. Indien de applicatie geen speciale iOS bibliotheken nodig heeft, is er geen probleem.
 
 Een ander belangrijk luik dat Kotlin/Native reeds ondersteunt is het aanmaken van testen voor de geschreven domeinlogica. Testen zijn en blijven een belangrijke onderdeel van object-oriented programming.
 
 \section{Beperkingen}
 Aangezien er nog geen officiële versie van Kotlin/Native is vrijgegeven is het logisch dat de mogelijkheden nog zeer beperkt zijn. 
 
-Er kan voor de platformspecifieke iOS code geen iOS specifieke bibliotheken gebruikt worden. In deze proof-of-concept was het de bedoeling om de shopping cart in zowel Android als iOS te cachen. In iOS moet het object dat gecached moet worden voldoen aan een bepaalde protocol, namelijk Codable. Kotlin/Native heeft geen kennis van deze protocollen waardoor het dus niet mogelijk is om het object te cachen in iOS. Voor Android kon dit wel, indien je een bepaald object wil cachen volstaat het om deze klasse de interface Serializable te laten implementeren. Dit is niet mogelijk in de common module, aangezien iOS het protocol Serializable niet kent. Dit is wel mogelijk in de platformspecifieke code van Android. Voor Android kan je dus wel interfaces implementeren maar dan moet de klasse in de common module expect worden gedeclareerd en moet de actual klasse van Android deze interface implementeren. Dit is het geval bij het domeinmodel van deze proof-of-concept, zie figuur \ref{fig:domeinmodel-kn}.
+Er kan voor de platformspecifieke iOS code geen iOS specifieke bibliotheken gebruikt worden. In deze proof-of-concept was het de bedoeling om de shopping cart in zowel Android als iOS te cachen. In iOS moet het object dat gecached moet worden voldoen aan een bepaalde protocol, namelijk Codable. Kotlin/Native heeft geen kennis van deze protocollen waardoor het dus niet mogelijk is om het object te cachen in iOS. Voor Android kon dit wel, indien een bepaald object gecached moet worden volstaat het om deze klasse de interface Serializable te laten implementeren. Dit is niet mogelijk in de common module aangezien iOS het protocol Serializable niet kent. Dit is wel mogelijk in de platformspecifieke code van Android. Voor Android is het wel mogelijk om interfaces te implementeren maar dan moet de klasse in de common module expect worden gedeclareerd en moet de actual klasse, in de Android platforms map, deze interface implementeren. Dit is het geval bij het domeinmodel van deze proof-of-concept, zie figuur \ref{fig:domeinmodel-kn}.
 
 Het aanspreken van hardware, zoals de Camera, via Kotlin/Native is (nog) niet mogelijk. Momenteel moet het openen van bijvoorbeeld de camera geprogrammeerd worden in het Android en Xcode project, er is (nog) geen manier om dit te doen in bijvoorbeeld de common module.
 
