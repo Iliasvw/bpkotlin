@@ -1,7 +1,3 @@
-%%=============================================================================
-%% Inleiding
-%%=============================================================================
-
 \chapter{Inleiding}
 \label{ch:inleiding}
 
@@ -21,21 +17,77 @@
  De ontwikkeling van mobiele applicaties is een belangrijke niche in de IT. Zo kunnen we drie verschillende besturingssystemen onderscheiden bij mobiele applicaties: Android, iOS en Windows. Die laatste wordt steeds minder en minder gebruikt voor mobiele toepassingen. Volgens het artikel \textcite{Statista2018}, van Statista, een portaal voor statistieken en onderzoek, heeft Android een marktaandeel van 87.7\%. Dit wil dus zeggen dat meer dan 85\% van de mensen die een smartphone heeft, een toestel heeft met het Android besturingssyteem. 
 
  De mobiele applicaties die draaien op Android werden allemaal geprogrammeerd in Java. Maar sinds kort is er een nieuwe mogelijkheid, Kotlin. Kotlin is een programmeertaal die ontworpen is door JetBrains in 2011. Zes jaar later (2017) biedt Google volledige ondersteuning om Android applicaties te programmeren in Kotlin. 
+ 
+ \section{Begrippen}
+ \subsection{Wat is cross-platform?}
+ Wat is de betekenis van cross-platform? Gaat dit over het delen van user interfaces, het delen van domeinlogica, of gaat dit over beiden? \textcite{CrossExplain}, een website voor IT professionals en geeks, heeft op hun website een verklaring voor een cross-platform product. Zij verklaren dat een cross-platform product een platformonafhankelijk computerproduct of systeem is dat op meerdere platformen of besturingssystemen kan werken. Zij geven echter ook aan dat wanneer bepaalde zaak van de applicatie hergebruikt worden per platform, er gedaan wordt aan cross-platform development. Zowel het delen van domeinlogica, het delen van interfaces of beiden is cross-platform ontwikkeling. Cross-platform is echter ook bekend als multiplatform of platformonafhankelijk.
+ 
+\subsection{Wat is een framework?}
+Een framework kan in het algemeen beschreven worden als een soort van structuur die bedoeld is als ondersteuning bij het bouwen van een bepaald iets. Het is goed te vergelijken met een skelet waarop iets wordt gebouwd en het biedt functionaliteiten aan om te focussen op bepaalde specifieke taken. 
+
+Frameworks worden sterk gebruikt bij het ontwikkelen van software en vooral in de wereld van de mobiele applicaties. Momenteel bestaan er verschillende frameworks waarmee mobiele applicaties kunnen worden gebouwd. Twee voorbeelden hiervan zijn Cordova en PhoneGap \autocite{Framework}.
+
+\subsection{Wat is een native applicatie?}
+Een native applicatie is een softwareprogramma dat ontwikkeld is om gebruik te worden op een specifiek platform of besturingssysteem. Aangezien een native applicatie gebouwd is om op een bepaalde platform te worden gebruikt, kan het gebruik maken van de hardware en software van het toestel. Native applicaties kunnen geoptimaliseerde prestaties bieden en hebben het voordeel om gebruik te kunnen maken van de laatst nieuwe technologiën zoals GPS, wat veel moeilijker is bij bijvoorbeeld een webapplicatie \autocite{MeaningNativeApp}.
+
+\subsection{Wat is een hybride applicatie?}
+Een hybride applicatie is een applicatie die de features van enerzijds een native applicatie en anderzijds een webapplicatie combineert. Hybride applicaties worden dus niet ontwikkeld met de bedoeling om gebruik te worden op een bepaald platform of besturingssysteem. De bedoeling van hybride applicaties is om de mogelijk aan te bieden om de applicatie op eender welk besturingssysteem te gebruiken. Hybride applicaties maken gebruik van een ingebouwde browser om de user interface te weer te geven. Bij hybride applicatieontwikkeling wordt er gebruik gemaakt van Javascript, HTML en CSS. Enkele voorbeelden van dit type framework zijn Cordova, Ionic en Trigger.IO \autocite{MeaningHybridApp}.
+
+\subsection{Wat is een cross-platform applicatie?}
+Cross-platform applicaties zijn gelijkaardig aan hybride applicaties. Het grote verschil tussen beide types is dat cross-platform applicaties geen gebruik maken van een ingebouwde browser om de user interface te tonen aan de gebruiker. De user interface wordt getoond aan de hand van native elementen. Javascript wordt gebruikt om de functionaliteiten in de applicatie op te bouwen. HTML en CSS zorgen voor de opbouw van de user interface. Enkele voorbeelden van dit type framework zijn Xamarin, React/Native en NativeScript \autocite{NativeVsCross2}.
+
+\subsection{Native versus cross-platform en hybride development}
+\label{sec:nativeversuscross}
+Voor het ontwikkelen van mobiele applicaties bestaan er dus verschillende methodes. Het wel of niet kiezen voor native applicatieontwikkeling is afhankelijk van heel wat criteria. Denk maar aan de platformen dat de applicatie moet ondersteunen, de eisen waaraan een applicatie moet voldoen, de verschillende functionaliteiten en ga zo maar door. Iedere methodiek voor het ontwikkelen van applicaties heeft zo zijn eigen voor- en nadelen (\textcite{NativeVsCross2}, \textcite{NativeVsCross3}).
+
+\subsubsection{Native ontwikkeling}
+Voordelen:
+\begin{itemize}
+	\item Groot aantal functionaliteiten aangezien er gebruik kan worden gemaakt van alle mogelijkheden van het gebruikte toestel.
+	\item Snelle software prestaties.
+	\item Een user interface die overeenkomt met de gebruikerservaringen van het besturingssysteem.
+\end{itemize}
+
+Nadelen:
+\begin{itemize}
+	\item Indien er meerdere platformen ondersteund moeten worden, moeten er twee aparte applicaties ontwikkeld worden.
+	\item Kosten om meerdere platformen te beheren.
+	\item Er kan geen code gedeeld worden tussen verschillende platformen.
+\end{itemize}
+
+\subsubsection{Cross-platform en hybride ontwikkeling}
+Voordelen:
+\begin{itemize}
+	\item Applicatie kan sneller ontwikkeld worden.
+	\item Verschillende frameworks die helpen bij de ontwikkeling.
+	\item Het delen van code over de verschillende platformen.
+\end{itemize}
+
+Nadelen:
+\begin{itemize}
+	\item Niet alle code kan gedeeld worden over de verschillende platformen. Soms moet er native code geschreven worden.
+	\item Toegang tot het toestel en besturingssysteem zijn afhankelijk van de mogelijkheden van het framework.
+	\item Snelheid van de applicatie kan trager zijn dan native applicatie aangezien er gewerkt wordt via een tussenliggende taal, namelijk Javascript.
+\end{itemize}
 
 \section{Probleemstelling}
 \label{sec:probleemstelling}
-Vanuit dit onderzoek zal blijken hoe goed Kotlin/Native is als cross-platform framework en wat de mogelijkheden zijn van Kotlin/Native om te programmeren voor verschillende platformen. Deze vraag kwam vanuit mijn stagebedrijf (Endare BVBA). Een developer bij Endare is reeds bezig met het aanleren van Kotlin en heeft reeds enkele Android projecten gemaakt met Kotlin. Bij Endare wordt er zeer veel aan cross-platform ontwikkeling gedaan. Zo heeft een mede-stagiair tijdens zijn stage bij Endare, gewerkt met React/Native. Een framework waarbij je via één codebase native applicaties kan schrijven voor iOS en Android. Tegenwoordig worden er nog maar weinig native applicaties gebouwd. Waarom? Voor veel bedrijven zijn native applicaties een zéér hoge kost. Je hebt enerzijds twee keer (indien we voor iOS en Android ontwikkelen) een kost om de applicaties te bouwen, anderszijds heb je twee keer een kost om de applicaties te onderhouden of eventueel uit te breiden. Maar er zijn natuurlijk wel redenen waarom bedrijven nu net wel native applicaties willen in plaats van cross-platform applicaties. Zo zal men bij native applicaties gebruik kunnen maken van alle features van het besturingssysteem, wat niet altijd kan bij cross-platform applicaties, en de performance zou ook een stuk beter zijn, dit valt te besluiten uit het artikel van \textcite{NativeVsCross}. 
+Vanuit dit onderzoek zal blijken hoe goed Kotlin/Native is als cross-platform framework en wat de mogelijkheden zijn van Kotlin/Native om een applicatie te programmeren voor verschillende platformen. Deze vraag kwam vanuit het bedrijf genaamd Endare BVBA. Endare is een bedrijf dat gericht is op het ontwikkelen van mobiele- en webapplicaties. Een developer bij Endare is reeds bezig met het aanleren van Kotlin en heeft reeds enkele Android projecten gemaakt met Kotlin. Bij Endare wordt er zeer veel aan cross-platform ontwikkeling gedaan. Zo heeft een stagiair tijdens zijn stage bij Endare, gewerkt met React/Native, het populaire framework van Facebook voor cross-platform ontwikkeling.
 
-Tegenwoordig is er meer dan genoeg keuze om cross-platform applicaties te maken. Zo is er:
-\begin{itemize}
-	\item Ionic
-	\item Cordova
-	\item React/Native
-	\item Xamarin
-\end{itemize}
-En ga zo maar door... Met Kotlin/Native komt er een nieuw framework zich aanbieden. Dit framework is nog zeer jong en er bestaat bijna geen documentatie. Ontwikkelaars die dit framework willen gebruiken moeten momenteel zelf de werking van Kotlin/Native proberen achterhalen. Daarom is het belangrijk om te bestuderen of Kotlin een mogelijkheid biedt tot een nieuwe cross-platform programmeertaal, hoe de compiler van Kotlin ervoor kan zorgen dat het op meerdere platformen kan draaien en hoe men nu juist gebruik kan maken van Kotlin/Native. 
+De vraag naar native applicaties wordt steeds minder. Waarom? Uit sectie \ref{sec:nativeversuscross} bleek dat native applicaties voor veel bedrijven een grote kost zijn. Er is enerzijds twee keer (indien er voor iOS en Android ontwikkeld wordt) een kost om de applicaties te bouwen, anderzijds is er twee keer een kost om de applicaties te onderhouden of eventueel uit te breiden. Volgens een artikel van Comentum, een toonaangevend bedrijf op het gebied van digitale oplossingen, varieert de kost voor het ontwikkelen van een native applicatie (Android of iOS) tussen de 9000 en 90000 dollar, afhankelijk van de vereisten van de applicatie \autocite{NativeDevelopmentCost}. 
 
-Voor het stagebedrijf, Endare, heeft deze bachelorproef een grote meerwaarde aangezien zij iedere dag met cross-platform frameworks aan de slag moeten.
+\begin{figure} [ht]
+	\centering
+	\includegraphics[width=0.95\textwidth]{img/nativeappkost.png}
+	\caption{Kostprijs ontwikkeling native applicatie (\cite{NativeDevelopmentCost})}
+	\label{fig:nativeappkost}
+\end{figure}
+
+Uit sectie \ref{sec:nativeversuscross} valt te besluiten dat er ook redenen zijn waarom bedrijven nu net wel native applicaties willen in plaats van cross-platform applicaties. 
+
+Momenteel is er meer dan genoeg keuze om applicaties voor verschillende platformen tegelijkertijd te ontwikkelen. Met Kotlin/Native komt er een nieuw framework zich aanbieden. Dit framework is nog zeer jong en er bestaat bijna geen documentatie. Ontwikkelaars die dit framework willen gebruiken moeten momenteel zelf de werking van Kotlin/Native proberen achterhalen. Daarom is het belangrijk om te bestuderen of Kotlin een mogelijkheid biedt tot een nieuwe cross-platform programmeertaal, hoe de compiler van Kotlin ervoor kan zorgen dat het op meerdere platformen kan draaien en hoe men nu juist gebruik kan maken van Kotlin/Native. 
+
+Voor Endare heeft deze bachelorproef een grote meerwaarde aangezien zij iedere dag met cross-platform frameworks aan de slag moeten. Kotlin/Native zou de mogelijkheid geven om native applicaties te ontwikkelen in combinatie met een domeinlogica die gedeeld wordt tussen de verschillende platformen.
 
 %Uit je probleemstelling moet duidelijk zijn dat je onderzoek een meerwaarde heeft voor een concrete doelgroep. De doelgroep moet goed gedefinieerd en afgelijnd zijn. Doelgroepen als ``bedrijven,'' ``KMO's,'' systeembeheerders, enz.~zijn nog te vaag. Als je een lijstje kan maken van de personen/organisaties die een meerwaarde zullen vinden in deze bachelorproef (dit is eigenlijk je steekproefkader), dan is dat een indicatie dat de doelgroep goed gedefinieerd is. Dit kan een enkel bedrijf zijn of zelfs één persoon (je co-promotor/opdrachtgever).
 

@@ -4,181 +4,197 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Inleiding}{17}{chapter.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}Probleemstelling}{17}{section.1.1}
+\contentsline {section}{\numberline {1.1}Begrippen}{17}{section.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}Onderzoeksvraag}{18}{section.1.2}
+\contentsline {subsection}{\numberline {1.1.1}Wat is cross-platform?}{17}{subsection.1.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Onderzoeksdoelstelling}{18}{section.1.3}
+\contentsline {subsection}{\numberline {1.1.2}Wat is een framework?}{18}{subsection.1.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.4}Opzet van deze bachelorproef}{19}{section.1.4}
+\contentsline {subsection}{\numberline {1.1.3}Wat is een native applicatie?}{18}{subsection.1.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Stand van zaken}{21}{chapter.2}
+\contentsline {subsection}{\numberline {1.1.4}Wat is een hybride applicatie?}{18}{subsection.1.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Wat is cross-platform?}{21}{section.2.1}
+\contentsline {subsection}{\numberline {1.1.5}Wat is een cross-platform applicatie?}{18}{subsection.1.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Wat is Kotlin?}{21}{section.2.2}
+\contentsline {subsection}{\numberline {1.1.6}Native versus cross-platform en hybride development}{19}{subsection.1.1.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Kotlin en Android}{22}{section.2.3}
+\contentsline {subsubsection}{Native ontwikkeling}{19}{section*.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Automigration}{22}{section.2.4}
+\contentsline {subsubsection}{Cross-platform en hybride ontwikkeling}{19}{section*.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Kotlin web en back-end}{23}{section.2.5}
+\contentsline {section}{\numberline {1.2}Probleemstelling}{20}{section.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.6}Kotlin/Native}{23}{section.2.6}
+\contentsline {section}{\numberline {1.3}Onderzoeksvraag}{21}{section.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.7}Kotlin en iOS}{23}{section.2.7}
+\contentsline {section}{\numberline {1.4}Onderzoeksdoelstelling}{21}{section.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.8}Compiler}{24}{section.2.8}
+\contentsline {section}{\numberline {1.5}Opzet van deze bachelorproef}{21}{section.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.9}Het gebruik van Kotlin}{24}{section.2.9}
+\contentsline {chapter}{\numberline {2}Stand van zaken}{23}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.10}Waarom Kotlin?}{25}{section.2.10}
+\contentsline {section}{\numberline {2.1}Wat is Kotlin?}{23}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Methodologie}{27}{chapter.3}
+\contentsline {section}{\numberline {2.2}Kotlin en Android}{24}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Opzoeken informatie over Kotlin}{27}{section.3.1}
+\contentsline {section}{\numberline {2.3}Automigration}{24}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Opzoeken informatie over Kotlin/Native}{27}{section.3.2}
+\contentsline {section}{\numberline {2.4}Kotlin web en back-end}{24}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Bekijken voorbeeldprojecten JetBrains}{28}{section.3.3}
+\contentsline {section}{\numberline {2.5}Kotlin/Native}{25}{section.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Praktische uitwerking Kotlin/Native}{28}{section.3.4}
+\contentsline {section}{\numberline {2.6}Kotlin en iOS}{25}{section.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Literatuurstudie LLVM compiler}{28}{section.3.5}
+\contentsline {section}{\numberline {2.7}Compiler}{25}{section.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}De compilatie van Kotlin/Native}{29}{chapter.4}
+\contentsline {section}{\numberline {2.8}Het gebruik van Kotlin}{26}{section.2.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Wat is LLVM?}{29}{section.4.1}
+\contentsline {section}{\numberline {2.9}Waarom Kotlin?}{27}{section.2.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Deelprojecten LLVM}{30}{subsection.4.1.1}
+\contentsline {chapter}{\numberline {3}Methodologie}{29}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}De werking van LLVM}{30}{section.4.2}
+\contentsline {section}{\numberline {3.1}Opzoeken informatie over Kotlin}{29}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}De werking van een standaard compiler}{30}{subsection.4.2.1}
+\contentsline {section}{\numberline {3.2}Opzoeken informatie over Kotlin/Native}{29}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{De front-end}{30}{section*.9}
+\contentsline {section}{\numberline {3.3}Bekijken voorbeeldprojecten JetBrains}{30}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{De optimizer}{31}{section*.11}
+\contentsline {section}{\numberline {3.4}Praktische uitwerking Kotlin/Native}{30}{section.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{De back-end}{31}{section*.12}
+\contentsline {section}{\numberline {3.5}Literatuurstudie LLVM compiler}{30}{section.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Meerdere front- en backends}{32}{subsection.4.2.2}
+\contentsline {chapter}{\numberline {4}De compilatie van Kotlin/Native}{31}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Verschil met LLVM}{32}{section.4.3}
+\contentsline {section}{\numberline {4.1}Wat is LLVM?}{31}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}LLVM en Kotlin}{33}{section.4.4}
+\contentsline {subsection}{\numberline {4.1.1}Deelprojecten LLVM}{32}{subsection.4.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Java Virtual Machine (JVM)}{33}{section.4.5}
+\contentsline {section}{\numberline {4.2}De werking van LLVM}{32}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}LLVM en JVM}{34}{section.4.6}
+\contentsline {subsection}{\numberline {4.2.1}De werking van een standaard compiler}{32}{subsection.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}De werking van Kotlin/Native}{35}{chapter.5}
+\contentsline {subsubsection}{De front-end}{32}{section*.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Wat is Kotlin/Native?}{35}{section.5.1}
+\contentsline {subsubsection}{De optimizer}{33}{section*.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Het delen van code in Kotlin/Native}{35}{section.5.2}
+\contentsline {subsubsection}{De back-end}{33}{section*.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}De structuur van een Kotlin/Native project}{37}{section.5.3}
+\contentsline {subsection}{\numberline {4.2.2}Meerdere front- en backends}{34}{subsection.4.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Expect en actual klassen}{38}{section.5.4}
+\contentsline {section}{\numberline {4.3}Verschil met LLVM}{34}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}Gemeenschappelijke klassen}{39}{section.5.5}
+\contentsline {section}{\numberline {4.4}LLVM en Kotlin}{35}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.6}Het gebruik van Kotlin code}{39}{section.5.6}
+\contentsline {section}{\numberline {4.5}Java Virtual Machine (JVM)}{35}{section.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Kotlin/Native in de praktijk}{41}{chapter.6}
+\contentsline {section}{\numberline {4.6}LLVM en JVM}{36}{section.4.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Domeinmodel}{41}{section.6.1}
+\contentsline {chapter}{\numberline {5}De werking van Kotlin/Native}{37}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Requirements}{42}{section.6.2}
+\contentsline {section}{\numberline {5.1}Wat is Kotlin/Native?}{37}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Wat is gradle?}{43}{section.6.3}
+\contentsline {section}{\numberline {5.2}Het delen van code in Kotlin/Native}{38}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.4}Stap 1: project initiatie}{43}{section.6.4}
+\contentsline {section}{\numberline {5.3}De structuur van een Kotlin/Native project}{38}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.1}Versies}{44}{subsection.6.4.1}
+\contentsline {section}{\numberline {5.4}Expect en actual klassen}{39}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.2}Repositories}{44}{subsection.6.4.2}
+\contentsline {section}{\numberline {5.5}Gemeenschappelijke klassen}{41}{section.5.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.3}Dependencies}{44}{subsection.6.4.3}
+\contentsline {section}{\numberline {5.6}Het gebruiken van de Kotlin code}{42}{section.5.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.4}Overige informatie}{45}{subsection.6.4.4}
+\contentsline {chapter}{\numberline {6}Kotlin/Native in de praktijk}{43}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.5}Stap 2: project structuur}{45}{section.6.5}
+\contentsline {section}{\numberline {6.1}Domeinmodel}{43}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.6}Stap 3: Common map }{45}{section.6.6}
+\contentsline {section}{\numberline {6.2}Requirements}{44}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.6.1}Build map}{46}{subsection.6.6.1}
+\contentsline {section}{\numberline {6.3}Wat is gradle?}{45}{section.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.6.2}Main en test map}{46}{subsection.6.6.2}
+\contentsline {section}{\numberline {6.4}Stap 1: project initiatie}{45}{section.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.6.3}Build.gradle}{46}{subsection.6.6.3}
+\contentsline {subsection}{\numberline {6.4.1}Versies}{46}{subsection.6.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.7}Common code}{47}{section.6.7}
+\contentsline {subsection}{\numberline {6.4.2}Repositories}{46}{subsection.6.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.7.1}Cart}{47}{subsection.6.7.1}
+\contentsline {subsection}{\numberline {6.4.3}Dependencies}{46}{subsection.6.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.7.2}CartLine}{48}{subsection.6.7.2}
+\contentsline {subsection}{\numberline {6.4.4}Overige informatie}{47}{subsection.6.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.7.3}Product}{48}{subsection.6.7.3}
+\contentsline {subsection}{\numberline {6.4.5}Build map}{47}{subsection.6.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.8}Stap 4: platforms folder}{49}{section.6.8}
+\contentsline {section}{\numberline {6.5}Stap 2: project structuur}{47}{section.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.8.1}Platforms android map}{49}{subsection.6.8.1}
+\contentsline {section}{\numberline {6.6}Stap 3: Common map }{48}{section.6.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Build.gradle}{49}{section*.21}
+\contentsline {subsection}{\numberline {6.6.1}Main en test map}{48}{subsection.6.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Platformspecifieke code}{50}{section*.22}
+\contentsline {subsection}{\numberline {6.6.2}Build.gradle}{48}{subsection.6.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.8.2}Platforms ios map}{51}{subsection.6.8.2}
+\contentsline {section}{\numberline {6.7}Common code}{49}{section.6.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Build.gradle}{51}{section*.23}
+\contentsline {subsection}{\numberline {6.7.1}Cart}{49}{subsection.6.7.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Platformspecifieke code}{52}{section*.24}
+\contentsline {subsection}{\numberline {6.7.2}CartLine}{50}{subsection.6.7.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.9}Stap 5: Android map}{53}{section.6.9}
+\contentsline {subsection}{\numberline {6.7.3}Product}{51}{subsection.6.7.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.9.1}settings.gradle}{53}{subsection.6.9.1}
+\contentsline {section}{\numberline {6.8}Stap 4: platforms folder}{51}{section.6.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.9.2}build.gradle}{53}{subsection.6.9.2}
+\contentsline {subsection}{\numberline {6.8.1}Platforms android map}{52}{subsection.6.8.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.10}Stap 6: iOS map}{54}{section.6.10}
+\contentsline {subsubsection}{Build.gradle}{52}{section*.24}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.10.1}Gebruiken van het SharediOS framework}{54}{subsection.6.10.1}
+\contentsline {subsubsection}{Platformspecifieke code}{52}{section*.25}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.11}Aanspreken van code}{55}{section.6.11}
+\contentsline {subsection}{\numberline {6.8.2}Platforms ios map}{53}{subsection.6.8.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.11.1}Android}{55}{subsection.6.11.1}
+\contentsline {subsubsection}{Build.gradle}{53}{section*.26}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.11.2}iOS}{56}{subsection.6.11.2}
+\contentsline {subsubsection}{Platformspecifieke code}{54}{section*.27}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.12}User interfaces}{56}{section.6.12}
+\contentsline {section}{\numberline {6.9}Stap 5: Android map}{55}{section.6.9}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.13}Testen}{56}{section.6.13}
+\contentsline {subsection}{\numberline {6.9.1}settings.gradle}{55}{subsection.6.9.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.14}Huidige mogelijkheden}{57}{section.6.14}
+\contentsline {subsection}{\numberline {6.9.2}build.gradle}{56}{subsection.6.9.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.15}Beperkingen}{57}{section.6.15}
+\contentsline {section}{\numberline {6.10}Stap 6: iOS map}{56}{section.6.10}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.16}Proof-of-concept}{58}{section.6.16}
+\contentsline {subsection}{\numberline {6.10.1}Gebruiken van het SharediOS framework}{56}{subsection.6.10.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.16.1}Android}{59}{subsection.6.16.1}
+\contentsline {section}{\numberline {6.11}Aanspreken van code}{58}{section.6.11}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.16.2}iOS}{60}{subsection.6.16.2}
+\contentsline {subsection}{\numberline {6.11.1}Android}{58}{subsection.6.11.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Conclusie}{61}{chapter.7}
+\contentsline {subsection}{\numberline {6.11.2}iOS}{58}{subsection.6.11.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{63}{appendix.A}
+\contentsline {section}{\numberline {6.12}User interfaces}{58}{section.6.12}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}Introductie}{63}{section.A.1}
+\contentsline {section}{\numberline {6.13}Testen}{59}{section.6.13}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}State-of-the-art}{64}{section.A.2}
+\contentsline {section}{\numberline {6.14}Huidige mogelijkheden}{59}{section.6.14}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}Methodologie}{65}{section.A.3}
+\contentsline {section}{\numberline {6.15}Beperkingen}{60}{section.6.15}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.4}Verwachte resultaten}{65}{section.A.4}
+\contentsline {section}{\numberline {6.16}Proof-of-concept}{60}{section.6.16}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.5}Verwachte conclusies}{66}{section.A.5}
+\contentsline {subsection}{\numberline {6.16.1}Android}{61}{subsection.6.16.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografie}{67}{appendix*.29}
+\contentsline {subsection}{\numberline {6.16.2}iOS}{62}{subsection.6.16.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Conclusie}{63}{chapter.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {A}Onderzoeksvoorstel}{65}{appendix.A}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.1}Introductie}{65}{section.A.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}State-of-the-art}{66}{section.A.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}Methodologie}{67}{section.A.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.4}Verwachte resultaten}{67}{section.A.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.5}Verwachte conclusies}{68}{section.A.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografie}{69}{appendix*.32}
 \contentsfinish 

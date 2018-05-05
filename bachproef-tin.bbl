@@ -41,28 +41,6 @@
       \field{title}{Why you shouldn't switch to Kotlin}
       \field{year}{2016}
     \endentry
-    \entry{Medium2017}{misc}{}
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=c64d8879c42c5776e8255073565ab54d}{%
-           family={{Ali Muzaffar}},
-           familyi={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{c64d8879c42c5776e8255073565ab54d}
-      \strng{fullhash}{c64d8879c42c5776e8255073565ab54d}
-      \strng{authornamehash}{c64d8879c42c5776e8255073565ab54d}
-      \strng{authorfullhash}{c64d8879c42c5776e8255073565ab54d}
-      \field{sortinit}{A}
-      \field{sortinithash}{3248043b5fe8d0a34dab5ab6b8d4309b}
-      \field{labeldatesource}{year}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Building a full-stack web-app in Kotlin}
-      \field{year}{2017}
-      \verb{url}
-      \verb https://medium.com/bcgdv-engineering/building-a-full-stack-web-app-in-kotlin-af8e8fe1f5dc
-      \endverb
-    \endentry
     \entry{JetBrainsVM}{misc}{}
       \name{author}{1}{}{%
         {{uniquename=0,hash=dd06277c17dc8ea26f9b1a2f9001af6a}{%
@@ -127,56 +105,6 @@
       \field{year}{2017}
       \verb{url}
       \verb https://www.avantica.net/blog/what-is-kotlin-and-how-did-we-get-here
-      \endverb
-    \endentry
-    \entry{Informit}{misc}{}
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=daed1937c489ce8feb27f6838641fcab}{%
-           family={Chisnall},
-           familyi={C\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{daed1937c489ce8feb27f6838641fcab}
-      \strng{fullhash}{daed1937c489ce8feb27f6838641fcab}
-      \strng{authornamehash}{daed1937c489ce8feb27f6838641fcab}
-      \strng{authorfullhash}{daed1937c489ce8feb27f6838641fcab}
-      \field{sortinit}{C}
-      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
-      \field{labeldatesource}{year}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{How the LLVM Compiler Infrastructure Works}
-      \field{year}{2008}
-      \verb{url}
-      \verb http://www.informit.com/articles/article.aspx?p=1215438
-      \endverb
-    \endentry
-    \entry{LLVM}{misc}{}
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=125bc0ef9981222e2c15e430e45f26c4}{%
-           family={group},
-           familyi={g\bibinitperiod},
-           given={LLVM},
-           giveni={L\bibinitperiod},
-           prefix={developer},
-           prefixi={d\bibinitperiod}}}%
-      }
-      \strng{namehash}{125bc0ef9981222e2c15e430e45f26c4}
-      \strng{fullhash}{125bc0ef9981222e2c15e430e45f26c4}
-      \strng{authornamehash}{125bc0ef9981222e2c15e430e45f26c4}
-      \strng{authorfullhash}{125bc0ef9981222e2c15e430e45f26c4}
-      \field{sortinit}{d}
-      \field{sortinithash}{d10b5413de1f3d197b20897dd0d565bb}
-      \field{labeldatesource}{year}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{LLVM}
-      \field{year}{2018}
-      \verb{url}
-      \verb https://llvm.org/
       \endverb
     \endentry
     \entry{Developine}{misc}{}
@@ -303,6 +231,28 @@
       \verb https://www.statista.com/statistics/266136/global-market-share-held-by-smartphone-operating-systems/
       \endverb
     \endentry
+    \entry{NativeVsCross3}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=5fc0c1f2fad534100492c0f3b528b55c}{%
+           family={InOutput},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{5fc0c1f2fad534100492c0f3b528b55c}
+      \strng{fullhash}{5fc0c1f2fad534100492c0f3b528b55c}
+      \strng{authornamehash}{5fc0c1f2fad534100492c0f3b528b55c}
+      \strng{authorfullhash}{5fc0c1f2fad534100492c0f3b528b55c}
+      \field{sortinit}{I}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Choosing the right mobile app for your project: Native vs cross-platform vs hybrid}
+      \field{year}{2017}
+      \verb{url}
+      \verb http://inoutput.io/articles/development/choosing-the-right-mobile-app-for-your-project-native-vs-cross-platform-vs-hybrid
+      \endverb
+    \endentry
     \entry{JetBrainsFAQ}{misc}{}
       \name{author}{1}{}{%
         {{uniquename=0,hash=b6a77f3f5bead76a495a90d63703e1f9}{%
@@ -325,66 +275,6 @@
       \verb https://kotlinlang.org/docs/reference/faq.html
       \endverb
     \endentry
-    \entry{SSDK}{misc}{}
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=b6a77f3f5bead76a495a90d63703e1f9}{%
-           family={JetBrains},
-           familyi={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{b6a77f3f5bead76a495a90d63703e1f9}
-      \strng{fullhash}{b6a77f3f5bead76a495a90d63703e1f9}
-      \strng{authornamehash}{b6a77f3f5bead76a495a90d63703e1f9}
-      \strng{authorfullhash}{b6a77f3f5bead76a495a90d63703e1f9}
-      \field{sortinit}{J}
-      \field{sortinithash}{c86bd6cced82a15683b396c2169909ef}
-      \field{extrayear}{2}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://kotlinlang.org/docs/reference/server-overview.html}}
-      \field{title}{Kotlin for server-side development}
-      \field{year}{2017}
-    \endentry
-    \entry{Kotlin}{misc}{}
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=b6a77f3f5bead76a495a90d63703e1f9}{%
-           family={JetBrains},
-           familyi={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{b6a77f3f5bead76a495a90d63703e1f9}
-      \strng{fullhash}{b6a77f3f5bead76a495a90d63703e1f9}
-      \strng{authornamehash}{b6a77f3f5bead76a495a90d63703e1f9}
-      \strng{authorfullhash}{b6a77f3f5bead76a495a90d63703e1f9}
-      \field{sortinit}{J}
-      \field{sortinithash}{c86bd6cced82a15683b396c2169909ef}
-      \field{extrayear}{3}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://kotlinlang.org/docs/reference/faq.html}}
-      \field{title}{Kotlin official website FAQ}
-      \field{year}{2017}
-    \endentry
-    \entry{KotlinNative}{misc}{}
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=b6a77f3f5bead76a495a90d63703e1f9}{%
-           family={JetBrains},
-           familyi={J\bibinitperiod}}}%
-      }
-      \strng{namehash}{b6a77f3f5bead76a495a90d63703e1f9}
-      \strng{fullhash}{b6a77f3f5bead76a495a90d63703e1f9}
-      \strng{authornamehash}{b6a77f3f5bead76a495a90d63703e1f9}
-      \strng{authorfullhash}{b6a77f3f5bead76a495a90d63703e1f9}
-      \field{sortinit}{J}
-      \field{sortinithash}{c86bd6cced82a15683b396c2169909ef}
-      \field{extrayear}{4}
-      \field{labeldatesource}{year}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://kotlinlang.org/docs/reference/native-overview.html}}
-      \field{title}{Kotlin official website, Kotlin Native}
-      \field{year}{2017}
-    \endentry
     \entry{GoogleSupportKotlin}{misc}{}
       \name{author}{1}{}{%
         {{uniquename=0,hash=b6a77f3f5bead76a495a90d63703e1f9}{%
@@ -397,7 +287,7 @@
       \strng{authorfullhash}{b6a77f3f5bead76a495a90d63703e1f9}
       \field{sortinit}{J}
       \field{sortinithash}{c86bd6cced82a15683b396c2169909ef}
-      \field{extrayear}{5}
+      \field{extrayear}{2}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
@@ -497,6 +387,31 @@
       \verb https://medium.com/all-technology-feeds/cross-platform-vs-native-mobile-app-development-choosing-the-right-dev-tools-for-your-app-project-47d0abafee81
       \endverb
     \endentry
+    \entry{NativeDevelopmentCost}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=54704a09050efb36d942bc80844e5a0f}{%
+           family={Kohan},
+           familyi={K\bibinitperiod},
+           given={Bernard},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{54704a09050efb36d942bc80844e5a0f}
+      \strng{fullhash}{54704a09050efb36d942bc80844e5a0f}
+      \strng{authornamehash}{54704a09050efb36d942bc80844e5a0f}
+      \strng{authorfullhash}{54704a09050efb36d942bc80844e5a0f}
+      \field{sortinit}{K}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Comentum}
+      \field{title}{Mobile App Development Cost and Process}
+      \field{year}{2015}
+      \verb{url}
+      \verb http://www.comentum.com/mobile-app-development-cost.html
+      \endverb
+    \endentry
     \entry{GoogleGradle}{misc}{}
       \name{author}{1}{}{%
         {{uniquename=0,hash=e7ba8198f55630c8227e324242752461}{%
@@ -567,6 +482,28 @@
       \field{howpublished}{\url{https://medium.com/@magnus.chatt/why-you-should-totally-switch-to-kotlin-c7bbde9e10d5}}
       \field{title}{Switch to Kotlin}
       \field{year}{2017}
+    \endentry
+    \entry{NativeVsCross2}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=a557e06635b8da402ae33421db13b00d}{%
+           family={Newgenapps},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{a557e06635b8da402ae33421db13b00d}
+      \strng{fullhash}{a557e06635b8da402ae33421db13b00d}
+      \strng{authornamehash}{a557e06635b8da402ae33421db13b00d}
+      \strng{authorfullhash}{a557e06635b8da402ae33421db13b00d}
+      \field{sortinit}{N}
+      \field{sortinithash}{1163c28585427c673ad5a010cbf82f52}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Native vs Hybrid vs Cross-Platform Approach to Mobile App Development}
+      \field{year}{2018}
+      \verb{url}
+      \verb https://www.newgenapps.com/blog/native-vs-hybrid-vs-cross-platform-approach-to-mobile-app-development
+      \endverb
     \endentry
     \entry{ResearchGate}{misc}{}
       \name{author}{1}{}{%
@@ -653,6 +590,69 @@
       \field{year}{2018}
       \verb{url}
       \verb https://www.techopedia.com/definition/3376/java-virtual-machine-jvm
+      \endverb
+    \endentry
+    \entry{MeaningHybridApp}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=700f0e630e939fff4cff6be3fc518b34}{%
+           family={TechTarget},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{700f0e630e939fff4cff6be3fc518b34}
+      \strng{fullhash}{700f0e630e939fff4cff6be3fc518b34}
+      \strng{authornamehash}{700f0e630e939fff4cff6be3fc518b34}
+      \strng{authorfullhash}{700f0e630e939fff4cff6be3fc518b34}
+      \field{sortinit}{T}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is a hyrbid app?}
+      \field{year}{2011}
+      \verb{url}
+      \verb https://searchsoftwarequality.techtarget.com/definition/hybrid-application-hybrid-app
+      \endverb
+    \endentry
+    \entry{Framework}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=700f0e630e939fff4cff6be3fc518b34}{%
+           family={TechTarget},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{700f0e630e939fff4cff6be3fc518b34}
+      \strng{fullhash}{700f0e630e939fff4cff6be3fc518b34}
+      \strng{authornamehash}{700f0e630e939fff4cff6be3fc518b34}
+      \strng{authorfullhash}{700f0e630e939fff4cff6be3fc518b34}
+      \field{sortinit}{T}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is a framework?}
+      \field{year}{2015}
+      \verb{url}
+      \verb https://whatis.techtarget.com/definition/framework
+      \endverb
+    \endentry
+    \entry{MeaningNativeApp}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=700f0e630e939fff4cff6be3fc518b34}{%
+           family={TechTarget},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{700f0e630e939fff4cff6be3fc518b34}
+      \strng{fullhash}{700f0e630e939fff4cff6be3fc518b34}
+      \strng{authornamehash}{700f0e630e939fff4cff6be3fc518b34}
+      \strng{authorfullhash}{700f0e630e939fff4cff6be3fc518b34}
+      \field{sortinit}{T}
+      \field{sortinithash}{2e5c2f51f7fa2d957f3206819bf86dc3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is a native app?}
+      \field{year}{2018}
+      \verb{url}
+      \verb https://searchsoftwarequality.techtarget.com/definition/native-application-native-app
       \endverb
     \endentry
     \entry{TechYourChance}{article}{}
