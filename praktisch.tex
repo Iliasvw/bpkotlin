@@ -12,7 +12,7 @@ Het domeinmodel beschikt over drie klassen:
 	
 	\item Een CartLine object heeft een product en quantity (hoeveelheid) attribuut. Deze klasse beschikt over een constructor die twee parameters verwacht, die tevens onze attributen zijn. Deze is ook voorzien van twee getters, om de attributen op te vragen (aangezien deze private zijn) en een methode om de kostprijs van deze CartLine te berekenen.
 	
-	\item De product klasse is de klasse die per platform wordt geimplementeerd. Deze klasse wordt dus als expect gedeclareerd en beschikt over drie expect methodes om de attributen van de klasse op te vragen. Per platform, in dit voorbeeld zal dit Android en iOS zijn, wordt er een implementatie voorzien van deze klasse. Deze actual klassen hebben elk een name, price, description en productImage en een implementatie van de methodes van de expect Product klasse. Het type van de productImage verschilt per platform.
+	\item De product klasse is de klasse die per platform wordt geïmplementeerd. Deze klasse wordt dus als expect gedeclareerd en beschikt over drie expect methodes om de attributen van de klasse op te vragen. Per platform, in dit voorbeeld zal dit Android en iOS zijn, wordt er een implementatie voorzien van deze klasse. Deze actual klassen hebben elk een name, price, description en productImage en een implementatie van de methodes van de expect Product klasse. Het type van de productImage verschilt per platform.
 \end{itemize}
 
 \begin{figure} [ht]
@@ -78,7 +78,7 @@ subprojects {
 \end{lstlisting}
 Hieronder wordt de inhoud van het build.gradle bestand besproken.
 \subsection{Versies}
-Bovenaan wordt er aangegeven welke versie van Kotlin en Kotlin/Native er gebruikt zal worden voor de opzet van dit project. Dit zijn beide de nieuwste versies. Opgelet, het is niet altijd vanzelfsprekend om de laatste versie van Kotlin/Native te gebruiken. Er wordt voortdurend gewerkt aan Kotlin en Kotlin/Native en nieuwe dingen worden continu gepushed op de GitHub repository. Het kan al eens gebeuren dat sommige features niet altijd even goed werken, wat voor problemen kan zorgen bij de ontwikkeling van de applicatie. Bij twijfels, neem een minder recente versie van de Kotlin/Native plugin.
+Bovenaan wordt er aangegeven welke versie van Kotlin en Kotlin/Native er gebruikt zal worden voor de opzet van dit project. Dit zijn beide de nieuwste versies. Opgelet, het is niet altijd vanzelfsprekend om de laatste versie van Kotlin/Native te gebruiken. Er wordt voortdurend gewerkt aan Kotlin en Kotlin/Native en nieuwe dingen worden continu gepusht op de GitHub repository. Het kan al eens gebeuren dat sommige features niet altijd even goed werken, wat voor problemen kan zorgen bij de ontwikkeling van de applicatie. Bij twijfels, neem een minder recente versie van de Kotlin/Native plugin.
 
 \subsection{Repositories}
 In de repositories tag worden de juiste repositories gelinkt:
@@ -105,7 +105,7 @@ In de dependencies tag worden de juiste dependencies gelinkt:
 \end{itemize}
 
 \subsection{Build map}
-Voor elke map die een build.gradle bestand bevat zal er automatisch een build folder worden gegenereerd. De build map bevat alle gecompileerde bestanden, van een bepaalde map, die genereerd worden door Kotlin/Native en deze worden bij iedere gradle run en/of build aangemaakt.
+Voor elke map die een build.gradle bestand bevat zal er automatisch een build folder worden gegenereerd. De build map bevat alle gecompileerde bestanden, van een bepaalde map, die gegenereerd worden door Kotlin/Native en deze worden bij iedere gradle run en/of build aangemaakt.
 
 \section{Stap 2: project structuur}
 Nadat het build.gradle bestand aangemaakt is, is het de bedoeling om via IntelliJ IDEA het gradle bestand te importeren. Zie figuur \ref{fig:stap2-import}. IntelliJ zal een dialoogvenster openen, waarbij het build.gradle bestand moet worden geopend. De IDE zal hierna het build.gradle bestand uitvoeren en het genereert enkele bestanden.
