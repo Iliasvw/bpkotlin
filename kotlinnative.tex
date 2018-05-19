@@ -62,7 +62,7 @@ Op deze figuur zijn dus een aantal mappen te vinden:
 	\item De \textbf{common} map bevat gemeenschappelijke code dat over de verschillende platformen wordt gedeeld.
 	\item De \textbf{gradle} map, automatisch gegenereerd, bevat een properties bestand. In dit bestand worden enkele belangrijke properties onthouden, zoals de locatie van de gradle installatie.
 	\item \textbf{ios} bevat het volledige iOS project.
-	\item De \textbf{platforms} map bevat voor ieder platform, dat men wenst te ondersteunen, een map. In dit voorbeeld zijn er dus twee mappen, een iOS en Android map. De bedoeling is om hierin specifieke code te schrijven die varieert per platform. Zie sectie \ref{sec:sharingcode} voor meer informatie.
+	\item De \textbf{platforms} map bevat voor ieder platform, dat men wenst te ondersteunen, een map. In dit voorbeeld zijn er dus twee mappen, een iOS en Android-map. De bedoeling is om hierin specifieke code te schrijven die varieert per platform. Zie sectie \ref{sec:sharingcode} voor meer informatie.
 \end{itemize}
 
 \section{Kotlin/Native code}
@@ -137,6 +137,6 @@ class Example {
 
 \section {Het gebruiken van de Kotlin code}
 \label{sec:use-ios-code}
-Maar hoe kan de gemeenschappelijke en platformspecifieke code gebruikt worden? Simpel. Bij een Android project kunnen we de Kotlin code gebruiken door simpelweg de bibliotheek te importeren. Dit is niks meer dan een import bovenaan in de Android activity. iOS gerelateerde code zal gedeeld worden via een iOS framework dat gegenereerd wordt door Kotlin/Native. Dit framework zal toegevoegd worden in de build phases van het Xcode project. Zie sectie \ref{sec:ios-stap6} voor meer informatie.
+Maar hoe kan de gemeenschappelijke en platformspecifieke code gebruikt worden? Simpel. Bij een Android-project kunnen we de Kotlin code gebruiken door simpelweg de bibliotheek te importeren. Dit is niks meer dan een import bovenaan in de Android activity. iOS gerelateerde code zal gedeeld worden via een iOS framework dat gegenereerd wordt door Kotlin/Native. Dit framework zal toegevoegd worden in de build phases van het Xcode project. Zie sectie \ref{sec:ios-stap6} voor meer informatie.
 
 Kotlin/Native zal de code uit de common map en de code uit de platformspecifieke map bundelen tot één geheel. Zoals reeds gezegd zal dit bij iOS een framework zijn, bij Android echter een package die kan worden geïmporteerd. Dit gebeurt aan de hand van verschillende plugins, zie hoofdstuk \ref{ch:praktisch} voor meer informatie over deze build scripts.

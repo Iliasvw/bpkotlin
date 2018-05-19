@@ -92,7 +92,7 @@ In de repositories tag worden de juiste repositories gelinkt:
 In de dependencies tag worden de juiste dependencies gelinkt:
 \begin{itemize}
 	\item \textbf{Kotlin-gradle} laadt de Kotlin-gradle plugin met de versie van Kotlin die wordt aangegeven bovenaan het build script. Deze plugin zorgt voor het compileren van Kotlin bronnen en modules.
-	\item \textbf{Android build tools} is nodig voor het bouwen van de Android applicatie.
+	\item \textbf{Android build tools} is nodig voor het bouwen van de Android-applicatie.
 	\item \textbf{Kotlin-native-gradle-plugin} is de Kotlin/Native plugin die gebruikt zal worden om te zorgen voor een cross-platform applicatie.
 \end{itemize}
 
@@ -255,7 +255,7 @@ De platform folder bevat enkele subfolders, één subfolder per platform waarvoo
 
 Zowel de main en test map bevatten elk nog een map. Bij Android is dit een package die begint met het groupId, zie sectie \ref{sec:overige}, en eindigt met een willekeurige naam. In dit voorbeeld is dit opnieuw 'libs'. Dit dient identiek te zijn aan de naam van de package gekozen in de common map, zie sectie \ref{sec:maintestcommon}. In het geval van iOS zijn dit geen packages maar eerder een mappenstructuur.
 
-\subsection{Platforms android map}
+\subsection{Platforms Android-map}
 \subsubsection{Build.gradle}
 \begin{lstlisting}
 apply plugin: 'kotlin-platform-jvm'
@@ -280,7 +280,7 @@ dependencies {
 }
 \end{lstlisting}
 
-In deze build.gradle wordt er gebruik gemaakt van de kotlin-platform-jvm plugin. Android applicaties maken nog steeds gebruik van de JVM en dus ook deze android applicatie. De JVM voert een aantal noodzakelijk taken uit die ook Kotlin nodig heeft in Android applicaties, zie sectie \ref{sec:jvm} voor meer uitleg over de JVM. De sourceSets worden ingesteld. Tenslotte worden alle dependencies geladen en wordt er aangegeven dat de common module verwacht wordt die code bevat.
+In deze build.gradle wordt er gebruik gemaakt van de kotlin-platform-jvm plugin. Android-applicaties maken nog steeds gebruik van de JVM en dus ook deze Android-applicatie. De JVM voert een aantal noodzakelijk taken uit die ook Kotlin nodig heeft in Android-applicaties, zie sectie \ref{sec:jvm} voor meer uitleg over de JVM. De sourceSets worden ingesteld. Tenslotte worden alle dependencies geladen en wordt er aangegeven dat de common module verwacht wordt die code bevat.
 
 \subsubsection{Platformspecifieke code}
 De platformspecifieke code voor Android. De klasse product wordt voorzien van een afbeelding en aangezien drawables in Android gemapt worden naar een integerwaarde, wordt er een getal ingevuld in de constructor. De naam van het product wordt teruggeven met prefix 'Android'.
@@ -321,7 +321,7 @@ actual class Product: Serializable {
 }
 \end{lstlisting}
 
-\subsection{Platforms ios map}
+\subsection{Platforms iOS-map}
 \subsubsection{Build.gradle}
 \label{sec:ios-build-gradle}
 \begin{lstlisting}
@@ -398,8 +398,8 @@ actual class Product {
 }
 \end{lstlisting}
 
-\section{Stap 5: Android map}
-In de android map is het de bedoeling om via Android Studio een nieuw project aan te maken. Bij het aanmaken van het project in Android Studio kan de locatie van het project worden opgeven. Deze locatie moet zodanig ingesteld zijn dat het Android project een submap is van het Kotlin/Native project en waardoor het geïntegreerd zal worden in dit project.
+\section{Stap 5: Android-map}
+In de Android-map is het de bedoeling om via Android Studio een nieuw project aan te maken. Bij het aanmaken van het project in Android Studio kan de locatie van het project worden opgeven. Deze locatie moet zodanig ingesteld zijn dat het Android-project een submap is van het Kotlin/Native project en waardoor het geïntegreerd zal worden in dit project.
 
 \subsection{settings.gradle}
 Voor we gebruik kunnen maken van de Kotlin klassen, moeten er eerst nog enkele wijzigingen gebeuren in de settings.gradle van het Android project. De settings.gradle wordt vervangen door onderstaande code:
@@ -417,17 +417,17 @@ project(":platforms-android").projectDir = new File("../platforms/android")
 Via de settings.gradle wordt er aangegeven om de common en platforms-android modules te includen in het project. Hierdoor worden de common en platformspecifieke Android modules geïntegreerd in het Android project.
 
 \subsection{build.gradle}
-Tenslotte moet er nog een kleine wijziging doorgevoerd worden in de build.gradle van het Android project. In de dependencies tag moet er enkel en alleen volgende lijn toegevoegd worden in de dependencies tag:
+Tenslotte moet er nog een kleine wijziging doorgevoerd worden in de build.gradle van het Android-project. In de dependencies tag moet er enkel en alleen volgende lijn toegevoegd worden in de dependencies tag:
 
 \begin{lstlisting}
 implementation project(':platforms-android')
 \end{lstlisting}
 
-Hiermee wordt er aangegeven dat de specifieke Android implementatie te vinden is in platforms-android, waarvan de locatie is opgegeven in de settings.gradle. Vanaf nu kan er gebruik gemaakt worden van de klassen in de common module en de platformspecifieke Android module.
+Hiermee wordt er aangegeven dat de specifieke Android implementatie te vinden is in platforms-android, waarvan de locatie is opgegeven in de settings.gradle. Vanaf nu kan er gebruik gemaakt worden van de klassen in de common module en de platformspecifieke Android-module.
 
-\section{Stap 6: iOS map}
+\section{Stap 6: iOS-map}
 \label{sec:ios-stap6}
-Net zoals bij de android map, is het de bedoeling om via Xcode een nieuw Xcode project aan te maken dat ook een submap is van het Kotlin/Native project. Men kan zowel kiezen voor een Objective-C als Swift project aangezien het gecompileerde iOS framework zowel in beide projecten kan gebruikt worden.
+Net zoals bij de Android-map, is het de bedoeling om via Xcode een nieuw Xcode project aan te maken dat ook een submap is van het Kotlin/Native project. Men kan zowel kiezen voor een Objective-C als Swift project aangezien het gecompileerde iOS framework zowel in beide projecten kan gebruikt worden.
 
 \subsection{Gebruiken van het SharediOS framework}
 Vooraleer men in Xcode kan gebruik maken van het SharediOS framework, moeten er een aantal dingen aangepast worden in de build phases van het project. Uit figuur \ref{fig:stap6-phases} kan worden afgeleid dat de build phases zijn aangepast. Volgende build phase moet worden toegevoegd in Xcode: Compile Kotlin Native to iOS framework.
@@ -470,7 +470,7 @@ Tenslotte zal het framework nog in de build phases 'Link Binary With Libraries' 
 
 \section{Aanspreken van code}
 \subsection{Android}
-Om gebruik te kunnen maken van de Kotlin code in het Android project moet men simpelweg volgende import toevoegen om alle klassen te kunnen gebruiken: 
+Om gebruik te kunnen maken van de Kotlin code in het Android-project moet men simpelweg volgende import toevoegen om alle klassen te kunnen gebruiken: 
 
 \begin{lstlisting}
 import ilias.vw.libs.*
@@ -483,7 +483,7 @@ Om gebruik te kunnen maken van het SharediOS framework in de ViewControllers moe
 import SharediOS
 \end{lstlisting}
 
-Het aanmaken van een object in iOS is nu heel simpel geworden. Zoals te zien is in onderstaande code heeft Kotlin/Native een prefix gegeven aan de klassen. Kotlin/Native zal steeds de hoofdletters uit de naam van het framework filteren, dat gekozen wordt in de build.gradle van de iOS folder, zie sectie \ref{sec:ios-build-gradle}. Stel dat het framework KotlinNativeFramework heet, dan zal de prefix KNF zijn en zal de product klasse KNFProduct heten. In dit voorbeeld heet het gecompileerde iOS framework SharediOS, waardoor de prefix SOS is.
+Het aanmaken van een object in iOS is nu heel simpel geworden. Zoals te zien is in onderstaande code heeft Kotlin/Native een prefix gegeven aan de klassen. Kotlin/Native zal steeds de hoofdletters uit de naam van het framework filteren, dat gekozen wordt in de build.gradle van de iOS-map, zie sectie \ref{sec:ios-build-gradle}. Stel dat het framework KotlinNativeFramework heet, dan zal de prefix KNF zijn en zal de product klasse KNFProduct heten. In dit voorbeeld heet het gecompileerde iOS framework SharediOS, waardoor de prefix SOS is.
 
 \begin{lstlisting}
 var product: SOSProduct = SOSProduct(name: "Playstation 4", price: 399.95, description: "Playstation 4 gaming console", productImage: "ps4")
@@ -516,7 +516,7 @@ Hierbij wordt er een cart aangemaakt met een naam 'test'. Daarna wordt de naam t
 
 Aangezien er per platform, platformspecifieke code geschreven kan worden is het belangrijk om deze code ook te kunnen testen. Er kan naargelang dat de code per platform verschilt, verschillende testcode geschreven worden in de test map van het platform. Dit zorgt ervoor dat er geen ongeteste code in het project geraakt wat eventueel bugs kan bevatten. 
 
-Een voorbeeld voor deze proof-of-concept: er kan voor de ios test gecheckt worden of de naam van het product begint met de prefix 'iOS' en voor Android kan er gecheckt worden of deze naam start met prefix 'Android'.
+Een voorbeeld voor deze proof-of-concept: er kan voor de iOS test gecheckt worden of de naam van het product begint met de prefix 'iOS' en voor Android kan er gecheckt worden of deze naam start met prefix 'Android'.
 
 \section{Huidige mogelijkheden}
 Zoals uit de proof-of-concept af te leiden is, is het reeds mogelijk om Kotlin/Native te gebruiken om een cross-platform applicatie te ontwikkelen. Aan de hand van de Kotlin/Native Gradle plugin is het mogelijk om niet alleen voor Android te ontwikkelen maar ook voor iOS. Cross-platform heeft bij Kotlin/Native niet dezelfde betekenis als bij een framework zoals React/Native. Het doel van Kotlin/Native is dus het delen van domeinlogica en deze hergebruiken over de verschillende te ondersteunen platformen. In deze vroege versie (0.6) van Kotlin/Native is het reeds mogelijk om dit te doen, maar de mogelijkheden blijven beperkt. Indien de applicatie geen speciale iOS bibliotheken nodig heeft, is er geen probleem.
