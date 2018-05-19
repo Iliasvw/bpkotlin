@@ -34,7 +34,7 @@ Enkele voorbeelden van deelprojecten van de LLVM developers group \autocite{LLVM
 LLVM is dus een bibliotheek die gebruikt wordt om tussenliggende en/of machine-code te genereren en optimaliseren. Maar wat is nu de exacte werking van deze compiler? De werking van de LLVM is totaal verschillend dan die van bijvoorbeeld de JVM. Zie sectie \ref{sec:jvm} voor meer uitleg.
 
 \subsection{De werking van een standaard compiler}
-Het meest populaire ontwerp voor een statische compiler, zoals de meeste C-compilers, is het driefasenontwerp waarbij de belangrijkste componenten de \textbf{frontend}, de \textbf{optimizer} en de \textbf{backend} zijn. 
+Het meest populaire ontwerp voor een statische compiler, zoals de meeste C-compilers, is het driefasenontwerp waarbij de belangrijkste componenten de \textbf{front-end}, de \textbf{optimizer} en de \textbf{back-end} zijn. 
 
 \begin{figure} [ht]
 	\centering
@@ -43,8 +43,8 @@ Het meest populaire ontwerp voor een statische compiler, zoals de meeste C-compi
 	\label{fig:driefasenontwerp}
 \end{figure}
 
-\subsubsection{De frontend}
-De frontend zorgt voor de analyse van de broncode. Deze heeft dus als taak om ervoor te zorgen dat geen code gecompileerd kan worden waarbij fouten aanwezig zijn. Dit gebeurt door het opstellen van een taalspecifieke abstracte syntaxboom om de syntaxcode voor te stellen. Deze syntaxboom wordt optioneel geconverteerd naar een nieuwe boom voor optimalisatie en de optimizer en de backend worden uitgevoerd aan de hand van deze boom. De JVM (Javac) is ook een implementatie van dit driefasenontwerp. Een voorbeeld van een syntaxboom is te zien in figuur \ref{fig:syntaxtree}.
+\subsubsection{De front-end}
+De front-end zorgt voor de analyse van de broncode. Deze heeft dus als taak om ervoor te zorgen dat geen code gecompileerd kan worden waarbij fouten aanwezig zijn. Dit gebeurt door het opstellen van een taalspecifieke abstracte syntaxboom om de syntaxcode voor te stellen. Deze syntaxboom wordt optioneel geconverteerd naar een nieuwe boom voor optimalisatie en de optimizer en de back-end worden uitgevoerd aan de hand van deze boom. De JVM (Javac) is ook een implementatie van dit driefasenontwerp. Een voorbeeld van een syntaxboom is te zien in figuur \ref{fig:syntaxtree}.
 
 \begin{figure} [ht]
 	\centering
@@ -56,30 +56,30 @@ De frontend zorgt voor de analyse van de broncode. Deze heeft dus als taak om er
 \subsubsection{De optimizer}
 De optimizer is verantwoordelijk, zoals de naam het zelfs zegt, voor het uitvoeren van een breed gamma van transformaties om de uitvoeringstijd van de code te optimaliseren. Dit wordt gedaan door het elimineren van overtollige berekeningen, maar dit is meestal afhankelijk van de taal die gebruikt werd en de doelarchitectuur.
 
-\subsubsection{De backend}
-De backend, ook bekend als de codegenerator, gaat de code gaan mappen naar een instructieset. Naast het maken van deze instructieset is het ook verantwoordelijk om ervoor te zorgen dat deze instructieset gebruik maakt van de ongewone kenmerken van de ondersteunde architectuur. Iedere architectuur is namelijk anders en de gegenereerde instructieset moet dus afgestemd worden op de doelarchitectuur.
+\subsubsection{De back-end}
+De back-end, ook bekend als de codegenerator, gaat de code gaan mappen naar een instructieset. Naast het maken van deze instructieset is het ook verantwoordelijk om ervoor te zorgen dat deze instructieset gebruik maakt van de ongewone kenmerken van de ondersteunde architectuur. Iedere architectuur is namelijk anders en de gegenereerde instructieset moet dus afgestemd worden op de doelarchitectuur.
 
-\subsection{Meerdere front- en backends}
-Het grote voordeel van dit driefasenontwerp treedt op wanneer een compiler besluit om meerdere brontalen en architecturen te ondersteunen. Indien de optimizer een gemeenschappelijke code representatie gebruikt, dan kan een frontend geschreven worden voor elke taal die gecompileerd kan worden naar die gemeenschappelijke representatie, en een backend kan worden geschreven voor elke doelarchitectuur dat daaruit kan compileren. Door het gebruik van deze gemeenschappelijke code representatie heeft de optimizer geen kennis nodig van de doelarchitectuur. Op figuur \ref{fig:llvmdriefasen} is te zien dat door de common optimizer te gebruiken, er meerdere frontends kunnen worden geschreven en meerdere doelarchitecturen kunnen worden ondersteund.
+\subsection{Meerdere front- en back-ends}
+Het grote voordeel van dit driefasenontwerp treedt op wanneer een compiler besluit om meerdere brontalen en architecturen te ondersteunen. Indien de optimizer een gemeenschappelijke code representatie gebruikt, dan kan een front-end geschreven worden voor elke taal die gecompileerd kan worden naar die gemeenschappelijke representatie, en een back-end kan worden geschreven voor elke doelarchitectuur dat daaruit kan compileren. Door het gebruik van deze gemeenschappelijke code representatie heeft de optimizer geen kennis nodig van de doelarchitectuur. Op figuur \ref{fig:llvmdriefasen} is te zien dat door de common optimizer te gebruiken, er meerdere front-ends kunnen worden geschreven en meerdere doelarchitecturen kunnen worden ondersteund.
 
-Met dit ontwerp, indien men wenst een nieuwe brontaal te ondersteunen, moet men enkel een nieuwe frontend schrijven maar de bestaande optimizer en backend kunnen worden hergebruikt. Indien deze delen (frontend, optimizer en backend) niet waren gescheiden, zou het implementeren van een nieuwe brontaal vereisen om helemaal opnieuw te beginnen, dus een volledig nieuwe compiler te schrijven. Indien men N doelarchitecturen heeft en M brontalen, dan zou men N*M compilers hebben.
+Met dit ontwerp, indien men wenst een nieuwe brontaal te ondersteunen, moet men enkel een nieuwe front-end schrijven maar de bestaande optimizer en back-end kunnen worden hergebruikt. Indien deze delen (front-end, optimizer en back-end) niet waren gescheiden, zou het implementeren van een nieuwe brontaal vereisen om helemaal opnieuw te beginnen, dus een volledig nieuwe compiler te schrijven. Indien men N doelarchitecturen heeft en M brontalen, dan zou men N*M compilers hebben.
 
 Nog een voordeel van dit ontwerp is dat deze soorten van compilers een veel bredere set van programmeurs kan tevreden stellen. Dit is minder het geval indien men slechts één brontaal en doelarchitectuur zou ondersteunen. 
 
 \begin{figure} [ht]
 	\centering
 	\includegraphics[width=0.95\textwidth]{img/llvmdriefasen}
-	\caption{Meerdere front- en backends (\cite{aosa})}
+	\caption{Meerdere front- en back-ends (\cite{aosa})}
 	\label{fig:llvmdriefasen}
 \end{figure}
 
 \section{LLVM en het driefasenontwerp}
 \label{sec:difference-llvm}
-In een LLVM-gebaseerde compiler heeft de frontend dezelfde taak als de frontend in een normale compiler. De code wordt daarna door de frontend vertaald naar LLVM intermediate representation (IR), dit meestal door het opbouwen van een syntaxboom en deze later te converteren naar IR. De IR is eigenlijk het hart van de LLVM. Het is een low-level programmeertaal die zeer dicht aansluit bij assembly code. Deze IR heeft als taak om de code te verbeteren, waarna deze code in een soort van codegenerator wordt gestoken waarbij deze wordt omgezet naar native machinecode. 
+In een LLVM-gebaseerde compiler heeft de front-end dezelfde taak als de front-end in een normale compiler. De code wordt daarna door de front-end vertaald naar LLVM intermediate representation (IR), dit meestal door het opbouwen van een syntaxboom en deze later te converteren naar IR. De IR is eigenlijk het hart van de LLVM. Het is een low-level programmeertaal die zeer dicht aansluit bij assembly code. Deze IR heeft als taak om de code te verbeteren, waarna deze code in een soort van codegenerator wordt gestoken waarbij deze wordt omgezet naar native machinecode. 
 
-In een korte notendop: de frontend krijgt een brontaal binnen en gaat deze taal parsen, valideren en analyseren. Hij stelt de syntaxboom op en zet deze om naar LLVM IR. De optimizer gaat de code optimaliseren en stuurt de IR code naar de backend die dient als codegenerator met als resultaat machinecode.
+In een korte notendop: de front-end krijgt een brontaal binnen en gaat deze taal parsen, valideren en analyseren. Hij stelt de syntaxboom op en zet deze om naar LLVM IR. De optimizer gaat de code optimaliseren en stuurt de IR code naar de back-end die dient als codegenerator met als resultaat machinecode.
 
-LLVM is dus een implementatie van het driefasenontwerp. Het grote verschil tussen een gewone implementatie van dit ontwerp en LLVM is het gebruik van de IR. Deze IR is de enige interface voor de optimizer. Dit betekent dat men enkel moet weten wat IR en wat de werking van deze IR is om een frontend te schrijven voor deze LLVM, wat het ondersteunen van nieuwe talen veel makkelijker maakt.
+LLVM is dus een implementatie van het driefasenontwerp. Het grote verschil tussen een gewone implementatie van dit ontwerp en LLVM is het gebruik van de IR. Deze IR is de enige interface voor de optimizer. Dit betekent dat men enkel moet weten wat IR en wat de werking van deze IR is om een front-end te schrijven voor deze LLVM, wat het ondersteunen van nieuwe talen veel makkelijker maakt.
 
 \begin{figure} [ht]
 	\centering
