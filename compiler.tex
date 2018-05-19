@@ -4,7 +4,7 @@
 
 \chapter{De compilatie van Kotlin/Native}
 \label{ch:compiler}
-Kotlin is een programmeertaal die gebruik maakt van de JVM. Sinds de beslissing van JetBrains om zich ook te focussen op cross-platform development, moesten ze met een oplossing komen voor de JVM. De JVM wordt namelijk niet ondersteund op alle besturingssystemen. Zo ondersteunen bijvoorbeeld MacOS en iOS (mobile) geen JVM. JetBrains moest dus op zoek gaan naar een oplossing... de LLVM compiler. Deze literatuurstudie is uitgevoerd aan de hand van de aosabook van LLVM, \textcite{aosa}, een zeer uitgebreide documentatie. 
+Kotlin is een programmeertaal die gebruik maakt van de JVM. Sinds de beslissing van JetBrains om zich ook te focussen op cross-platform development, moesten ze met een oplossing komen voor de JVM. De JVM wordt namelijk niet ondersteund op alle besturingssystemen. Zo ondersteunen bijvoorbeeld MacOS en iOS (mobile) geen JVM. JetBrains moest dus op zoek gaan naar een oplossing... de LLVM compiler. Deze compiler is een reeds bestaande compiler en is dus niet ontwikkeld in functie van Kotlin. Deze literatuurstudie is uitgevoerd aan de hand van de aosabook van LLVM, \textcite{aosa}, een zeer uitgebreide documentatie. 
 
 \section{Wat is LLVM?}
 Het LLVM-project is een verzameling modulaire en herbruikbare compiler- en toolchaintechnologieën. Het project is ontwikkeld door de LLVM developer group, waarvan Vikram Adve en Chris Lattner de originele ontwikkelaars zijn. De naam 'LLVM' zelf is geen acroniem, het is de volledige naam van het project. Ondanks de naam heeft LLVM weinig te maken met de traditionele virtuele machines.
@@ -13,20 +13,25 @@ Het LLVM-project begon als een onderzoeksproject aan de universiteit van Illinoi
 
 Sinds het ontstaan van LLVM is het project uitgegroeid tot een overkoepelend project dat bestaat uit een aantal deelprojecten. Veel van deze deelprojecten worden momenteel sterk gebruikt bij commerciële en open-source projecten en zelfs in academisch onderzoek.
 
-Het grote voordeel van het gebruik van LLVM is de veelzijdigheid, flexibiliteit en herbruikbaarheid. Dit wil zeggen dat het zo goed als in ieder soort project kan worden geïntegreerd. Het wordt daarom tegenwoordig gebruikt voor een groot aantal verschillende taken, dit gaande van het compileren van enkele kleine code-projecten tot het compileren van code voor massieve computers.
+Enkele voorbeelden van commerciële en open-source projecten zijn:
+\begin{itemize}
+	\item \textbf{Vuo}, een moderne visuele programmeertaal voor multimedia ontwerpers.
+	\item \textbf{Pony}, een object-georiënteerde programmeertaal.
+	\item \textbf{Crack}, een programmeertaal die het gemak van de ontwikkeling van een scripttaal biedt met de uitvoering van een gecompileerde taal.
+\end{itemize}
+
+Het grote voordeel van het gebruik van LLVM is de veelzijdigheid, flexibiliteit en herbruikbaarheid. Dit wil zeggen dat het zo goed als in ieder soort project kan worden geïntegreerd. Het wordt daarom tegenwoordig gebruikt voor een groot aantal verschillende taken, dit gaande van het compileren van enkele kleine code-projecten tot het compileren van code voor massieve computers \autocite{LLVM}.
 
 \subsection{Deelprojecten LLVM}
-Enkele voorbeelden van deelprojecten van de LLVM developers group:
+Enkele voorbeelden van deelprojecten van de LLVM developers group \autocite{LLVM}:
 \begin{itemize}
 	\item \textbf{Clang} is een LLVM native C/C++/Objective-C compiler dat als doel heeft om verbazingwekkend snelle compilaties aan te bieden. Het zorgt overigens voor nuttige fout- en waarschuwingsberichten.
-	\newline
 	\item Het \textbf{LLDB} project bouwt verder op libraries die aangeboden worden door LLVM en Clang om te zorgen voor een native debugger.
-	\newline
 	\item Het \textbf{libc++} en \textbf{libc++ ABI} project voorziet een krachtige implementatie van de standaard C++ bibliotheek, met ondersteuning voor C++11. 
 \end{itemize}
 
 \section{De werking van LLVM}
-LLVM is dus een bibliotheek die gebruikt wordt om tussenliggende en/of machine-code te genereren en optimaliseren. Maar wat is nu de exacte werking van deze compiler?
+LLVM is dus een bibliotheek die gebruikt wordt om tussenliggende en/of machine-code te genereren en optimaliseren. Maar wat is nu de exacte werking van deze compiler? De werking van de LLVM is totaal verschillend dan die van bijvoorbeeld de JVM. Zie sectie \ref{sec:jvm} voor meer uitleg.
 
 \subsection{De werking van een standaard compiler}
 Het meest populaire ontwerp voor een statische compiler, zoals de meeste C-compilers, is het driefasenontwerp waarbij de belangrijkste componenten de \textbf{front-end}, de \textbf{optimizer} en de \textbf{back-end} zijn. 
@@ -86,15 +91,9 @@ Kotlin/Native is een technologie dat Kotlin via LLVM direct compileert naar mach
 
 \section{Java Virtual Machine (JVM)}
 \label{sec:jvm}
-De Java Virtual Machine, ook wel JVM genoemd, is een virtuele machine voor het uitvoeren van Java bytecode \autocite{TechopediaBytecode}. Deze bytecode is een object-georiënteerde code die gecompileerd is om op een virtuele machine te worden uitgevoerd. De code kan op elk besturingssysteem of platform, waarvoor er een JVM beschikbaar is, worden gebruikt. De virtuele machine transformeert de code, geschreven in een bepaalde programmeertaal, in machinetaal die door de CPU\footnote{Central Processing Unit} van een systeem kan worden uitgevoerd, aangezien platformen andere interpretatietechnieken kunnen gebruiken. Bij de JVM zal de bytecode meestal het resultaat zijn van de compilatie van Java-code. Echter kunnen talen zoals Scala, Clojure en Groovy ook uitgevoerd worden op deze virtuele machine. De JVM heeft kennis van geheugenbeheer, optimalisatie van de uitvoering van de applicatie en garbage collection. Daarnaast begrijpt de JVM het concept van objecten en virtuele methode aanroepen. De gebruiker hoeft hierdoor geen rekening te houden met deze drie zaken \autocite{TechopediaJVM}. 
+De Java Virtual Machine, ook wel JVM genoemd, is een virtuele machine voor het uitvoeren van Java bytecode \autocite{TechopediaBytecode}. De JVM maakt gebruik van de Javac, de compiler die verantwoordelijk is voor het omzetten van Java-code naar bytecode. Deze bytecode is een object-georiënteerde code die gecompileerd is om op een virtuele machine te worden uitgevoerd. De code kan op elk besturingssysteem of platform, waarvoor er een JVM beschikbaar is, worden gebruikt. De virtuele machine transformeert de code, geschreven in een bepaalde programmeertaal, in machinetaal die door de CPU\footnote{Central Processing Unit} van een systeem kan worden uitgevoerd. Deze machinetaal moet geoptimaliseerd zijn voor de CPU aangezien andere platformen verschillende interpretatietechnieken kunnen gebruiken. Dit alles gebeurt at-runtime. Bij de JVM zal de bytecode meestal het resultaat zijn van de compilatie van Java-code. Echter kunnen talen zoals Scala, Clojure en Groovy ook uitgevoerd worden op deze virtuele machine. De JVM heeft kennis van geheugenbeheer, optimalisatie van de uitvoering van de applicatie en garbage collection. Daarnaast begrijpt de JVM het concept van objecten en virtuele methode aanroepen. De gebruiker hoeft hierdoor geen rekening te houden met deze drie zaken \autocite{TechopediaJVM}. 
 
 \section{LLVM en JVM}
-LLVM en JVM zijn twee aparte dingen. De JVM is, zoals te lezen in sectie \ref{sec:jvm}, een vertaler die broncode omzet naar machinetaal die door de processor van een computer onmiddelijk kan worden uitgevoerd. Het is een high-level virtuele machine aangezien deze kennis heeft van zaken zoals de garbage collection, geheugenbeheer en objecten.
+LLVM en JVM zijn twee aparte dingen. De JVM is, zoals te lezen in sectie \ref{sec:jvm}, een vertaler die broncode omzet naar machinetaal die door de processor van een computer onmiddelijk kan worden uitgevoerd. Het is een high-level virtuele machine aangezien deze kennis heeft van zaken zoals de garbage collection, geheugenbeheer en objecten. Bij de JVM gebeurt alles at-runtime. 
 
-De LLVM is een low-level register gebaseerde compilatie technologie. Het neemt de LLVM IR, zie sectie \ref{sec:difference-llvm}, en gaat deze overbrengen naar native uitvoerbare bestanden voor een specifiek platform. LLVM kan tijdens het vertaalproces naar IR veel optimalisaties uitvoeren.
-
-%De LLVM is een low-level register gebaseerde compilatie technologie. Het is ontworpen om onderliggende hardware te abstraheren en een lijn te trekken tussen de front-end en de back-end van een compileerprogramma.
-
-%De JVM is een high-level stack gebaseerde virtuele machine. De JVM biedt garbage collection aan, heeft kennis van objecten en virtuele methode aanroepen. JVM biedt dus een veel hogere infrastructuur voor taalinteroperabiliteit.
-
-%Het grote verschil tussen LLVM en JVM is dus het niveau waarop beide werken.
+De LLVM is een low-level register gebaseerde compilatie technologie. Het neemt de LLVM IR, zie sectie \ref{sec:difference-llvm}, en gaat deze overbrengen naar native uitvoerbare bestanden voor een specifiek platform. LLVM kan tijdens het vertaalproces naar IR veel optimalisaties uitvoeren. Echter gebeurt bij de LLVM alles at-compiletime.

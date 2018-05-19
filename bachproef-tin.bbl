@@ -363,30 +363,6 @@
       \verb https://kotlinlang.org/docs/reference/server-overview.html
       \endverb
     \endentry
-    \entry{NativeVsCross}{misc}{}
-      \name{author}{1}{}{%
-        {{uniquename=0,hash=e12bcfd40680513dc0accca1555fbdf5}{%
-           family={Klubnikin},
-           familyi={K\bibinitperiod},
-           given={Andrew},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{e12bcfd40680513dc0accca1555fbdf5}
-      \strng{fullhash}{e12bcfd40680513dc0accca1555fbdf5}
-      \strng{authornamehash}{e12bcfd40680513dc0accca1555fbdf5}
-      \strng{authorfullhash}{e12bcfd40680513dc0accca1555fbdf5}
-      \field{sortinit}{K}
-      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
-      \field{labeldatesource}{year}
-      \true{uniqueprimaryauthor}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Cross-platform vs. Native Mobile App Development: Choosing the Right Dev Tools for Your App Project}
-      \field{year}{2017}
-      \verb{url}
-      \verb https://medium.com/all-technology-feeds/cross-platform-vs-native-mobile-app-development-choosing-the-right-dev-tools-for-your-app-project-47d0abafee81
-      \endverb
-    \endentry
     \entry{NativeDevelopmentCost}{article}{}
       \name{author}{1}{}{%
         {{uniquename=0,hash=54704a09050efb36d942bc80844e5a0f}{%
@@ -459,6 +435,28 @@
       \field{year}{2018}
       \verb{url}
       \verb http://www.aosabook.org/en/llvm.html
+      \endverb
+    \endentry
+    \entry{LLVM}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=f17c30edf8b32353cf078de76c9c1b37}{%
+           family={{LLVM developer group}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{f17c30edf8b32353cf078de76c9c1b37}
+      \strng{fullhash}{f17c30edf8b32353cf078de76c9c1b37}
+      \strng{authornamehash}{f17c30edf8b32353cf078de76c9c1b37}
+      \strng{authorfullhash}{f17c30edf8b32353cf078de76c9c1b37}
+      \field{sortinit}{L}
+      \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{LLVM}
+      \field{year}{2018}
+      \verb{url}
+      \verb https://llvm.org/
       \endverb
     \endentry
     \entry{Pros}{misc}{}
