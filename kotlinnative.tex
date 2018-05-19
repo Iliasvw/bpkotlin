@@ -44,7 +44,7 @@ Figuur \ref{fig:sharingcode} toont hoe Kotlin/Native domeinlogica deelt over de 
 
 \section{De structuur van een Kotlin/Native project}
 \label{sec:knstructure}
-Alvorens te beginnen met het ontwikkelen van een Kotlin/Native project is het belangrijk om na te gaan wat de structuur is waar een Kotlin/Native project moet aan voldoen. Er is namelijk geen IDE of plugin die een Kotlin/Native project volledig automatisch genereert, daarom is het essentieel dat er vanaf het begin een goede mappenstructuur wordt opgebouwd. Figuur \ref{fig:knstructuur} toont een goede structuur van een Kotlin/Native project.
+Alvorens te beginnen met het ontwikkelen van een Kotlin/Native project is het belangrijk om na te gaan wat de structuur is waar een Kotlin/Native project moet aan voldoen. Er is namelijk geen IDE of plugin die een Kotlin/Native project volledig automatisch genereert, daarom is het essentieel dat er vanaf het begin een goede mappenstructuur wordt opgebouwd. Figuur \ref{fig:knstructuur} toont een goede structuur van een Kotlin/Native project. Deze mappenstructuur is verplicht om aan te houden, de namen van de mappen kunnen veranderd worden mits ook kleine verandering van de build scripts in \ref{ch:praktisch}.
 
 \begin{figure} [ht]
 	\centering
@@ -65,7 +65,8 @@ Op deze figuur zijn dus een aantal mappen te vinden:
 	\item De \textbf{platforms} map bevat voor ieder platform, dat men wenst te ondersteunen, een map. In dit voorbeeld zijn er dus twee mappen, een iOS en Android map. De bedoeling is om hierin specifieke code te schrijven die varieert per platform. Zie sectie \ref{sec:sharingcode} voor meer informatie.
 \end{itemize}
 
-\section {Expect en actual klassen}
+\section{Kotlin/Native code}
+\subsection {Expect en actual klassen}
 \label{sec:expectandactual}
 Stel dat men wenst om een ABCMethods Kotlin klasse te hebben die de methodes callA(), callB() en callC() heeft, maar waarvan de implementatie verschillend is per platform.
 
@@ -117,7 +118,7 @@ actual class ABCMethods actual constructor() {
 
 Door gebruik te maken van Kotlin/Native is het niet nodig om zelf aan te geven welk bestand de compiler moet gebruiken voor welk platform. De compiler zal detecteren welk platform er gebruikt wordt en het juiste bestand gebruiken.
 
-\section{Gemeenschappelijke klassen}
+\subsection{Gemeenschappelijke klassen}
 Naast de expect en actual klassen, die ervoor zorgen dat we platformspecifieke code kunnen schrijven en dus een onderscheid kunnen maken tussen de verschillende ondersteunde platformen, kunnen we ook klassen voorzien die voor alle platformen hetzelfde zijn. De implementatie van deze klasse is voor ieder platform hetzelfde.
 
 \begin{lstlisting}

@@ -16,11 +16,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.1.5}Wat is een cross-platform applicatie?}{18}{subsection.1.1.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.6}Native versus cross-platform en hybride development}{19}{subsection.1.1.6}
+\contentsline {subsection}{\numberline {1.1.6}Native versus cross-platform- en hybride development}{19}{subsection.1.1.6}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{Native ontwikkeling}{19}{section*.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Cross-platform en hybride ontwikkeling}{19}{section*.7}
+\contentsline {subsubsection}{Cross-platform- en hybride ontwikkeling}{19}{section*.7}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.2}Probleemstelling}{20}{section.1.2}
 \defcounter {refsection}{0}\relax 
@@ -42,13 +42,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.5}Kotlin/Native}{25}{section.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.6}Kotlin en iOS}{25}{section.2.6}
+\contentsline {section}{\numberline {2.6}Verschil tussen Kotlin en Kotlin/Native}{25}{section.2.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.7}Compiler}{25}{section.2.7}
+\contentsline {section}{\numberline {2.7}Kotlin en iOS}{25}{section.2.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.8}Het gebruik van Kotlin}{26}{section.2.8}
+\contentsline {section}{\numberline {2.8}Compiler}{26}{section.2.8}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.9}Waarom Kotlin?}{27}{section.2.9}
+\contentsline {section}{\numberline {2.9}Het gebruik van Kotlin}{26}{section.2.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.10}Waarom Kotlin?}{27}{section.2.10}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Methodologie}{29}{chapter.3}
 \defcounter {refsection}{0}\relax 
@@ -96,11 +98,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.3}De structuur van een Kotlin/Native project}{38}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Expect en actual klassen}{39}{section.5.4}
+\contentsline {section}{\numberline {5.4}Kotlin/Native code}{39}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}Gemeenschappelijke klassen}{41}{section.5.5}
+\contentsline {subsection}{\numberline {5.4.1}Expect en actual klassen}{39}{subsection.5.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.6}Het gebruiken van de Kotlin code}{42}{section.5.6}
+\contentsline {subsection}{\numberline {5.4.2}Gemeenschappelijke klassen}{41}{subsection.5.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.5}Het gebruiken van de Kotlin code}{42}{section.5.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Kotlin/Native in de praktijk}{43}{chapter.6}
 \defcounter {refsection}{0}\relax 

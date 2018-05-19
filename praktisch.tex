@@ -12,7 +12,7 @@ Het domeinmodel beschikt over drie klassen:
 	
 	\item Een CartLine object heeft een product en quantity (hoeveelheid) attribuut. Deze klasse beschikt over een constructor die twee parameters verwacht, die tevens onze attributen zijn. Deze is ook voorzien van twee getters, om de attributen op te vragen (aangezien deze private zijn) en een methode om de kostprijs van deze CartLine te berekenen.
 	
-	\item De product klasse is de klasse die per platform wordt geïmplementeerd. Deze klasse wordt dus als expect gedeclareerd en beschikt over drie expect methodes om de attributen van de klasse op te vragen. Per platform, in dit voorbeeld zal dit Android en iOS zijn, wordt er een implementatie voorzien van deze klasse. Deze actual klassen hebben elk een name, price, description en productImage en een implementatie van de methodes van de expect Product klasse. Het type van de productImage verschilt per platform.
+	\item De product klasse is de klasse die per platform wordt geïmplementeerd, dit is echter illustratief voor deze proof-of-concept. Deze klasse wordt dus als expect gedeclareerd en beschikt over drie expect methodes om de attributen van de klasse op te vragen. Per platform, in dit voorbeeld zal dit Android en iOS zijn, wordt er een implementatie voorzien van deze klasse. Deze actual klassen hebben elk een name, price, description en productImage en een implementatie van de methodes van de expect Product klasse. Het type van de productImage verschilt per platform.
 \end{itemize}
 
 \begin{figure} [ht]
@@ -430,7 +430,7 @@ Hiermee wordt er aangegeven dat de specifieke Android implementatie te vinden is
 Net zoals bij de android map, is het de bedoeling om via Xcode een nieuw Xcode project aan te maken dat ook een submap is van het Kotlin/Native project. Men kan zowel kiezen voor een Objective-C als Swift project aangezien het gecompileerde iOS framework zowel in beide projecten kan gebruikt worden.
 
 \subsection{Gebruiken van het SharediOS framework}
-Vooraleer men in Xcode kan gebruik maken van het SharediOS framework, moeten er een aantal dingen aangepast worden in de build phases van het project. Uit figuur \ref{fig:stap6-phases} kan worden afgeleid dat de build phases zijn aangepast. Volgende build phase moet worden toegevoegd: Compile Kotlin Native to iOS framework.
+Vooraleer men in Xcode kan gebruik maken van het SharediOS framework, moeten er een aantal dingen aangepast worden in de build phases van het project. Uit figuur \ref{fig:stap6-phases} kan worden afgeleid dat de build phases zijn aangepast. Volgende build phase moet worden toegevoegd in Xcode: Compile Kotlin Native to iOS framework.
 \begin{figure} [ht]
 	\centering
 	\includegraphics[width=0.75\textwidth]{img/stap6-phases.png}
@@ -490,7 +490,7 @@ var product: SOSProduct = SOSProduct(name: "Playstation 4", price: 399.95, descr
 \end{lstlisting}
 
 \section{User interfaces}
-De user interface moet dus per platform opgebouwd worden. Er is geen manier om één user interface te ontwikkelen voor beide platformen zoals bijvoorbeeld bij React/Native of Ionic. Dit kan zowel positief als negatief zijn. Het vraagt dubbel zoveel werk maar het geeft wel de mogelijkheid om verschillende accenten te leggen in de user interface per platform.
+De user interface moet dus per platform opgebouwd worden. Dit is echter native Android en iOS en hier wordt niet dieper op ingegaan. Er is geen manier om één user interface te ontwikkelen voor beide platformen zoals bijvoorbeeld bij React/Native of Ionic. Dit kan zowel positief als negatief zijn. Het vraagt dubbel zoveel werk maar het geeft wel de mogelijkheid om verschillende accenten te leggen in de user interface per platform.
 
 \section{Testen}
 \label{sec:testing}

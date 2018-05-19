@@ -37,14 +37,20 @@ Kotlin kan net zoals Java gebruikt worden om webapplicaties te bouwen. Dit in co
 
 Wens je echter een full-stack webapplicatie te bouwen, dan heb je de mogelijkheid om ook een Kotlin server op te zetten. Zo kan je bijvoorbeeld aan de webapplicatie een RESTfull server hangen om verschillende API calls te doen  \autocite{JetBrainsServer}.
 
-Kotlin-applicaties kunnen worden geïmplementeerd op elke host die Java-webapplicaties ondersteunt, inclusief Amazon Web Services, Google Cloud Platform en veel meer.
+Kotlin-applicaties kunnen worden geïmplementeerd op elke host die Java-webapplicaties ondersteunt, inclusief Amazon Web Services, Google Cloud Platform en veel meer. Zowel een Kotlin webapplicatie als back-end maakt gebruik van de JVM.
 
 \section{Kotlin/Native}
 \label{sec:kotlinnative}
 Waarschijnlijk momenteel één van de meest nieuwe en innovatieve projecten van JetBrains is Kotlin/Native. Momenteel is men gekomen aan versie 0.6 en er zijn al verschillende voorbeeldprojecten beschikbaar gesteld door JetBrains. Kotlin/Native zou het mogelijk maken om éénmalig domeinlogica te schrijven in een applicatie en deze te delen over verschillende platformen, bijvoorbeeld Android en iOS. De user interfaces zou men wel nog per platform moeten opbouwen, waardoor je toch het 'native applicatie'-gevoel krijgt. Kotlin/Native maakt gebruik van een totaal andere compiler dan JVM, zie sectie \ref{sec:llvm} voor meer info. De bijnaam die gegeven wordt aan Kotlin/Native is \textit{Konan}. Binnen dit onderzoek zal Kotlin/Native nauw onderzocht worden \autocite{AlbertGao}.
 
+\section{Verschil tussen Kotlin en Kotlin/Native}
+\label{sec:differenceKotlinAndNative}
+Het is belangrijk om een duidelijk verschil te zien tussen Kotlin en Kotlin/Native. Met Kotlin spreken we over de programmeertaal. Met Kotlin/Native wordt het framework bedoeld dat gebruikt kan worden voor cross-platform applicatieontwikkeling. Het framework zal gebruik maken van de programmeertaal Kotlin.
+
 \section{Kotlin en iOS}
-Verschillende ontwikkelaars, zoals \textcite{GaoIOS}, zijn reeds aan de slag gegaan met deze Kotlin/Native plugin. Op zijn website is te zien hoe het mogelijk is om aan de hand van deze plugin Kotlin te gebruiken voor iOS development. Er zijn twee mogelijkheden. Enerzijds heb je de mogelijkheid om het project in Objective-C aan te maken en de rest van het project in Kotlin te programmeren. Anderzijds kan het project in Swift aangemaakt worden en de Kotlin code wordt gecompileerd naar een iOS framework en toegevoegd aan het project.
+Verschillende ontwikkelaars, zoals \textcite{GaoIOS}, zijn reeds aan de slag gegaan met deze Kotlin/Native plugin. Op zijn website is te zien hoe het mogelijk is om aan de hand van deze plugin, Kotlin te gebruiken voor iOS development. 
+
+Er zijn twee mogelijkheden. Enerzijds is er de mogelijkheid om het project in Objective-C aan te maken. De code wordt, rechtstreeks in de Objective-C bestanden, in Kotlin geprogrammeerd in combinatie met Objective-C annotations. Anderzijds kan het project in Swift aangemaakt worden. De overige Kotlin code wordt geprogrammeerd in aparte Kotlin bestanden, gecompileerd naar een iOS framework en toegevoegd aan het project.
 
 Alhoewel het niet echt optimaal is om Kotlin direct te programmeren in Xcode, aangezien Xcode een Kotlin bestand niet zal herkennen, is het dus mogelijk. Indien de applicatie enkel en alleen ontwikkeld moet worden voor het iOS platform, dan is en blijft Swift of Objective-C de beste manier om een iOS applicatie te bouwen.
 
