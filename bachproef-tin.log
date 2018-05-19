@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.4)  19 MAY 2018 16:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.4)  19 MAY 2018 16:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2525,9 +2525,6 @@ File: img/driefasenmodel.png Graphic file (type png)
 <use img/driefasenmodel.png>
 Package pdftex.def Info: img/driefasenmodel.png used on input line 41.
 (pdftex.def)             Requested size: 405.45047pt x 70.62315pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 48.
 Package babel Info: Redefining dutch shorthand "~
@@ -2537,21 +2534,23 @@ Package babel Info: Redefining dutch shorthand "|
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 48.
  [32]
-<img/syntaxtree.png, id=596, 231.86626pt x 168.63pt>
+<img/syntaxtree.png, id=597, 231.86626pt x 168.63pt>
 File: img/syntaxtree.png Graphic file (type png)
  <use img/syntaxtree.png>
 Package pdftex.def Info: img/syntaxtree.png used on input line 51.
 (pdftex.def)             Requested size: 405.45047pt x 294.89848pt.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 59.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 59.
-Package babel Info: Redefining dutch shorthand "|
-(babel)             in language  on input line 59.
-Package babel Info: Redefining dutch shorthand "~
-(babel)             in language  on input line 59.
 
-[33 <./img/driefasenmodel.png> <./img/syntaxtree.png>]
+Underfull \vbox (badness 6428) has occurred while \output is active []
+
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 61.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 61.
+Package babel Info: Redefining dutch shorthand "|
+(babel)             in language  on input line 61.
+Package babel Info: Redefining dutch shorthand "~
+(babel)             in language  on input line 61.
+ [33 <./img/driefasenmodel.png> <./img/syntaxtree.png>]
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 62.
 Package babel Info: Redefining dutch shorthand "~
@@ -2567,6 +2566,9 @@ Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 76.
 Package babel Info: Redefining dutch shorthand "~
 (babel)             in language  on input line 76.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 Package babel Info: Redefining dutch shorthand "|
 (babel)             in language  on input line 79.
 Package babel Info: Redefining dutch shorthand "~
@@ -3376,7 +3378,7 @@ texmf-dist/fonts/type1/urw/avantgar/uagk8a.pfb></usr/local/texlive/2017/texmf-d
 ist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/
 type1/urw/times/utmr8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/
 times/utmri8a.pfb>
-Output written on bachproef-tin.pdf (72 pages, 2832801 bytes).
+Output written on bachproef-tin.pdf (72 pages, 2832790 bytes).
 PDF statistics:
  1660 PDF objects out of 1728 (max. 8388607)
  1394 compressed objects within 14 object streams
