@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.4)  30 APR 2018 13:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.4)  20 MAY 2018 14:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -328,43 +328,38 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@loff=\dimen155
 \@vwid@roff=\dimen156
 ))
-(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
-\c@subfigure=\count122
-\c@subtable=\count123
-)
 (./conference_poster.aux)
 \openout1 = `conference_poster.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 43.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count124
+\scratchcounter=\count122
 \scratchdimen=\dimen157
 \scratchbox=\box57
-\nofMPsegments=\count125
-\nofMParguments=\count126
+\nofMPsegments=\count123
+\nofMParguments=\count124
 \everyMPshowfont=\toks30
-\MPscratchCnt=\count127
+\MPscratchCnt=\count125
 \MPscratchDim=\dimen158
-\MPnumerator=\count128
-\makeMPintoPDFobject=\count129
+\MPnumerator=\count126
+\makeMPintoPDFobject=\count127
 \everyMPtoPDFconversion=\toks31
 ) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
@@ -420,17 +415,17 @@ Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 
-Package xcolor Warning: Incompatible color definition on input line 57.
+Package xcolor Warning: Incompatible color definition on input line 55.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <89.16> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <51.6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 61.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 59.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 57--62
+Underfull \hbox (badness 10000) in paragraph at lines 55--60
 
  []
 
@@ -438,97 +433,126 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--62
 File: figures/HG-woordmerk.jpg Graphic file (type jpg)
 
 <use figures/HG-woordmerk.jpg>
-Package pdftex.def Info: figures/HG-woordmerk.jpg used on input line 65.
+Package pdftex.def Info: figures/HG-woordmerk.jpg used on input line 63.
 (pdftex.def)             Requested size: 369.88582pt x 84.15202pt.
 
-Overfull \hbox (19.72723pt too wide) in paragraph at lines 56--68
+Overfull \hbox (19.72723pt too wide) in paragraph at lines 54--66
 [][] [] 
  []
 
 
-Package xcolor Warning: Incompatible color definition on input line 79.
+Package xcolor Warning: Incompatible color definition on input line 77.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
-Missing character: There is no √ in font ptmr7t!
-Missing character: There is no © in font ptmr7t!
-Missing character: There is no √ in font ptmr7t!
-Missing character: There is no © in font ptmr7t!
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 79.
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no Å in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no Å in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no Å in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no Å in font ptmr7t!
 <figures/kotlin.png, id=2, 1129.21875pt x 286.06876pt>
 File: figures/kotlin.png Graphic file (type png)
 
 <use figures/kotlin.png>
-Package pdftex.def Info: figures/kotlin.png used on input line 85.
+Package pdftex.def Info: figures/kotlin.png used on input line 83.
 (pdftex.def)             Requested size: 952.18294pt x 241.2215pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 86.
+Package xcolor Warning: Incompatible color definition on input line 84.
 
 
-Package xcolor Warning: Incompatible color definition on input line 86.
+Package xcolor Warning: Incompatible color definition on input line 84.
 
 
-Package xcolor Warning: Incompatible color definition on input line 94.
+Package xcolor Warning: Incompatible color definition on input line 92.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <35.83> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 95.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 93.
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no à in font ptmr7t!
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ô in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--100
+
+ []
+
 <figures/kn.png, id=4, 1505.625pt x 752.8125pt>
 File: figures/kn.png Graphic file (type png)
  <use figures/kn.png>
-Package pdftex.def Info: figures/kn.png used on input line 101.
+Package pdftex.def Info: figures/kn.png used on input line 102.
 (pdftex.def)             Requested size: 1002.183pt x 501.10796pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 102.
+Package xcolor Warning: Incompatible color definition on input line 103.
 
 
-Package xcolor Warning: Incompatible color definition on input line 102.
+Package xcolor Warning: Incompatible color definition on input line 103.
 
 
-Package xcolor Warning: Incompatible color definition on input line 109.
+Package xcolor Warning: Incompatible color definition on input line 110.
 
 <figures/apple-android.jpeg, id=5, 504.38437pt x 301.125pt>
 File: figures/apple-android.jpeg Graphic file (type jpg)
 
 <use figures/apple-android.jpeg>
-Package pdftex.def Info: figures/apple-android.jpeg used on input line 115.
-(pdftex.def)             Requested size: 801.74945pt x 478.66238pt.
+Package pdftex.def Info: figures/apple-android.jpeg used on input line 116.
+(pdftex.def)             Requested size: 1002.183pt x 598.32454pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 116.
+Package xcolor Warning: Incompatible color definition on input line 117.
 
 
-Package xcolor Warning: Incompatible color definition on input line 116.
+Package xcolor Warning: Incompatible color definition on input line 117.
 
 
-Package xcolor Warning: Incompatible color definition on input line 135.
+Package xcolor Warning: Incompatible color definition on input line 136.
+
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no à in font ptmr7t!
+
+Package xcolor Warning: Incompatible color definition on input line 143.
+
+<figures/verder-onderzoek.png, id=6, 663.47874pt x 219.82124pt>
+File: figures/verder-onderzoek.png Graphic file (type png)
+
+<use figures/verder-onderzoek.png>
+Package pdftex.def Info: figures/verder-onderzoek.png used on input line 149.
+(pdftex.def)             Requested size: 1002.183pt x 332.05885pt.
 
 
-Package xcolor Warning: Incompatible color definition on input line 142.
+Package xcolor Warning: Incompatible color definition on input line 150.
+
+
+Package xcolor Warning: Incompatible color definition on input line 150.
 
 [1
 
 
 Non-PDF special ignored!{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/upd
 map/pdftex.map} <./figures/HG-woordmerk.jpg> <./figures/kotlin.png> <./figures/
-kn.png> <./figures/apple-android.jpeg>] (./conference_poster.aux) ) 
+kn.png> <./figures/apple-android.jpeg> <./figures/verder-onderzoek.png>]
+(./conference_poster.aux) ) 
 Here is how much of TeX's memory you used:
- 5313 strings out of 492995
- 80764 string characters out of 6132704
- 172391 words of memory out of 5000000
- 8756 multiletter control sequences out of 15000+600000
+ 5267 strings out of 492995
+ 80097 string characters out of 6132704
+ 180121 words of memory out of 5000000
+ 8711 multiletter control sequences out of 15000+600000
  16727 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,8n,77p,940b,484s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/
-texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2017/te
-xmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2017/texmf-dist
-/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2017/texmf-dist/fonts/typ
-e1/urw/times/utmr8a.pfb>
-Output written on conference_poster.pdf (1 page, 1123507 bytes).
+ 39i,8n,77p,1489b,484s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/
+base/8r.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.
+pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on conference_poster.pdf (1 page, 1268109 bytes).
 PDF statistics:
- 28 PDF objects out of 1000 (max. 8388607)
+ 30 PDF objects out of 1000 (max. 8388607)
  15 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
