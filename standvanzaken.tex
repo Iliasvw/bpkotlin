@@ -7,11 +7,11 @@
 
 % Pas na deze inleidende paragraaf komt de eerste sectiehoofding.
 
-Dit hoofdstuk is een literatuurstudie over de huidige stand van zaken rond Kotlin. Hierin wordt bekeken wat Kotlin eigenlijk is en waarom Kotlin is uitgevonden. Daarna is Kotlin op verschillende platformen aan de beurt, meer specifieke is dit iOS, Android, webapplicatie en als back-end. Tenslotte het gebruik van Kotlin, hoeveel ontwikkelaars maken er reeds gebruik van Kotlin? Na het lezen van dit hoofdstuk bent u volledig op de hoogte van de laatste nieuwigheden rond Kotlin.
+Dit hoofdstuk is een literatuurstudie over de huidige stand van zaken rond Kotlin. Hierin wordt bekeken wat Kotlin eigenlijk is en waarom Kotlin is uitgevonden. Daarna is Kotlin op verschillende platformen aan de beurt, meer specifiek is dit iOS, Android, webapplicatie en als back-end. Tenslotte het gebruik van Kotlin, hoeveel ontwikkelaars maken er reeds gebruik van Kotlin? Na het lezen van dit hoofdstuk bent u volledig op de hoogte van de laatste nieuwigheden rond Kotlin.
 
 \section{Wat is Kotlin?}
 \label{sec:kotlin}
-Volgens de FAQ van Kotlin \autocite{JetBrainsFAQ} is Kotlin een open-source programmeertaal die object-georiënteerde en functionele programmatie features combineert. Kotlin is ook een statically typed programmeertaal. Dit betekent dat het type van de variabele is toegekend wanneer de code wordt gecompileerd. Javascript is een dynamically typed programmeertaal, waarbij aan een variabele verschillende types kan worden toegekend. Zo kan een variabele bij Javascript in het begin een getal zijn, maar wat verder in de code kan dit veranderd worden naar een tekst.
+Volgens de FAQ van Kotlin \autocite{JetBrainsFAQ} is Kotlin een open-source programmeertaal die object-georiënteerde en functionele programmatie features combineert. Kotlin is ook een statically typed programmeertaal. Dit betekent dat het type van de variabele is toegekend wanneer de code wordt gecompileerd. JavaScript is een dynamically typed programmeertaal, waarbij aan een variabele verschillende types kan worden toegekend. Zo kan een variabele bij JavaScript in het begin een getal zijn, maar wat verder in de code kan dit veranderd worden naar een tekst.
 
 Kotlin is ontworpen door JetBrains. JetBrains is een organisatie afkomstig van Sint-Petersburg, Rusland. De naam Kotlin is afkomstig van het Kotlin eiland, 30 km ten westen van Sint-Petersburg. JetBrains is een software ontwikkelingbedrijf dat gesticht is in het jaar 2000. Hun hoofdkantoor is gevestigd in Praag (Tsjechië) en hun core-business is het ontwikkelen van tools die gebruikt kunnen worden door verschillende types van software ontwikkelaars. Zo hebben zij IDE's\footnote{Integrated Development Environment} ontwikkeld voor Java, Ruby, Python, PHP, SQL, Objective-C, C++, C\# en JavaScript \autocite{JetBrainsOverView}.
 
@@ -19,7 +19,7 @@ Kotlin is ontworpen door JetBrains. JetBrains is een organisatie afkomstig van S
 \label{sec:kotlinandroid}
 Volgens het artikel van \textcite{GoogleSupportKotlin} heeft Google in 2017 bekend gemaakt dat het Kotlin volledig zou ondersteunen voor Android applicatieontwikkeling. In Android Studio zal vanaf versie 3.0 Kotlin ondersteund worden voor Android development. Een Kotlin project maken in Android Studio is dan ook heel gemakkelijk. In Android Studio is er bij het aanmaken van een project de mogelijkheid om direct de ondersteuning voor Kotlin in te schakelen. Hierdoor zal het aangemaakte project onmiddellijk in Kotlin geschreven zijn.
 
-Het is mogelijk in Android Studio om een reeds bestaand Android Java project om te zetten naar Kotlin. Hierbij zal de actie 'Convert Java File to Kotlin File' moeten uitvoerd worden (rechtermuisknop in het Java bestand). Hierdoor zal Android Studio detecteren dat er gebruik gemaakt zal worden van Kotlin, waardoor hij zal vragen om de Kotlin plugin te installeren via Gradle indien deze nog niet is geïnstalleerd.
+Het is mogelijk in Android Studio om een reeds bestaand Android Java project om te zetten naar Kotlin. Hierbij zal de actie 'Convert Java File to Kotlin File' moeten uitvoerd worden (rechtermuisknop in het Java bestand). Hierdoor zal Android Studio detecteren dat er gebruik zal worden gemaakt van Kotlin, waardoor hij zal vragen om de Kotlin plugin te installeren via Gradle indien deze nog niet is geïnstalleerd.
 
 
 \section{Automigration}
@@ -28,16 +28,16 @@ Door de intergratie van Kotlin in Android Studio werd er een conversietool ter b
 
 Het is ook reeds mogelijk om zowel Java en Kotlin te combineren. Zo kunnen de verschillende object classes in Java worden geschreven en kan je via Kotlin alle objecten aanmaken. Of dit nuttig en best practice is, valt te beslissen door de developer.
 
-Indien bestaande Java code online of van een vorige project gekopieerd en geplakt wordt naar een bestaand Android Studio project, dan zal Android Studio zelf detecteren dat er Java code gebruikt zal worden in een Kotlin project. Hij zal dan zelf ook de suggestie doen om de Java code om te zetten naar Kotlin code \autocite{Avantica2017}.
+Indien bestaande Java-code online of van een vorige project gekopieerd en geplakt wordt naar een bestaand Android Studio project, dan zal Android Studio zelf detecteren dat er Java-code gebruikt zal worden in een Kotlin project. Hij zal dan zelf ook de suggestie doen om de Java-code om te zetten naar Kotlin-code \autocite{Avantica2017}.
 
 
 \section{Kotlin web en back-end}
 \label{sec:kotlincrossplatform}
 Kotlin kan net zoals Java gebruikt worden om webapplicaties te bouwen. Dit in combinatie met bijvoorbeeld het Spring Framework, waarbij HttpServlets gebruikt worden om de webpagina's te tonen \autocite{JetBrainsWeb}.
 
-Wens je echter een full-stack webapplicatie te bouwen, dan heb je de mogelijkheid om ook een Kotlin server op te zetten. Zo kan je bijvoorbeeld aan de webapplicatie een RESTfull server hangen om verschillende API calls te doen  \autocite{JetBrainsServer}.
+Wens je echter een full-stack webapplicatie te bouwen, dan heb je de mogelijkheid om ook een Kotlin server op te zetten. Zo kan je bijvoorbeeld aan de webapplicatie een RESTfull server hangen om verschillende API calls te doen.
 
-Kotlin-applicaties kunnen worden geïmplementeerd op elke host die Java-webapplicaties ondersteunt, inclusief Amazon Web Services, Google Cloud Platform en veel meer. Zowel een Kotlin webapplicatie als back-end maakt gebruik van de JVM.
+Kotlin-applicaties kunnen worden geïmplementeerd op elke host die Java-webapplicaties ondersteunt, inclusief Amazon Web Services, Google Cloud Platform en veel meer. Zowel een Kotlin webapplicatie als back-end maakt gebruik van de JVM \autocite{JetBrainsServer}.
 
 \section{Kotlin/Native}
 \label{sec:kotlinnative}
@@ -50,24 +50,24 @@ Het is belangrijk om een duidelijk verschil te zien tussen Kotlin en Kotlin/Nati
 \section{Kotlin en iOS}
 Verschillende ontwikkelaars, zoals \textcite{GaoIOS}, zijn reeds aan de slag gegaan met deze Kotlin/Native plugin. Op zijn website is te zien hoe het mogelijk is om aan de hand van deze plugin, Kotlin te gebruiken voor iOS development. 
 
-Er zijn twee mogelijkheden. Enerzijds is er de mogelijkheid om het project in Objective-C aan te maken. De code wordt, rechtstreeks in de Objective-C bestanden, in Kotlin geprogrammeerd in combinatie met Objective-C annotations. Anderzijds kan het project in Swift aangemaakt worden. De overige Kotlin code wordt geprogrammeerd in aparte Kotlin bestanden, gecompileerd naar een iOS framework en toegevoegd aan het project.
+Er zijn twee mogelijkheden. Enerzijds is er de mogelijkheid om het project in Objective-C aan te maken. De code wordt, rechtstreeks in de Objective-C bestanden, in Kotlin geprogrammeerd in combinatie met Objective-C annotations. Anderzijds kan het project in Swift aangemaakt worden. De overige Kotlin-code wordt geprogrammeerd in aparte Kotlin bestanden, gecompileerd naar een iOS framework en toegevoegd aan het project.
 
 Alhoewel het niet echt optimaal is om Kotlin direct te programmeren in Xcode, aangezien Xcode een Kotlin bestand niet zal herkennen, is het dus mogelijk. Indien de applicatie enkel en alleen ontwikkeld moet worden voor het iOS platform, dan is en blijft Swift of Objective-C de beste manier om een iOS applicatie te bouwen.
 
 \section{Compiler}
 \label{sec:llvm}
-Net zoals Java draait Kotlin op de JVM. Dit wil dus zeggen dat alle toestellen die een JVM kunnen draaien, ook Kotlin code ondersteunen. Maar sinds de dag dat JetBrains besloten heeft om zich niet enkel meer te richten op platformen die enkel en alleen de JVM ondersteunen \autocite{JetBrainsVM}, hebben zij ervoor gezorgd dat ongeacht welk platform of besturingssysteem er gebruikt wordt, de Kotlin code wordt ondersteund. Dit komt door de LLVM compiler die Kotlin/Native gebruikt. Deze wordt in hoofdstuk \ref{ch:compiler} verder besproken.
+Net zoals Java draait Kotlin op de JVM. Dit wil dus zeggen dat alle toestellen die een JVM kunnen draaien, ook Kotlin-code ondersteunen. Maar sinds de dag dat JetBrains besloten heeft om zich niet enkel meer te richten op platformen die enkel en alleen de JVM ondersteunen \autocite{JetBrainsVM}, hebben zij ervoor gezorgd dat ongeacht welk platform of besturingssysteem er gebruikt wordt, de Kotlin-code wordt ondersteund. Dit komt door de LLVM-compiler die Kotlin/Native gebruikt. Deze wordt in hoofdstuk \ref{ch:compiler} verder besproken.
 
 \section{Het gebruik van Kotlin}
 \label{sec:kotlingebruik}
 Het gebruik van Kotlin is gedurende de jaren zeer sterk gestegen. Op de blog van JetBrains \autocite{JetBrains12} zijn grafieken te vinden waarmee wordt aangetoond dat de populariteit van Kotlin enkel maar stijgt.
 
-Figuur \ref{fig:kotlingithub} toont het aantal lijnen Kotlin code beschikbaar op GitHub, het aantal vragen gesteld op Stackoverflow over Kotlin en het aantal keer dat de Kotlin plugin werd gebruikt. Hieruit kan besloten worden dat het gebruik van Kotlin sterk stijgt de laatste drie jaren.
+Figuur \ref{fig:kotlingithub} toont het aantal lijnen Kotlin-code beschikbaar op GitHub, het aantal vragen gesteld op Stackoverflow over Kotlin en het aantal keer dat de Kotlin plugin werd gebruikt. Hieruit kan besloten worden dat het gebruik van Kotlin sterk stijgt de laatste drie jaren.
 
 \begin{figure} [ht]
 	\centering
 	\includegraphics[width=0.95\textwidth]{img/KotlinAdoption.png}
-	\caption{Hoeveelheid Kotlin code op GitHub (\cite{JetBrains12})}
+	\caption{Hoeveelheid Kotlin-code op GitHub (\cite{JetBrains12})}
 	\label{fig:kotlingithub}
 \end{figure}
 
@@ -78,7 +78,7 @@ Figuur \ref{fig:kotlingithub} toont het aantal lijnen Kotlin code beschikbaar op
 	\label{fig:usergroups}
 \end{figure}
 
-Volgens statistieken van een Android-software ontwikkelingsbedrijf genaamd AppBrain \autocite{AppBrain}, is Kotlin het beste framework voor Android-applicaties te ontwikkelen. Verschillende veel gebruikte applicaties zoals Netflix, Twitter en Candy Crash bevatten grote delen Kotlin code.
+Volgens statistieken van een Android-software ontwikkelingsbedrijf genaamd AppBrain \autocite{AppBrain}, is Kotlin het beste framework om Android-applicaties te ontwikkelen. Verschillende populaire applicaties zoals Netflix, Twitter en Candy Crash bevatten grote delen Kotlin-code.
 
 Figuur \ref{fig:usergroups} toont de verschillende user groups over de volledige wereld. Het toont de sterke opkomst van Kotlin over de wereld, met een sterke concentratie in Europa.
 

@@ -4,7 +4,7 @@ In dit hoofdstuk zal er praktisch een Kotlin/Native project worden opgebouwd. De
 
 \section{Domeinmodel}
 \label{sec:domeinmodel}
-Aangezien het doel van Kotlin/Native het delen van domeinlogica is, is het handig om op voorhand na te denken over het domeinmodel. Welke klassen zijn er nodig, welke attributen en methodes moeten deze klassen hebben, is er eventueel in implementatie van klassen tussen Android en iOS? Een domeinmodel geeft ook een duidelijk overzicht over de logica van de applicatie. Zie figuur \ref{fig:domeinmodel-kn} om het domeinmodel te bekijken van deze voorbeeldapplicatie. 
+Aangezien het doel van Kotlin/Native het delen van domeinlogica is, is het handig om op voorhand na te denken over het domeinmodel. Welke klassen zijn er nodig, welke attributen en methodes moeten deze klassen hebben, is er eventueel een verschil in implementatie van klassen tussen Android en iOS? Een domeinmodel geeft ook een duidelijk overzicht over de logica van de applicatie. Zie figuur \ref{fig:domeinmodel-kn} om het domeinmodel te bekijken van deze voorbeeldapplicatie. 
 
 Het domeinmodel beschikt over drie klassen: 
 \begin{itemize}
@@ -105,7 +105,7 @@ In de dependencies tag worden de juiste dependencies gelinkt:
 \end{itemize}
 
 \subsection{Build map}
-Voor elke map die een build.gradle bestand bevat zal er automatisch een build folder worden gegenereerd. De build map bevat alle gecompileerde bestanden, van een bepaalde map, die gegenereerd worden door Kotlin/Native en deze worden bij iedere gradle run en/of build aangemaakt.
+Voor elke map die een build.gradle bestand bevat zal er automatisch een build map worden gegenereerd. De build map bevat alle gecompileerde bestanden, van een bepaalde map, die gegenereerd worden door Kotlin/Native en deze worden bij iedere gradle run en/of build aangemaakt.
 
 \section{Stap 2: project structuur}
 Nadat het build.gradle bestand aangemaakt is, is het de bedoeling om via IntelliJ IDEA het gradle bestand te importeren. Zie figuur \ref{fig:stap2-import}. IntelliJ zal een dialoogvenster openen, waarbij het build.gradle bestand moet worden geopend. De IDE zal hierna het build.gradle bestand uitvoeren en het genereert enkele bestanden.
@@ -159,7 +159,7 @@ De bovenste regel in de build.gradle geeft aan dat de kotlin-platform-common plu
 
 Er worden ook twee sourceSets toegevoegd. SourceSets vertegenwoordigen een logische groep van Java/Kotlin bronnen. Kotlin/Native zal steeds zoeken naar code in de map src/kotlin/main of src/kotlin/test, maar hier geven we aan dat code te vinden is in de main en test map en dus niet onder een src/kotlin/ map.
 
-Tenslotte worden er drie dependencies toegevoegd. De stdlib is verantwoordelijk verlenen van toegang tot de standaard bibliotheek van Kotlin. Hierdoor hebben we toegang tot collections, streams, annotations en nog veel meer. Er worden nog twee test dependencies toegevoegd, één verantwoordelijk voor de annotations, de andere voor het opstellen en uitvoeren van de testen, zie sectie \ref{sec:testing} voor meer informatie over het opstellen van testen.
+Tenslotte worden er drie dependencies toegevoegd. De stdlib is verantwoordelijk voor het verlenen van toegang tot de standaard bibliotheek van Kotlin. Hierdoor hebben we toegang tot collections, streams, annotations en nog veel meer. Er worden nog twee test dependencies toegevoegd, één verantwoordelijk voor de annotations, de andere voor het opstellen en uitvoeren van de testen, zie sectie \ref{sec:testing} voor meer informatie over het opstellen van testen.
 
 \section{Common code}
 Uitwerking van de common code van de voorbeeldapplicatie.
@@ -243,8 +243,8 @@ expect class {
 }
 \end{lstlisting}
 
-\section{Stap 4: platforms folder}
-De platform folder bevat enkele subfolders, één subfolder per platform waarvoor men wenst te ontwikkelen. Bij dit voorbeeld zijn er dus twee subfolders aanwezig, namelijk Android en iOS. Zie figuur \ref{fig:stap4-structuur}. Per submap, hebben we opnieuw twee submappen, namelijk main en test. Net zoals bij de common map. 
+\section{Stap 4: platforms map}
+De platform map bevat enkele submap, één submap per platform waarvoor men wenst te ontwikkelen. Bij dit voorbeeld zijn er dus twee subfolders aanwezig, namelijk Android en iOS. Zie figuur \ref{fig:stap4-structuur}. Per submap, hebben we opnieuw twee submappen, namelijk main en test. Net zoals bij de common map. 
 
 \begin{figure} [ht]
 	\centering
@@ -464,7 +464,7 @@ Bij iedere gradle build van het Kotlin/Native project zal de build.gradle in de 
 	\label{fig:stap6-build}
 \end{figure}
 
-In bovenstaand build phase script wordt gekeken welk type toestel er wordt gebruikt, een echte iPhone of een simulator. Daarna zal het juiste framework gekopieerd worden naar de build folder in de map van het Xcode project. Bij iedere build en/of run van het Xcode project zal bovenstaand script worden uitgevoerd. Dit zal ervoor zorgen dat steeds het laatst gegenereerde framework gebruikt zal worden door het Xcode project.
+In bovenstaand build phase script wordt gekeken welk type toestel er wordt gebruikt, een echte iPhone of een simulator. Daarna zal het juiste framework gekopieerd worden naar de build map in de map van het Xcode project. Bij iedere build en/of run van het Xcode project zal bovenstaand script worden uitgevoerd. Dit zal ervoor zorgen dat steeds het laatst gegenereerde framework gebruikt zal worden door het Xcode project.
 
 Tenslotte zal het framework nog in de build phases 'Link Binary With Libraries' en 'Embed Frameworks' moeten worden toegevoegd. Hierbij wordt er gelinkt naar het gekopieerde framework in de build folder van het Xcode project.
 
@@ -490,7 +490,7 @@ var product: SOSProduct = SOSProduct(name: "Playstation 4", price: 399.95, descr
 \end{lstlisting}
 
 \section{User interfaces}
-De user interface moet dus per platform opgebouwd worden. Dit is echter native Android en iOS en hier wordt niet dieper op ingegaan. Er is geen manier om één user interface te ontwikkelen voor beide platformen zoals bijvoorbeeld bij React/Native of Ionic. Dit kan zowel positief als negatief zijn. Het vraagt dubbel zoveel werk maar het geeft wel de mogelijkheid om verschillende accenten te leggen in de user interface per platform.
+De user interface moet dus per platform opgebouwd worden. Dit is echter native Android en iOS maar hier wordt niet dieper op ingegaan aangezien dit niet de scope is van deze bachelorproef. Er is geen manier om één user interface te ontwikkelen voor beide platformen zoals bijvoorbeeld bij React/Native of Ionic. Dit kan zowel positief als negatief zijn. Het vraagt dubbel zoveel werk maar het biedt wel de mogelijkheid om verschillende accenten te leggen in de user interface per platform.
 
 \section{Testen}
 \label{sec:testing}

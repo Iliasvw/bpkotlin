@@ -107,6 +107,28 @@
       \verb https://www.avantica.net/blog/what-is-kotlin-and-how-did-we-get-here
       \endverb
     \endentry
+    \entry{PluginIcon}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=28e30b89d550464939a53412ed096e3c}{%
+           family={Chittagongit},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{28e30b89d550464939a53412ed096e3c}
+      \strng{fullhash}{28e30b89d550464939a53412ed096e3c}
+      \strng{authornamehash}{28e30b89d550464939a53412ed096e3c}
+      \strng{authorfullhash}{28e30b89d550464939a53412ed096e3c}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Plugin icon}
+      \field{year}{2018}
+      \verb{url}
+      \verb http://chittagongit.com/icon/icon-plugin-17.html
+      \endverb
+    \endentry
     \entry{Developine}{misc}{}
       \name{author}{1}{}{%
         {{uniquename=0,hash=468c46e8f3ea92006bb0d15203fe0c47}{%
@@ -231,6 +253,28 @@
       \verb https://www.statista.com/statistics/266136/global-market-share-held-by-smartphone-operating-systems/
       \endverb
     \endentry
+    \entry{HardwareIcon}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=7b4b8ad9ce96c2fd36d47d675cc992f8}{%
+           family={IconHot},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{7b4b8ad9ce96c2fd36d47d675cc992f8}
+      \strng{fullhash}{7b4b8ad9ce96c2fd36d47d675cc992f8}
+      \strng{authornamehash}{7b4b8ad9ce96c2fd36d47d675cc992f8}
+      \strng{authorfullhash}{7b4b8ad9ce96c2fd36d47d675cc992f8}
+      \field{sortinit}{I}
+      \field{sortinithash}{a3dcedd53b04d1adfd5ac303ecd5e6fa}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Hardware icon}
+      \field{year}{2018}
+      \verb{url}
+      \verb http://www.iconhot.com/icon/devine-icons-part-2/device-and-hardware.html
+      \endverb
+    \endentry
     \entry{NativeVsCross3}{misc}{}
       \name{author}{1}{}{%
         {{uniquename=0,hash=5fc0c1f2fad534100492c0f3b528b55c}{%
@@ -341,7 +385,7 @@
       \verb https://kotlinlang.org/docs/tutorials/httpservlets.html
       \endverb
     \endentry
-    \entry{JetBrainsServer}{misc}{}
+    \entry{KotlinLogo}{misc}{}
       \name{author}{1}{}{%
         {{uniquename=0,hash=b6a77f3f5bead76a495a90d63703e1f9}{%
            family={JetBrains},
@@ -354,6 +398,28 @@
       \field{sortinit}{J}
       \field{sortinithash}{c86bd6cced82a15683b396c2169909ef}
       \field{extrayear}{3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Kotlin logo}
+      \field{year}{2018}
+      \verb{url}
+      \verb https://kotlinlang.org/
+      \endverb
+    \endentry
+    \entry{JetBrainsServer}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=b6a77f3f5bead76a495a90d63703e1f9}{%
+           family={JetBrains},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{fullhash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{authornamehash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{authorfullhash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \field{sortinit}{J}
+      \field{sortinithash}{c86bd6cced82a15683b396c2169909ef}
+      \field{extrayear}{4}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
@@ -412,6 +478,28 @@
       \verb https://www.infoworld.com/article/2614665/development-tools/google-positions-gradle-as-the-build-system-of-choice-for-android.html
       \endverb
     \endentry
+    \entry{AppleAndAndroidLogo}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=fb7e0b81ff1e8b2ee4e1690de39f2c27}{%
+           family={LaptopMag},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{fb7e0b81ff1e8b2ee4e1690de39f2c27}
+      \strng{fullhash}{fb7e0b81ff1e8b2ee4e1690de39f2c27}
+      \strng{authornamehash}{fb7e0b81ff1e8b2ee4e1690de39f2c27}
+      \strng{authorfullhash}{fb7e0b81ff1e8b2ee4e1690de39f2c27}
+      \field{sortinit}{L}
+      \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Android en Apple logo}
+      \field{year}{2018}
+      \verb{url}
+      \verb https://www.laptopmag.com/articles/android-smartphone-sales
+      \endverb
+    \endentry
     \entry{aosa}{article}{}
       \name{author}{1}{}{%
         {{uniquename=0,hash=082d304bf1444853e07be11590d172a2}{%
@@ -457,6 +545,28 @@
       \field{year}{2018}
       \verb{url}
       \verb https://llvm.org/
+      \endverb
+    \endentry
+    \entry{SwiftLogo}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=f047f6780210af02696a6610bdfbe0d9}{%
+           family={MacWorld},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{f047f6780210af02696a6610bdfbe0d9}
+      \strng{fullhash}{f047f6780210af02696a6610bdfbe0d9}
+      \strng{authornamehash}{f047f6780210af02696a6610bdfbe0d9}
+      \strng{authorfullhash}{f047f6780210af02696a6610bdfbe0d9}
+      \field{sortinit}{M}
+      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Swift logo}
+      \field{year}{2018}
+      \verb{url}
+      \verb https://www.macworld.co.uk/how-to/mac-software/make-apps-swift-4-3523633/
       \endverb
     \endentry
     \entry{Pros}{misc}{}
