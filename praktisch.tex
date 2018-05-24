@@ -10,7 +10,7 @@ Het domeinmodel beschikt over drie klassen:
 \begin{itemize}
 	\item De klasse Cart stelt het winkelmandje voor. Deze beschikt over een naam en kan nul, één of meerdere CartLines bevatten. De klasse heeft een constructor die een naam verwacht en methodes om een CartLine toe te voegen, alle CartLines op te vragen, de totale prijs van het winkelmandje te berekenen en een CartLine te verwijderen van het winkelmandje.
 	
-	\item Een CartLine object heeft een product en quantity (hoeveelheid) attribuut. Deze klasse beschikt over een constructor die twee parameters verwacht, die tevens onze attributen zijn. Deze is ook voorzien van twee getters, om de attributen op te vragen (aangezien deze private zijn) en een methode om de kostprijs van deze CartLine te berekenen.
+	\item Een CartLine object heeft een product en quantity (hoeveelheid) attribuut. Deze klasse beschikt over een constructor die twee parameters verwacht, die tevens de attributen zijn. Deze is ook voorzien van twee getters, om de attributen op te vragen (aangezien deze private zijn) en een methode om de kostprijs van deze CartLine te berekenen.
 	
 	\item De product klasse is de klasse die per platform wordt geïmplementeerd, dit is echter illustratief voor deze proof-of-concept. Deze klasse wordt dus als expect gedeclareerd en beschikt over drie expect methodes om de attributen van de klasse op te vragen. Per platform, in dit voorbeeld zal dit Android en iOS zijn, wordt er een implementatie voorzien van deze klasse. Deze actual klassen hebben elk een name, price, description en productImage en een implementatie van de methodes van de expect Product klasse. Het type van de productImage verschilt per platform.
 \end{itemize}
@@ -34,7 +34,7 @@ Om gebruik te kunnen maken van Kotlin/Native voor het ontwikkelen van cross-plat
 \section{Wat is gradle?}
 Gradle is een build systeem. Het combineert de beste features van vele andere build systemen en combineert deze tot één systeem. Het is een op JVM gebaseerd build systeem wat betekent dat er eigen geschreven Java scripts kunnen worden gebruikt. 
 
-Android Studio maakt gebruikt van Gradle. Waarom maakt Google gebruikt van Gradle? Google zag Gradle als een zeer geavanceerd build systeem en realiseerde dat er eigen geschreven build scripts gebruikt kunnen worden met zo goed als geen leercurve. Het was ook niet nodig om een andere programmeertaal aan te leren aangezien er scripts kunnen worden geschreven in Java. Hierdoor is de Gradle plugin toegevoegd aan Android Studio \autocite{GoogleGradle}.
+Android Studio maakt gebruikt van Gradle. Waarom maakt Google gebruik van Gradle? Google zag Gradle als een zeer geavanceerd build systeem en realiseerde dat er eigen geschreven build scripts gebruikt kunnen worden met zo goed als geen leercurve. Het was ook niet nodig om een andere programmeertaal aan te leren aangezien er scripts kunnen worden geschreven in Java. Hierdoor is de Gradle plugin toegevoegd aan Android Studio \autocite{GoogleGradle}.
 
 \section{Stap 1: project initiatie}
 De eerste stap in het ontwikkelen van een Kotlin/Native project is het maken van een nieuwe map op een gewenste locatie op de harde schijf van de computer. Hierin zal er een eerste bestand worden aangemaakt: \textbf{build.gradle}.
@@ -244,7 +244,7 @@ expect class {
 \end{lstlisting}
 
 \section{Stap 4: platforms map}
-De platform map bevat enkele submap, één submap per platform waarvoor men wenst te ontwikkelen. Bij dit voorbeeld zijn er dus twee subfolders aanwezig, namelijk Android en iOS. Zie figuur \ref{fig:stap4-structuur}. Per submap, hebben we opnieuw twee submappen, namelijk main en test. Net zoals bij de common map. 
+De platforms map bevat enkele submappen, één submap per platform waarvoor men wenst te ontwikkelen. Bij dit voorbeeld zijn er dus twee submappen aanwezig, namelijk Android en iOS. Zie figuur \ref{fig:stap4-structuur}. Per submap, hebben we opnieuw twee submappen, namelijk main en test. Net zoals bij de common map. 
 
 \begin{figure} [ht]
 	\centering
@@ -355,7 +355,7 @@ dependencies {
 }
 \end{lstlisting}
 
-Zoals reeds te lezen is in sectie \ref{sec:use-ios-code} zal Kotlin/Native alle Kotlin code compileren naar een iOS framework. In de build.gradle wordt de naam van het framework en de toestellen (iPhone en iPhone simulators) dat men wenst te ondersteunen ingesteld.
+Zoals reeds te lezen is in sectie \ref{sec:use-ios-code} zal Kotlin/Native alle Kotlin-code compileren naar een iOS framework. In de build.gradle wordt de naam van het framework en de toestellen (iPhone en iPhone simulators) dat men wenst te ondersteunen ingesteld.
 
 De main map wordt als source directory ingesteld. Om ervoor te zorgen dat op iOS ook de testen kunnen worden uitgevoerd, wordt de main map ingesteld als bron van klassen die gebruikt kunnen worden voor alle testen en de test map wordt ingesteld als bron waar alle testen zijn gelokaliseerd.
 
@@ -455,7 +455,7 @@ mkdir "$SRCROOT/build/"
 cp -a "$SRCROOT/../platforms/ios/build/konan/bin/$NAME/" "$SRCROOT/build/"
 \end{lstlisting}
 
-Bij iedere gradle build van het Kotlin/Native project zal de build.gradle in de platforms/ios map ervoor zorgen dat de Kotlin code omgezet wordt naar een iOS framework. Dit framework vindt men terug in een submap van de build map (platforms/ios/build/). Zie figuur \ref{fig:stap6-build}. Er wordt dus zowel voor een echt toestel (iphone map) als voor een simulator (iphone\char`_sim map) een framework gegenereerd. Dit wordt gedaan omdat beiden op verschillende architecturen worden uitgevoerd.
+Bij iedere gradle build van het Kotlin/Native project zal de build.gradle in de platforms/ios map ervoor zorgen dat de Kotlin-code omgezet wordt naar een iOS framework. Dit framework vindt men terug in een submap van de build map (platforms/ios/build/). Zie figuur \ref{fig:stap6-build}. Er wordt dus zowel voor een echt toestel (iphone map) als voor een simulator (iphone\char`_sim map) een framework gegenereerd. Dit wordt gedaan omdat beiden op verschillende architecturen worden uitgevoerd.
 
 \begin{figure} [ht]
 	\centering
