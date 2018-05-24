@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.4)  23 MAY 2018 22:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.12.4)  24 MAY 2018 18:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -525,8 +525,6 @@ Package xcolor Warning: Incompatible color definition on input line 119.
 
 Package xcolor Warning: Incompatible color definition on input line 138.
 
-Missing character: There is no Ì in font ptmr7t!
-Missing character: There is no ˆ in font ptmr7t!
 
 Package xcolor Warning: Incompatible color definition on input line 145.
 
@@ -553,16 +551,16 @@ kn.png> <./figures/apple-android.jpeg> <./figures/verder-onderzoek.png>]
 Here is how much of TeX's memory you used:
  5737 strings out of 492995
  86077 string characters out of 6132704
- 194069 words of memory out of 5000000
+ 195069 words of memory out of 5000000
  9168 multiletter control sequences out of 15000+600000
  16727 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,8n,77p,1489b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,8n,77p,1507b,486s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/
 base/8r.enc}</usr/local/texlive/2017/texmf-dist/fonts/type1/urw/courier/ucrr8a.
 pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/
 local/texlive/2017/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on conference_poster.pdf (1 page, 1268319 bytes).
+Output written on conference_poster.pdf (1 page, 1268658 bytes).
 PDF statistics:
  30 PDF objects out of 1000 (max. 8388607)
  15 compressed objects within 1 object stream
