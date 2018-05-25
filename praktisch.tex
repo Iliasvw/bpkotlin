@@ -28,13 +28,13 @@ Om gebruik te kunnen maken van Kotlin/Native voor het ontwikkelen van cross-plat
 	\item \textbf{Android studio} voor het ontwikkelen van de Android applicatie.
 	\item \textbf{Xcode} voor het ontwikkelen van de iOS applicatie (toestel met MacOS is vereist).
 	\item \textbf{IntelliJ IDEA} (optioneel) voor het opzetten van het project. Dit kan eventueel met een andere IDEA, die gradle projecten ondersteunt, worden opgezet.
-	\item \textbf{Gradle} om gebruik te kunnen maken van de Kotlin/Native compiler en plugin. Deze wordt automatisch geïnstalleerd bij het instellen van IntelliJ IDEA of Android Studio.
+	\item \textbf{Gradle} om gebruik te kunnen maken van de Kotlin/Native compiler en plug-in. Deze wordt automatisch geïnstalleerd bij het instellen van IntelliJ IDEA of Android Studio.
 \end{itemize}
 
 \section{Wat is gradle?}
 Gradle is een build systeem. Het combineert de beste features van vele andere build systemen en combineert deze tot één systeem. Het is een op JVM gebaseerd build systeem wat betekent dat er eigen geschreven Java scripts kunnen worden gebruikt. 
 
-Android Studio maakt gebruikt van Gradle. Waarom maakt Google gebruik van Gradle? Google zag Gradle als een zeer geavanceerd build systeem en realiseerde dat er eigen geschreven build scripts gebruikt kunnen worden met zo goed als geen leercurve. Het was ook niet nodig om een andere programmeertaal aan te leren aangezien er scripts kunnen worden geschreven in Java. Hierdoor is de Gradle plugin toegevoegd aan Android Studio \autocite{GoogleGradle}.
+Android Studio maakt gebruikt van Gradle. Waarom maakt Google gebruik van Gradle? Google zag Gradle als een zeer geavanceerd build systeem en realiseerde dat er eigen geschreven build scripts gebruikt kunnen worden met zo goed als geen leercurve. Het was ook niet nodig om een andere programmeertaal aan te leren aangezien er scripts kunnen worden geschreven in Java. Hierdoor is de Gradle plug-in toegevoegd aan Android Studio \autocite{GoogleGradle}.
 
 \section{Stap 1: project initiatie}
 De eerste stap in het ontwikkelen van een Kotlin/Native project is het maken van een nieuwe map op een gewenste locatie op de harde schijf van de computer. Hierin zal er een eerste bestand worden aangemaakt: \textbf{build.gradle}.
@@ -78,7 +78,7 @@ subprojects {
 \end{lstlisting}
 Hieronder wordt de inhoud van het build.gradle bestand besproken.
 \subsection{Versies}
-Bovenaan wordt er aangegeven welke versie van Kotlin en Kotlin/Native er gebruikt zal worden voor de opzet van dit project. Dit zijn beide de nieuwste versies. Opgelet, het is niet altijd vanzelfsprekend om de laatste versie van Kotlin/Native te gebruiken. Er wordt voortdurend gewerkt aan Kotlin en Kotlin/Native en nieuwe dingen worden continu gepusht op de GitHub repository. Het kan al eens gebeuren dat sommige features niet altijd even goed werken, wat voor problemen kan zorgen bij de ontwikkeling van de applicatie. Bij twijfels, neem een minder recente versie van de Kotlin/Native plugin.
+Bovenaan wordt er aangegeven welke versie van Kotlin en Kotlin/Native er gebruikt zal worden voor de opzet van dit project. Dit zijn beide de nieuwste versies. Opgelet, het is niet altijd vanzelfsprekend om de laatste versie van Kotlin/Native te gebruiken. Er wordt voortdurend gewerkt aan Kotlin en Kotlin/Native en nieuwe dingen worden continu gepusht op de GitHub repository. Het kan al eens gebeuren dat sommige features niet altijd even goed werken, wat voor problemen kan zorgen bij de ontwikkeling van de applicatie. Bij twijfels, neem een minder recente versie van de Kotlin/Native plug-in.
 
 \subsection{Repositories}
 In de repositories tag worden de juiste repositories gelinkt:
@@ -91,9 +91,9 @@ In de repositories tag worden de juiste repositories gelinkt:
 \subsection{Dependencies}
 In de dependencies tag worden de juiste dependencies gelinkt:
 \begin{itemize}
-	\item \textbf{Kotlin-gradle} laadt de Kotlin-gradle plugin met de versie van Kotlin die wordt aangegeven bovenaan het build script. Deze plugin zorgt voor het compileren van Kotlin bronnen en modules.
+	\item \textbf{Kotlin-gradle} laadt de Kotlin-gradle plug-in met de versie van Kotlin die wordt aangegeven bovenaan het build script. Deze plug-in zorgt voor het compileren van Kotlin bronnen en modules.
 	\item \textbf{Android build tools} is nodig voor het bouwen van de Android-applicatie.
-	\item \textbf{Kotlin-native-gradle-plugin} is de Kotlin/Native plugin die gebruikt zal worden om te zorgen voor een cross-platform applicatie.
+	\item \textbf{Kotlin-native-gradle-plugin} is de Kotlin/Native plug-in die gebruikt zal worden om te zorgen voor een cross-platform applicatie.
 \end{itemize}
 
 \subsection{Overige informatie}
@@ -155,7 +155,7 @@ dependencies {
  testCompile "org.jetbrains.kotlin:kotlin-test-common:$kotlin_version"
 }
 \end{lstlisting}
-De bovenste regel in de build.gradle geeft aan dat de kotlin-platform-common plugin gebruikt zal worden. Deze zal verantwoordelijk zijn voor het compileren en delen van alle gemeenschappelijke code over de verschillende platformen.
+De bovenste regel in de build.gradle geeft aan dat de kotlin-platform-common plug-in gebruikt zal worden. Deze zal verantwoordelijk zijn voor het compileren en delen van alle gemeenschappelijke code over de verschillende platformen.
 
 Er worden ook twee sourceSets toegevoegd. SourceSets vertegenwoordigen een logische groep van Java/Kotlin bronnen. Kotlin/Native zal steeds zoeken naar code in de map src/kotlin/main of src/kotlin/test, maar hier geven we aan dat code te vinden is in de main en test map en dus niet onder een src/kotlin/ map.
 
@@ -280,7 +280,7 @@ dependencies {
 }
 \end{lstlisting}
 
-In deze build.gradle wordt er gebruik gemaakt van de kotlin-platform-jvm plugin. Android-applicaties maken nog steeds gebruik van de JVM en dus ook deze Android-applicatie. De JVM voert een aantal noodzakelijk taken uit die ook Kotlin nodig heeft in Android-applicaties, zie sectie \ref{sec:jvm} voor meer uitleg over de JVM. De sourceSets worden ingesteld. Tenslotte worden alle dependencies geladen en wordt er aangegeven dat de common module verwacht wordt die code bevat.
+In deze build.gradle wordt er gebruik gemaakt van de kotlin-platform-jvm plug-in. Android-applicaties maken nog steeds gebruik van de JVM en dus ook deze Android-applicatie. De JVM voert een aantal noodzakelijk taken uit die ook Kotlin nodig heeft in Android-applicaties, zie sectie \ref{sec:jvm} voor meer uitleg over de JVM. De sourceSets worden ingesteld. Tenslotte worden alle dependencies geladen en wordt er aangegeven dat de common module verwacht wordt die code bevat.
 
 \subsubsection{Platformspecifieke code}
 De platformspecifieke code voor Android. De klasse product wordt voorzien van een afbeelding en aangezien drawables in Android gemapt worden naar een integerwaarde, wordt er een getal ingevuld in de constructor. De naam van het product wordt teruggeven met prefix 'Android'.
@@ -519,7 +519,7 @@ Aangezien er per platform, platformspecifieke code geschreven kan worden is het 
 Een voorbeeld voor deze proof-of-concept: er kan voor de iOS test gecheckt worden of de naam van het product begint met de prefix 'iOS' en voor Android kan er gecheckt worden of deze naam start met prefix 'Android'.
 
 \section{Huidige mogelijkheden}
-Zoals uit de proof-of-concept af te leiden is, is het reeds mogelijk om Kotlin/Native te gebruiken om een cross-platform applicatie te ontwikkelen. Aan de hand van de Kotlin/Native Gradle plugin is het mogelijk om niet alleen voor Android te ontwikkelen maar ook voor iOS. Cross-platform heeft bij Kotlin/Native niet dezelfde betekenis als bij een framework zoals React/Native. Het doel van Kotlin/Native is dus het delen van domeinlogica en deze hergebruiken over de verschillende te ondersteunen platformen. In deze vroege versie (0.6) van Kotlin/Native is het reeds mogelijk om dit te doen, maar de mogelijkheden blijven beperkt. Indien de applicatie geen speciale iOS bibliotheken nodig heeft, is er geen probleem.
+Zoals uit de proof-of-concept af te leiden is, is het reeds mogelijk om Kotlin/Native te gebruiken om een cross-platform applicatie te ontwikkelen. Aan de hand van de Kotlin/Native Gradle plug-in is het mogelijk om niet alleen voor Android te ontwikkelen maar ook voor iOS. Cross-platform heeft bij Kotlin/Native niet dezelfde betekenis als bij een framework zoals React/Native. Het doel van Kotlin/Native is dus het delen van domeinlogica en deze hergebruiken over de verschillende te ondersteunen platformen. In deze vroege versie (0.6) van Kotlin/Native is het reeds mogelijk om dit te doen, maar de mogelijkheden blijven beperkt. Indien de applicatie geen speciale iOS bibliotheken nodig heeft, is er geen probleem.
 
 Een ander belangrijk luik dat Kotlin/Native reeds ondersteunt is het aanmaken van testen voor de geschreven domeinlogica. Testen zijn en blijven een belangrijke onderdeel van object-oriented programming.
 

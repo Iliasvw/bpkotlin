@@ -14,7 +14,7 @@ Kotlin/Native is een technologie die zorgt voor de compilatie van Kotlin naar na
 Kotlin Native ondersteunt volledig de interoperabiliteit met native code. Wat betreft het gebruik van Kotlin libraries, deze zijn volledig ter beschikking van de ontwikkelaar. Indien een bepaalde bibliotheek niet ondersteund wordt, bestaat er een tool om een tussenliggende bibliotheek te genereren van een C-header bestand, waardoor deze bibliotheek toch gebruikt kan worden.  Op macOS en iOS wordt samenwerking met Objective/C-code ook ondersteund.
 \fi
 
-Kotlin/Native is momenteel heel jong en zit nog in volledige ontwikkeling. De eerste versie van Kotlin/Native werd vrijgegeven op 31 maart 2017. Er zijn reeds enkele versies aanwezig op de GitHub van JetBrains waar ontwikkelaars aan de slag mee kunnen. De ondersteuning voor de IDE's is beschikbaar als een plugin voor CLion. De werking van deze plugin is echter zeer beperkt. De enigste mogelijkheid die deze plugin momenteel ondersteunt is het genereren van een voorbeeld full-stack Kotlin/Native applicatie. Voor andere doeleinden kan deze plugin niet gebruikt worden.
+Kotlin/Native is momenteel heel jong en zit nog in volledige ontwikkeling. De eerste versie van Kotlin/Native werd vrijgegeven op 31 maart 2017. Er zijn reeds enkele versies aanwezig op de GitHub van JetBrains waar ontwikkelaars aan de slag mee kunnen. De ondersteuning voor de IDE's is beschikbaar als een plug-in voor CLion. De werking van deze plug-in is echter zeer beperkt. De enigste mogelijkheid die deze plug-in momenteel ondersteunt is het genereren van een voorbeeld full-stack Kotlin/Native applicatie. Voor andere doeleinden kan deze plug-in niet gebruikt worden.
 
 \section{Het delen van code in Kotlin/Native}
 \label{sec:sharingcode}
@@ -44,7 +44,7 @@ Figuur \ref{fig:sharingcode} toont hoe Kotlin/Native domeinlogica deelt over de 
 
 \section{De structuur van een Kotlin/Native project}
 \label{sec:knstructure}
-Alvorens te beginnen met het ontwikkelen van een Kotlin/Native project is het belangrijk om na te gaan wat de structuur is waaraan een Kotlin/Native project moet voldoen. Er is namelijk geen IDE of plugin die een Kotlin/Native project volledig automatisch genereert, daarom is het essentieel dat er vanaf het begin een goede mappenstructuur wordt opgebouwd. Figuur \ref{fig:knstructuur} toont een goede structuur van een Kotlin/Native project. Deze mappenstructuur is verplicht na te leven, de namen van de mappen kunnen veranderd worden mits enkele kleine veranderingen in de build scripts van hoofdstuk \ref{ch:praktisch}.
+Alvorens te beginnen met het ontwikkelen van een Kotlin/Native project is het belangrijk om na te gaan wat de structuur is waaraan een Kotlin/Native project moet voldoen. Er is namelijk geen IDE of plug-in die een Kotlin/Native project volledig automatisch genereert, daarom is het essentieel dat er vanaf het begin een goede mappenstructuur wordt opgebouwd. Figuur \ref{fig:knstructuur} toont een goede structuur van een Kotlin/Native project. Deze mappenstructuur is verplicht na te leven, de namen van de mappen kunnen veranderd worden mits enkele kleine veranderingen in de build scripts van hoofdstuk \ref{ch:praktisch}.
 
 \begin{figure} [ht]
 	\centering
@@ -139,4 +139,4 @@ class Example {
 \label{sec:use-ios-code}
 Maar hoe kan de gemeenschappelijke en platformspecifieke code gebruikt worden? Simpel. Bij een Android-project kunnen we de Kotlin-code gebruiken door simpelweg de bibliotheek te importeren. Dit is niks meer dan een import bovenaan in de Android activity. iOS gerelateerde code zal gedeeld worden via een iOS framework dat gegenereerd wordt door Kotlin/Native. Dit framework zal toegevoegd worden in de build phases van het Xcode project. Zie sectie \ref{sec:ios-stap6} voor meer informatie.
 
-Kotlin/Native zal de code uit de common map en de code uit de platformspecifieke map bundelen tot één geheel. Zoals reeds gezegd zal dit bij iOS een framework zijn, bij Android echter een package die kan worden geïmporteerd. Dit gebeurt aan de hand van verschillende plugins, zie hoofdstuk \ref{ch:praktisch} voor meer informatie over deze build scripts.
+Kotlin/Native zal de code uit de common map en de code uit de platformspecifieke map bundelen tot één geheel. Zoals reeds gezegd zal dit bij iOS een framework zijn, bij Android echter een package die kan worden geïmporteerd. Dit gebeurt aan de hand van verschillende plug-ins, zie hoofdstuk \ref{ch:praktisch} voor meer informatie over deze build scripts.

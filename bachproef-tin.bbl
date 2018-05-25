@@ -407,7 +407,7 @@
       \verb https://kotlinlang.org/
       \endverb
     \endentry
-    \entry{JetBrainsServer}{misc}{}
+    \entry{JetBrainsKotlinNative}{misc}{}
       \name{author}{1}{}{%
         {{uniquename=0,hash=b6a77f3f5bead76a495a90d63703e1f9}{%
            family={JetBrains},
@@ -420,6 +420,28 @@
       \field{sortinit}{J}
       \field{sortinithash}{c86bd6cced82a15683b396c2169909ef}
       \field{extrayear}{4}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Kotlin/Native}
+      \field{year}{2018}
+      \verb{url}
+      \verb https://kotlinlang.org/docs/reference/native-overview.html
+      \endverb
+    \endentry
+    \entry{JetBrainsServer}{misc}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=b6a77f3f5bead76a495a90d63703e1f9}{%
+           family={JetBrains},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{fullhash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{authornamehash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \strng{authorfullhash}{b6a77f3f5bead76a495a90d63703e1f9}
+      \field{sortinit}{J}
+      \field{sortinithash}{c86bd6cced82a15683b396c2169909ef}
+      \field{extrayear}{5}
       \field{labeldatesource}{year}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}

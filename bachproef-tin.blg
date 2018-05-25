@@ -1,20 +1,20 @@
 [0] Config.pm:354> INFO - This is Biber 2.7
 [0] Config.pm:357> INFO - Logfile is 'bachproef-tin.blg'
-[39] biber-darwin:303> INFO - === Wed May 23, 2018, 22:02:35
-[60] Biber.pm:359> INFO - Reading 'bachproef-tin.bcf'
-[155] Biber.pm:835> INFO - Found 36 citekeys in bib section 0
-[168] Biber.pm:3670> INFO - Processing section 0
-[181] Biber.pm:3840> INFO - Looking for bibtex format file 'bachproef-tin.bib' for section 0
-[184] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
-[191] bibtex.pm:1292> INFO - Found BibTeX data source 'bachproef-tin.bib'
-[222] Biber.pm:3840> INFO - Looking for bibtex format file 'voorstel/biblio.bib' for section 0
-[223] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
-[224] bibtex.pm:1292> INFO - Found BibTeX data source 'voorstel/biblio.bib'
-[227] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/z2/b6s581x52bz5nfqkf294mg200000gn/T/W1me6XABgE/biblio.bib_1404.utf8, line 4, warning: 42 characters of junk seen at toplevel
-[268] UCollate.pm:68> INFO - Overriding locale 'nl-NL' defaults 'variable = shifted' with 'variable = non-ignorable'
-[268] UCollate.pm:68> INFO - Overriding locale 'nl-NL' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[268] Biber.pm:3499> INFO - Sorting list 'apa/global/' of type 'entry' with scheme 'apa' and locale 'nl-NL'
-[268] Biber.pm:3505> INFO - No sort tailoring available for locale 'nl-NL'
-[293] bbl.pm:608> INFO - Writing 'bachproef-tin.bbl' with encoding 'UTF-8'
-[297] bbl.pm:712> INFO - Output to bachproef-tin.bbl
-[298] Biber.pm:109> INFO - WARNINGS: 1
+[37] biber-darwin:303> INFO - === Fri May 25, 2018, 17:21:48
+[59] Biber.pm:359> INFO - Reading 'bachproef-tin.bcf'
+[152] Biber.pm:835> INFO - Found 37 citekeys in bib section 0
+[165] Biber.pm:3670> INFO - Processing section 0
+[179] Biber.pm:3840> INFO - Looking for bibtex format file 'bachproef-tin.bib' for section 0
+[182] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[188] bibtex.pm:1292> INFO - Found BibTeX data source 'bachproef-tin.bib'
+[220] Biber.pm:3840> INFO - Looking for bibtex format file 'voorstel/biblio.bib' for section 0
+[221] bibtex.pm:1435> INFO - Decoding LaTeX character macros into UTF-8
+[221] bibtex.pm:1292> INFO - Found BibTeX data source 'voorstel/biblio.bib'
+[224] Utils.pm:164> WARN - BibTeX subsystem: /var/folders/z2/b6s581x52bz5nfqkf294mg200000gn/T/dbHmRmqohs/biblio.bib_1976.utf8, line 4, warning: 42 characters of junk seen at toplevel
+[266] UCollate.pm:68> INFO - Overriding locale 'nl-NL' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[266] UCollate.pm:68> INFO - Overriding locale 'nl-NL' defaults 'variable = shifted' with 'variable = non-ignorable'
+[267] Biber.pm:3499> INFO - Sorting list 'apa/global/' of type 'entry' with scheme 'apa' and locale 'nl-NL'
+[267] Biber.pm:3505> INFO - No sort tailoring available for locale 'nl-NL'
+[292] bbl.pm:608> INFO - Writing 'bachproef-tin.bbl' with encoding 'UTF-8'
+[296] bbl.pm:712> INFO - Output to bachproef-tin.bbl
+[297] Biber.pm:109> INFO - WARNINGS: 1
